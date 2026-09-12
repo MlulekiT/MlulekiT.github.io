@@ -6,12 +6,14 @@
 
 <title>Dr Mluleki Tsawe</title>
 
+images/profile.jpg
+
 <style>
 
 :root{
     --primary:#006d77;
     --secondary:#5b2c83;
-    --text:#333;
+    --text:#333333;
     --light:#f8fafc;
     --border:#e5e7eb;
 }
@@ -22,9 +24,9 @@ html{
 
 body{
     margin:0;
-    font-family:Segoe UI,Arial,sans-serif;
+    font-family:Segoe UI, Arial, sans-serif;
+    background:#ffffff;
     color:var(--text);
-    background:#fff;
     line-height:1.7;
 }
 
@@ -36,7 +38,7 @@ body{
 nav{
     position:sticky;
     top:0;
-    background:white;
+    background:#ffffff;
     border-bottom:1px solid var(--border);
     z-index:1000;
 }
@@ -50,8 +52,8 @@ nav .container{
 nav a{
     text-decoration:none;
     color:var(--text);
-    padding:18px 15px;
     font-weight:600;
+    padding:16px 12px;
 }
 
 nav a:hover{
@@ -59,14 +61,24 @@ nav a:hover{
 }
 
 .hero{
-    padding:100px 0 60px;
+    padding:80px 0;
     text-align:center;
 }
 
+.profile-pic{
+    width:180px;
+    height:180px;
+    object-fit:cover;
+    border-radius:50%;
+    border:4px solid white;
+    box-shadow:0 5px 20px rgba(0,0,0,0.15);
+    margin-bottom:25px;
+}
+
 .hero h1{
-    font-size:3.5rem;
-    margin-bottom:10px;
+    font-size:3rem;
     color:var(--primary);
+    margin-bottom:10px;
 }
 
 .hero h2{
@@ -75,41 +87,40 @@ nav a:hover{
 }
 
 .hero p{
-    max-width:800px;
+    max-width:850px;
     margin:auto;
-    font-size:1.1rem;
 }
 
 .links{
-    margin-top:30px;
+    margin-top:25px;
 }
 
 .btn{
     display:inline-block;
     padding:12px 22px;
+    margin:5px;
     background:var(--primary);
     color:white;
     text-decoration:none;
     border-radius:6px;
-    margin:5px;
 }
 
 .btn-outline{
     display:inline-block;
     padding:12px 22px;
+    margin:5px;
     border:2px solid var(--primary);
     color:var(--primary);
     text-decoration:none;
     border-radius:6px;
-    margin:5px;
 }
 
 section{
-    padding:80px 0;
+    padding:70px 0;
     border-top:1px solid var(--border);
 }
 
-h2.section-title{
+.section-title{
     color:var(--primary);
     margin-bottom:20px;
 }
@@ -123,8 +134,8 @@ h2.section-title{
 .card{
     background:var(--light);
     border:1px solid var(--border);
-    padding:25px;
     border-radius:10px;
+    padding:25px;
 }
 
 .card h3{
@@ -134,26 +145,52 @@ h2.section-title{
 
 .framework{
     text-align:center;
-    font-size:1.2rem;
+    font-size:1.1rem;
 }
 
 .framework div{
-    margin:12px 0;
-}
-
-.publication{
-    margin-bottom:15px;
+    margin:10px 0;
 }
 
 footer{
-    padding:50px 0;
-    text-align:center;
     background:var(--light);
+    text-align:center;
+    padding:50px 0;
+    margin-top:50px;
 }
 
 .small{
     color:#666;
-    font-size:0.95rem;
+}
+
+@media (max-width:768px){
+
+.hero{
+    padding:60px 0;
+}
+
+.hero h1{
+    font-size:2.2rem;
+}
+
+.hero h2{
+    font-size:1.2rem;
+}
+
+.profile-pic{
+    width:140px;
+    height:140px;
+}
+
+nav a{
+    padding:10px 8px;
+    font-size:0.9rem;
+}
+
+section{
+    padding:50px 0;
+}
+
 }
 
 </style>
@@ -163,16 +200,15 @@ footer{
 
 <nav>
 <div class="container">
+
 #programmeProgramme</a>
-#lifecourseLife Course</a>
-#themesResearch</a>
+#researchResearch</a>
 #publicationsPublications</a>
 #cvCV</a>
-#currentCurrent Work</a>
 #teachingTeaching</a>
 #methodsMethods</a>
-#consultancyConsultancy</a>
 #contactContact</a>
+
 </div>
 </nav>
 
@@ -180,32 +216,43 @@ footer{
 
 <div class="container">
 
+images/profile.jpg
+
 <h1>Dr Mluleki Tsawe</h1>
 
 <h2>
-Population Health Across the Life Course
-in Sub-Saharan Africa
+Population Health Across the Life Course in Sub-Saharan Africa
 </h2>
 
 <p>
 Senior Lecturer, Department of Population Studies and Demography,
 North-West University (Mahikeng).
-My research examines how demographic change, household relationships,
-kinship structures and social inequalities shape health across the
-life course in African populations.
+</p>
+
+<p>
+My research examines how demographic change,
+household relationships, kinship structures and
+social inequalities shape health across the life course
+in African populations.
 </p>
 
 <div class="links">
 
-https://orcid.org/0000-0002-0580-5508ORCID</a>
+https://orcid.org/0000-0002-0580-5508
+ORCID
+</a>
 
 <a class="btn-outline"
 href="https://scholar.google.com/citations?user=1L3IWv4AAAAJ&hl=en"
-target="_blank">Google Scholar</a>
+target="_blank">
+Google Scholar
+</a>
 
 <a class="btn-outline"
 href="https://github.com/MlulekiT"
-target="_blank">GitHub</a>
+target="_blank">
+GitHub
+</a>
 
 </div>
 
@@ -214,6 +261,7 @@ target="_blank">GitHub</a>
 </header>
 
 <section id="programme">
+
 <div class="container">
 
 <h2 class="section-title">
@@ -221,11 +269,7 @@ Research Programme
 </h2>
 
 <p>
-
-How do demographic change,
-household relationships and social inequalities
-shape health across the life course in African populations?
-
+How do demographic change, household relationships and social inequalities shape health across the life course in African populations?
 </p>
 
 <div class="framework">
@@ -247,84 +291,37 @@ shape health across the life course in African populations?
 </div>
 
 </div>
+
 </section>
 
-<section id="lifecourse">
+<section id="research">
+
 <div class="container">
 
 <h2 class="section-title">
-Life-Course Framework
+Research Areas
 </h2>
 
 <div class="grid">
 
 <div class="card">
-<h3>Early Life</h3>
-Child mortality, nutrition and immunisation.
+<h3>Sexual & Reproductive Health</h3>
+Contraceptive use, fertility intentions, sexual debut and reproductive transitions.
 </div>
 
 <div class="card">
-<h3>Adolescence</h3>
-Sexual debut, reproductive health and transitions to adulthood.
+<h3>Maternal & Child Health</h3>
+Maternal healthcare utilisation, child survival, immunisation and health inequalities.
 </div>
 
 <div class="card">
-<h3>Reproductive Adulthood</h3>
-Contraception, fertility, maternal health and intimate partner violence.
+<h3>Households & Kinship</h3>
+Family formation, caregiving, living arrangements and intergenerational support.
 </div>
 
 <div class="card">
-<h3>Family Formation</h3>
-Households, kinship, caregiving and intergenerational support.
-</div>
-
-<div class="card">
-<h3>Later Adulthood</h3>
-Chronic disease, multimorbidity and healthcare access.
-</div>
-
-<div class="card">
-<h3>Older Age</h3>
-Disability, functional limitation and healthy ageing.
-</div>
-
-</div>
-
-</div>
-</section>
-
-<section id="themes">
-
-<div class="container">
-
-<h2 class="section-title">
-Research Themes
-</h2>
-
-<div class="grid">
-
-<div class="card">
-<h3>Maternal, Reproductive and Early-Life Health</h3>
-Contraception, fertility, maternal healthcare,
-child health and survival.
-</div>
-
-<div class="card">
-<h3>Health Inequalities</h3>
-Healthcare utilisation, social determinants,
-and population-health disparities.
-</div>
-
-<div class="card">
-<h3>Households & Population Dynamics</h3>
-Family formation, kinship,
-living arrangements and demographic change.
-</div>
-
-<div class="card">
-<h3>Ageing & Healthy Longevity</h3>
-Multimorbidity, disability,
-functional ageing and care dependence.
+<h3>Population Ageing</h3>
+Healthy ageing, multimorbidity, disability and care dependence.
 </div>
 
 </div>
@@ -341,21 +338,12 @@ functional ageing and care dependence.
 Featured Publications
 </h2>
 
-<div class="publication">
-• Factors Influencing the Use of Maternal Healthcare Services and Childhood Immunization in Eswatini
-</div>
-
-<div class="publication">
-• Determinants of Access to and Use of Maternal Health Care Services in the Eastern Cape, South Africa
-</div>
-
-<div class="publication">
-• Inequalities in Maternal Healthcare Use in Sierra Leone
-</div>
-
-<div class="publication">
-• Factors Associated with Experiencing Intimate Partner Violence in South Africa
-</div>
+<ul>
+<li>Factors Influencing the Use of Maternal Healthcare Services and Childhood Immunization in Eswatini.</li>
+<li>Determinants of Access to and Use of Maternal Health Care Services in the Eastern Cape, South Africa.</li>
+<li>Inequalities in Maternal Healthcare Use in Sierra Leone.</li>
+<li>Factors Associated with Experiencing Intimate Partner Violence in South Africa.</li>
+</ul>
 
 </div>
 
@@ -370,55 +358,13 @@ Curriculum Vitae
 </h2>
 
 <p>
-Download my current curriculum vitae,
-including qualifications, publications,
-teaching, supervision and consultancy activities.
+Download my current curriculum vitae including academic qualifications,
+publications, supervision, teaching and consultancy activities.
 </p>
 
 files/Mluleki_Tsawe_CV.pdf
 Download CV (PDF)
 </a>
-
-</div>
-
-</section>
-
-<section id="current">
-
-<div class="container">
-
-<h2 class="section-title">
-Current Work
-</h2>
-
-<div class="grid">
-
-<div class="card">
-<h3>Relationship Commitment and Contraceptive Use</h3>
-Examining how relationship context influences contraceptive use among AGYW.
-</div>
-
-<div class="card">
-<h3>Sex Differentials in Sexual Debut</h3>
-Survival analysis using pooled DHS data and life-course perspectives.
-</div>
-
-<div class="card">
-<h3>Households, Kinship and Healthy Ageing</h3>
-Investigating ageing, vulnerability and care within African households.
-</div>
-
-<div class="card">
-<h3>Pooled SADC Analyses</h3>
-Comparative studies using harmonised DHS datasets.
-</div>
-
-<div class="card">
-<h3>Population Health Tools</h3>
-Development of demographic software including dhscmort and mtmaps.
-</div>
-
-</div>
 
 </div>
 
@@ -433,18 +379,13 @@ Teaching & Supervision
 </h2>
 
 <p>
-
-Population policy, demographic methods,
-research methods and applied quantitative analysis.
-
+I teach population policy, demographic methods, research methods and applied quantitative analysis at postgraduate level.
 </p>
 
 <ul>
-
 <li>HPOP823 – Population Policies</li>
 <li>HPOP617 – Research Methods</li>
 <li>HPPA515 – Social Research Methods</li>
-
 </ul>
 
 </div>
@@ -463,13 +404,12 @@ Methods & Tools
 
 <div class="card">
 <h3>Data Sources</h3>
-DHS, MICS, Census and GHS.
+DHS, MICS, Census, General Household Survey and population-based surveys.
 </div>
 
 <div class="card">
 <h3>Methods</h3>
-Survival analysis, multilevel modelling,
-life tables and population projections.
+Survival analysis, multilevel modelling, life tables, demographic techniques and population projections.
 </div>
 
 <div class="card">
@@ -478,26 +418,6 @@ Stata, R, SPSS, D3.js and GIS.
 </div>
 
 </div>
-
-</div>
-
-</section>
-
-<section id="consultancy">
-
-<div class="container">
-
-<h2 class="section-title">
-MT Research & Demographic Consultancy
-</h2>
-
-<p>
-
-Independent demographic and population health consultancy
-specialising in survey analysis, demographic methods,
-monitoring and evaluation, and population-health research.
-
-</p>
 
 </div>
 
@@ -512,18 +432,18 @@ Contact
 </h2>
 
 <p>
-
 Dr Mluleki Tsawe<br>
 Department of Population Studies and Demography<br>
 North-West University, Mahikeng Campus
-
 </p>
 
 <p>
 
-https://orcid.org/0000-0002-0580-5508ORCID</a> |
-<a href="https://scholar.google.com/citations?user=1L3IWv4AAAAJ&hl=en">Google Scholar</a> |
-<a href="https://github.com/MlulekiT">GitHub</a>
+https://orcid.org/0000-0002-0580-5508ORCID</a>
+|
+<a href="https://scholar.google.com/citations?user=1L3IWv4AAAAJ&hl=en" target="_blank">Google Scholar</a>
+|
+<a href="https://github.com/MlulekiT" target="_blank">GitHub</a>
 
 </p>
 
@@ -533,13 +453,32 @@ https://orcid.org/0000-0002-0580-5508ORCID</a> |
 
 <footer>
 
+<div class="container">
+
+<h3>Dr Mluleki Tsawe</h3>
+
 <p>
 Population Health Across the Life Course in Sub-Saharan Africa
 </p>
 
-<p class="small">
-© Dr Mluleki Tsawe
+<p>
+Department of Population Studies and Demography<br>
+North-West University, Mahikeng Campus
 </p>
+
+<p>
+https://orcid.org/0000-0002-0580-5508ORCID</a>
+|
+<a href="https://scholar.google.com/citations?user=1L3IWv4AAAAJ&hl=en" target="_blank">Google Scholar</a>
+|
+<a href="https://github.com/MlulekiT" target="_blank">GitHub</a>
+</p>
+
+<p class="small">
+© 2026 Dr Mluleki Tsawe. All Rights Reserved.
+</p>
+
+</div>
 
 </footer>
 
