@@ -114,10 +114,16 @@ h2.section-title{
     margin-bottom:20px;
 }
 
+h3.subhead{
+    color:var(--secondary);
+    margin:36px 0 8px 0;
+}
+
 .grid{
     display:grid;
     grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
     gap:25px;
+    margin-top:20px;
 }
 
 .card{
@@ -135,6 +141,7 @@ h2.section-title{
 .framework{
     text-align:center;
     font-size:1.2rem;
+    margin:30px 0;
 }
 
 .framework div{
@@ -163,16 +170,14 @@ footer{
 
 <nav>
 <div class="container">
-#programmeProgramme</a>
-#lifecourseLife Course</a>
-#themesResearch</a>
-#publicationsPublications</a>
-#cvCV</a>
-#currentCurrent Work</a>
-#teachingTeaching</a>
-#methodsMethods</a>
-#consultancyConsultancy</a>
-#contactContact</a>
+<a href="#programme">Programme</a>
+<a href="#publications">Publications</a>
+<a href="#cv">CV</a>
+<a href="#current">Current Work</a>
+<a href="#teaching">Teaching</a>
+<a href="#methods">Methods</a>
+<a href="#consultancy">Consultancy</a>
+<a href="#contact">Contact</a>
 </div>
 </nav>
 
@@ -197,7 +202,7 @@ life course in African populations.
 
 <div class="links">
 
-https://orcid.org/0000-0002-0580-5508ORCID</a>
+<a class="btn-outline" href="https://orcid.org/0000-0002-0580-5508" target="_blank">ORCID</a>
 
 <a class="btn-outline"
 href="https://scholar.google.com/citations?user=1L3IWv4AAAAJ&hl=en"
@@ -221,40 +226,50 @@ Research Programme
 </h2>
 
 <p>
-
 How do demographic change,
 household relationships and social inequalities
 shape health across the life course in African populations?
-
 </p>
 
 <div class="framework">
-
 <div>Population</div>
 <div>↓</div>
-
 <div>Households</div>
 <div>↓</div>
-
 <div>Life Course</div>
 <div>↓</div>
-
 <div>Health</div>
 <div>↓</div>
-
 <div>Inequality</div>
+</div>
 
+<h3 class="subhead">Four research pillars</h3>
+
+<div class="grid">
+
+<div class="card">
+<h3>Maternal, Reproductive &amp; Early-Life Health</h3>
+Contraception, fertility, maternal healthcare, child health and survival.
+</div>
+
+<div class="card">
+<h3>Health Inequalities</h3>
+Healthcare utilisation, social determinants, and population-health disparities.
+</div>
+
+<div class="card">
+<h3>Households &amp; Population Dynamics</h3>
+Family formation, kinship, living arrangements and demographic change.
+</div>
+
+<div class="card">
+<h3>Ageing &amp; Healthy Longevity</h3>
+Multimorbidity, disability, functional ageing and care dependence.
 </div>
 
 </div>
-</section>
 
-<section id="lifecourse">
-<div class="container">
-
-<h2 class="section-title">
-Life-Course Framework
-</h2>
+<h3 class="subhead">Across the life course</h3>
 
 <div class="grid">
 
@@ -293,46 +308,6 @@ Disability, functional limitation and healthy ageing.
 </div>
 </section>
 
-<section id="themes">
-
-<div class="container">
-
-<h2 class="section-title">
-Research Themes
-</h2>
-
-<div class="grid">
-
-<div class="card">
-<h3>Maternal, Reproductive and Early-Life Health</h3>
-Contraception, fertility, maternal healthcare,
-child health and survival.
-</div>
-
-<div class="card">
-<h3>Health Inequalities</h3>
-Healthcare utilisation, social determinants,
-and population-health disparities.
-</div>
-
-<div class="card">
-<h3>Households & Population Dynamics</h3>
-Family formation, kinship,
-living arrangements and demographic change.
-</div>
-
-<div class="card">
-<h3>Ageing & Healthy Longevity</h3>
-Multimorbidity, disability,
-functional ageing and care dependence.
-</div>
-
-</div>
-
-</div>
-
-</section>
-
 <section id="publications">
 
 <div class="container">
@@ -342,19 +317,19 @@ Featured Publications
 </h2>
 
 <div class="publication">
-• Factors Influencing the Use of Maternal Healthcare Services and Childhood Immunization in Eswatini
+&bull; Factors Influencing the Use of Maternal Healthcare Services and Childhood Immunization in Eswatini
 </div>
 
 <div class="publication">
-• Determinants of Access to and Use of Maternal Health Care Services in the Eastern Cape, South Africa
+&bull; Determinants of Access to and Use of Maternal Health Care Services in the Eastern Cape, South Africa
 </div>
 
 <div class="publication">
-• Inequalities in Maternal Healthcare Use in Sierra Leone
+&bull; Inequalities in Maternal Healthcare Use in Sierra Leone
 </div>
 
 <div class="publication">
-• Factors Associated with Experiencing Intimate Partner Violence in South Africa
+&bull; Factors Associated with Experiencing Intimate Partner Violence in South Africa
 </div>
 
 </div>
@@ -375,9 +350,7 @@ including qualifications, publications,
 teaching, supervision and consultancy activities.
 </p>
 
-files/Mluleki_Tsawe_CV.pdf
-Download CV (PDF)
-</a>
+<a class="btn" href="assets/cv.pdf" download>Download CV (PDF)</a>
 
 </div>
 
@@ -395,27 +368,22 @@ Current Work
 
 <div class="card">
 <h3>Relationship Commitment and Contraceptive Use</h3>
-Examining how relationship context influences contraceptive use among AGYW.
+Examining how relationship context influences contraceptive use among AGYW, using SADHS 2016.
 </div>
 
 <div class="card">
 <h3>Sex Differentials in Sexual Debut</h3>
-Survival analysis using pooled DHS data and life-course perspectives.
-</div>
-
-<div class="card">
-<h3>Households, Kinship and Healthy Ageing</h3>
-Investigating ageing, vulnerability and care within African households.
+Survival analysis of the timing of sexual debut among AGYW, using pooled DHS data and a life-course framework.
 </div>
 
 <div class="card">
 <h3>Pooled SADC Analyses</h3>
-Comparative studies using harmonised DHS datasets.
+Extending DHS Methodological Report No. 36 across multiple SADC countries — shared-frailty survival models.
 </div>
 
 <div class="card">
 <h3>Population Health Tools</h3>
-Development of demographic software including dhscmort and mtmaps.
+Developing open-source Stata mapping tools, including <code>mtmaps</code>, and modernising the PHRE web presence.
 </div>
 
 </div>
@@ -429,22 +397,18 @@ Development of demographic software including dhscmort and mtmaps.
 <div class="container">
 
 <h2 class="section-title">
-Teaching & Supervision
+Teaching &amp; Supervision
 </h2>
 
 <p>
-
 Population policy, demographic methods,
 research methods and applied quantitative analysis.
-
 </p>
 
 <ul>
-
-<li>HPOP823 – Population Policies</li>
-<li>HPOP617 – Research Methods</li>
-<li>HPPA515 – Social Research Methods</li>
-
+<li>HPOP823 &ndash; Population Policies</li>
+<li>HPOP617 &ndash; Research Methods</li>
+<li>HPPA515 &ndash; Social Research Methods</li>
 </ul>
 
 </div>
@@ -456,7 +420,7 @@ research methods and applied quantitative analysis.
 <div class="container">
 
 <h2 class="section-title">
-Methods & Tools
+Methods &amp; Tools
 </h2>
 
 <div class="grid">
@@ -468,8 +432,7 @@ DHS, MICS, Census and GHS.
 
 <div class="card">
 <h3>Methods</h3>
-Survival analysis, multilevel modelling,
-life tables and population projections.
+Survival analysis, multilevel modelling, life tables and population projections.
 </div>
 
 <div class="card">
@@ -488,15 +451,13 @@ Stata, R, SPSS, D3.js and GIS.
 <div class="container">
 
 <h2 class="section-title">
-MT Research & Demographic Consultancy
+MT Research &amp; Demographic Consultancy
 </h2>
 
 <p>
-
 Independent demographic and population health consultancy
 specialising in survey analysis, demographic methods,
 monitoring and evaluation, and population-health research.
-
 </p>
 
 </div>
@@ -512,19 +473,15 @@ Contact
 </h2>
 
 <p>
-
 Dr Mluleki Tsawe<br>
 Department of Population Studies and Demography<br>
 North-West University, Mahikeng Campus
-
 </p>
 
 <p>
-
-https://orcid.org/0000-0002-0580-5508ORCID</a> |
+<a href="https://orcid.org/0000-0002-0580-5508">ORCID</a> |
 <a href="https://scholar.google.com/citations?user=1L3IWv4AAAAJ&hl=en">Google Scholar</a> |
 <a href="https://github.com/MlulekiT">GitHub</a>
-
 </p>
 
 </div>
@@ -538,7 +495,7 @@ Population Health Across the Life Course in Sub-Saharan Africa
 </p>
 
 <p class="small">
-© Dr Mluleki Tsawe
+&copy; Dr Mluleki Tsawe
 </p>
 
 </footer>
