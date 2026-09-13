@@ -1,1528 +1,2013 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-<title>Dr Mluleki Tsawe | Population health across the life course</title>
-
-<meta name="description" content="Academic website of Dr Mluleki Tsawe, Senior Lecturer in Population Studies and Demography at North-West University. Research on population health, demographic change, households, ageing and sexual and reproductive health in Sub-Saharan Africa.">
-<meta name="author" content="Dr Mluleki Tsawe">
-
-<meta property="og:title" content="Dr Mluleki Tsawe | Population health across the life course">
-<meta property="og:description" content="Population health, demography, households, ageing, and sexual and reproductive health in Sub-Saharan Africa.">
-<meta property="og:type" content="website">
-
-<style>
-:root{
-  --purple:#6c3d91;
-  --purple-dark:#4c2868;
-  --teal:#008899;
-  --teal-dark:#006d77;
-  --gold:#ffd525;
-  --ink:#17202a;
-  --muted:#5f6b76;
-  --soft:#f5f7f9;
-  --soft-purple:#f5f0f8;
-  --soft-teal:#eef8f8;
-  --white:#ffffff;
-  --border:#e3e7eb;
-  --max:1180px;
-  --radius:16px;
-  --shadow:0 12px 35px rgba(23,32,42,.08);
-  --transition:.25s ease;
-}
-
-*{
-  box-sizing:border-box;
-  margin:0;
-  padding:0;
-}
-
-html{
-  scroll-behavior:smooth;
-}
-
-body{
-  font-family:Arial,Helvetica,sans-serif;
-  color:var(--ink);
-  background:#fff;
-  line-height:1.65;
-}
-
-a{
-  color:inherit;
-}
-
-.container{
-  width:min(var(--max),92%);
-  margin:auto;
-}
-
-.skip{
-  position:absolute;
-  left:-9999px;
-}
-
-.skip:focus{
-  left:20px;
-  top:20px;
-  background:var(--purple);
-  color:#fff;
-  padding:10px 15px;
-  z-index:9999;
-}
-
-/* NAVIGATION */
-
-.navbar{
-  position:sticky;
-  top:0;
-  z-index:1000;
-  background:rgba(255,255,255,.96);
-  backdrop-filter:blur(12px);
-  border-bottom:1px solid var(--border);
-}
-
-.nav-inner{
-  min-height:74px;
-  display:flex;
-  align-items:center;
-  justify-content:space-between;
-  gap:25px;
-}
-
-.brand{
-  text-decoration:none;
-  font-weight:800;
-  color:var(--purple-dark);
-  line-height:1.15;
-}
-
-.brand small{
-  display:block;
-  margin-top:4px;
-  color:var(--muted);
-  font-size:.72rem;
-  font-weight:600;
-  letter-spacing:.04em;
-}
-
-.nav-links{
-  display:flex;
-  align-items:center;
-  gap:24px;
-  list-style:none;
-}
-
-.nav-links a{
-  text-decoration:none;
-  font-size:.88rem;
-  font-weight:700;
-  color:var(--ink);
-  transition:var(--transition);
-}
-
-.nav-links a:hover{
-  color:var(--purple);
-}
-
-/* HERO */
-
-.hero{
-  position:relative;
-  overflow:hidden;
-  background:
-    radial-gradient(circle at 85% 15%,rgba(0,136,153,.13),transparent 30%),
-    radial-gradient(circle at 10% 80%,rgba(108,61,145,.12),transparent 32%),
-    linear-gradient(135deg,#fff 0%,#faf8fc 100%);
-  padding:100px 0 90px;
-}
-
-.hero-grid{
-  display:grid;
-  grid-template-columns:1.35fr .65fr;
-  gap:70px;
-  align-items:center;
-}
-
-.eyebrow{
-  display:inline-block;
-  color:var(--teal-dark);
-  font-size:.78rem;
-  font-weight:800;
-  text-transform:uppercase;
-  letter-spacing:.13em;
-  margin-bottom:18px;
-}
-
-.hero h1{
-  font-size:clamp(2.7rem,6vw,5rem);
-  line-height:1;
-  letter-spacing:-.045em;
-  margin-bottom:25px;
-}
-
-.hero h1 span{
-  color:var(--purple);
-}
-
-.hero-title{
-  font-size:clamp(1.35rem,2.4vw,2rem);
-  line-height:1.25;
-  font-weight:800;
-  color:var(--teal-dark);
-  max-width:850px;
-  margin-bottom:22px;
-}
-
-.hero p{
-  color:var(--muted);
-  font-size:1.08rem;
-  max-width:760px;
-}
-
-.buttons{
-  display:flex;
-  flex-wrap:wrap;
-  gap:12px;
-  margin-top:30px;
-}
-
-.btn{
-  display:inline-flex;
-  align-items:center;
-  justify-content:center;
-  padding:13px 20px;
-  border-radius:10px;
-  text-decoration:none;
-  font-weight:800;
-  font-size:.9rem;
-  transition:var(--transition);
-}
-
-.btn-primary{
-  background:var(--purple);
-  color:#fff;
-}
-
-.btn-primary:hover{
-  background:var(--purple-dark);
-  transform:translateY(-2px);
-}
-
-.btn-secondary{
-  border:1px solid var(--border);
-  background:#fff;
-  color:var(--purple-dark);
-}
-
-.btn-secondary:hover{
-  border-color:var(--purple);
-  transform:translateY(-2px);
-}
-
-/* IDENTITY CARD */
-
-.identity-card{
-  background:#fff;
-  border:1px solid var(--border);
-  border-top:5px solid var(--purple);
-  border-radius:var(--radius);
-  padding:30px;
-  box-shadow:var(--shadow);
-}
-
-.initials{
-  width:76px;
-  height:76px;
-  display:flex;
-  align-items:center;
-  justify-content:center;
-  border-radius:50%;
-  background:var(--purple);
-  color:#fff;
-  font-size:1.5rem;
-  font-weight:900;
-  margin-bottom:20px;
-}
-
-.identity-card h2{
-  font-size:1.35rem;
-  margin-bottom:5px;
-}
-
-.identity-role{
-  color:var(--teal-dark);
-  font-weight:700;
-  font-size:.92rem;
-  margin-bottom:20px;
-}
-
-.profile-links{
-  display:grid;
-  gap:9px;
-}
-
-.profile-links a{
-  text-decoration:none;
-  color:var(--muted);
-  font-size:.88rem;
-  font-weight:700;
-}
-
-.profile-links a:hover{
-  color:var(--purple);
-}
-
-/* SECTIONS */
-
-section{
-  padding:90px 0;
-}
-
-.section-alt{
-  background:var(--soft);
-}
-
-.section-heading{
-  max-width:800px;
-  margin-bottom:45px;
-}
-
-.kicker{
-  color:var(--teal-dark);
-  text-transform:uppercase;
-  letter-spacing:.12em;
-  font-size:.75rem;
-  font-weight:900;
-  margin-bottom:10px;
-}
-
-.section-heading h2{
-  font-size:clamp(2rem,4vw,3rem);
-  line-height:1.1;
-  letter-spacing:-.03em;
-  margin-bottom:15px;
-}
-
-.section-heading p{
-  color:var(--muted);
-  font-size:1rem;
-}
-
-/* RESEARCH IDENTITY */
-
-.research-question{
-  background:var(--purple);
-  color:#fff;
-  border-radius:var(--radius);
-  padding:30px;
-  margin-bottom:35px;
-  box-shadow:var(--shadow);
-}
-
-.research-question strong{
-  display:block;
-  color:var(--gold);
-  text-transform:uppercase;
-  letter-spacing:.1em;
-  font-size:.72rem;
-  margin-bottom:8px;
-}
-
-.research-question p{
-  font-size:1.25rem;
-  line-height:1.45;
-  font-weight:700;
-}
-
-.pillars{
-  display:grid;
-  grid-template-columns:repeat(4,1fr);
-  gap:18px;
-}
-
-.pillar{
-  border:1px solid var(--border);
-  border-radius:var(--radius);
-  padding:25px;
-  background:#fff;
-  transition:var(--transition);
-}
-
-.pillar:hover{
-  transform:translateY(-4px);
-  box-shadow:var(--shadow);
-}
-
-.pillar-number{
-  color:var(--purple);
-  font-size:.75rem;
-  font-weight:900;
-  margin-bottom:14px;
-}
-
-.pillar h3{
-  font-size:1.1rem;
-  line-height:1.25;
-  margin-bottom:10px;
-}
-
-.pillar p{
-  color:var(--muted);
-  font-size:.9rem;
-}
-
-/* LIFE COURSE */
-
-.life-course{
-  display:grid;
-  grid-template-columns:repeat(6,1fr);
-  gap:10px;
-}
-
-.life-stage{
-  padding:18px 12px;
-  border-radius:12px;
-  background:#fff;
-  border:1px solid var(--border);
-  text-align:center;
-  font-size:.84rem;
-  font-weight:800;
-}
-
-.life-stage:nth-child(odd){
-  border-top:4px solid var(--purple);
-}
-
-.life-stage:nth-child(even){
-  border-top:4px solid var(--teal);
-}
-
-/* CURRENT WORK */
-
-.work-grid{
-  display:grid;
-  grid-template-columns:repeat(2,1fr);
-  gap:20px;
-}
-
-.work-card{
-  border:1px solid var(--border);
-  border-radius:var(--radius);
-  padding:28px;
-  background:#fff;
-}
-
-.work-card h3{
-  color:var(--purple-dark);
-  margin-bottom:10px;
-  font-size:1.2rem;
-}
-
-.work-card p{
-  color:var(--muted);
-  font-size:.94rem;
-}
-
-/* PUBLICATIONS */
-
-.publications{
-  display:grid;
-  gap:16px;
-}
-
-.publication{
-  display:block;
-  padding:24px 26px;
-  background:#fff;
-  border:1px solid var(--border);
-  border-radius:var(--radius);
-  text-decoration:none;
-  transition:var(--transition);
-}
-
-.publication:hover{
-  border-color:var(--purple);
-  transform:translateX(4px);
-  box-shadow:var(--shadow);
-}
-
-.publication-label{
-  color:var(--teal-dark);
-  font-size:.72rem;
-  font-weight:900;
-  text-transform:uppercase;
-  letter-spacing:.08em;
-  margin-bottom:7px;
-}
-
-.publication h3{
-  color:var(--ink);
-  font-size:1.03rem;
-  line-height:1.4;
-  margin-bottom:7px;
-}
-
-.publication span{
-  color:var(--purple);
-  font-size:.8rem;
-  font-weight:800;
-}
-
-.metrics{
-  display:grid;
-  grid-template-columns:repeat(3,1fr);
-  gap:18px;
-  margin-top:35px;
-}
-
-.metric{
-  padding:25px;
-  border-radius:var(--radius);
-  background:var(--soft-purple);
-  text-align:center;
-}
-
-.metric strong{
-  display:block;
-  font-size:2rem;
-  color:var(--purple);
-  line-height:1;
-  margin-bottom:8px;
-}
-
-.metric span{
-  color:var(--muted);
-  font-size:.85rem;
-}
-
-/* METHODS */
-
-.methods{
-  display:grid;
-  grid-template-columns:repeat(3,1fr);
-  gap:20px;
-}
-
-.method{
-  background:#fff;
-  border:1px solid var(--border);
-  border-radius:var(--radius);
-  padding:27px;
-}
-
-.method h3{
-  margin-bottom:12px;
-  color:var(--purple-dark);
-}
-
-.method p{
-  color:var(--muted);
-  font-size:.92rem;
-}
-
-/* MODULES */
-
-.modules{
-  display:grid;
-  grid-template-columns:repeat(2,1fr);
-  gap:12px;
-}
-
-.module{
-  display:flex;
-  gap:15px;
-  align-items:flex-start;
-  padding:20px;
-  background:#fff;
-  border:1px solid var(--border);
-  border-radius:12px;
-}
-
-.module-code{
-  min-width:82px;
-  color:var(--purple);
-  font-weight:900;
-  font-size:.84rem;
-}
-
-.module-name{
-  font-weight:700;
-}
-
-/* PROFILE */
-
-.profile-grid{
-  display:grid;
-  grid-template-columns:1fr 1fr;
-  gap:25px;
-}
-
-.profile-box{
-  padding:30px;
-  border:1px solid var(--border);
-  border-radius:var(--radius);
-  background:#fff;
-}
-
-.profile-box h3{
-  margin-bottom:15px;
-  color:var(--purple-dark);
-}
-
-.profile-box p{
-  color:var(--muted);
-  margin-bottom:10px;
-}
-
-.profile-box a{
-  color:var(--purple);
-  font-weight:800;
-  text-decoration:none;
-}
-
-.profile-box a:hover{
-  text-decoration:underline;
-}
-
-/* CONTACT */
-
-.contact{
-  background:
-    linear-gradient(135deg,var(--purple-dark),var(--purple));
-  color:#fff;
-}
-
-.contact .kicker{
-  color:var(--gold);
-}
-
-.contact .section-heading h2{
-  color:#fff;
-}
-
-.contact .section-heading p{
-  color:rgba(255,255,255,.8);
-}
-
-.contact-grid{
-  display:grid;
-  grid-template-columns:1fr 1fr;
-  gap:35px;
-}
-
-.contact-card{
-  background:rgba(255,255,255,.08);
-  border:1px solid rgba(255,255,255,.18);
-  border-radius:var(--radius);
-  padding:30px;
-}
-
-.contact-card h3{
-  margin-bottom:15px;
-}
-
-.contact-card p{
-  color:rgba(255,255,255,.8);
-}
-
-.contact-links{
-  display:grid;
-  gap:10px;
-}
-
-.contact-links a{
-  color:#fff;
-  text-decoration:none;
-  font-weight:700;
-}
-
-.contact-links a:hover{
-  color:var(--gold);
-}
-
-/* FOOTER */
-
-footer{
-  background:#251532;
-  color:rgba(255,255,255,.75);
-  padding:30px 0;
-}
-
-.footer-inner{
-  display:flex;
-  justify-content:space-between;
-  align-items:center;
-  gap:20px;
-}
-
-.footer-name{
-  color:#fff;
-  font-weight:800;
-}
-
-.footer-sub{
-  font-size:.8rem;
-  margin-top:4px;
-}
-
-.footer-copy{
-  font-size:.78rem;
-}
-
-/* RESPONSIVE */
-
-@media(max-width:1000px){
-
-  .hero-grid{
-    grid-template-columns:1fr;
-    gap:40px;
-  }
-
-  .pillars{
-    grid-template-columns:repeat(2,1fr);
-  }
-
-  .life-course{
-    grid-template-columns:repeat(3,1fr);
-  }
-
-  .methods{
-    grid-template-columns:1fr 1fr;
-  }
-
-}
-
-@media(max-width:760px){
-
-  .nav-inner{
-    padding:14px 0;
-    align-items:flex-start;
-  }
-
-  .nav-links{
-    display:none;
-  }
-
-  .hero{
-    padding:70px 0;
-  }
-
-  section{
-    padding:65px 0;
-  }
-
-  .pillars,
-  .work-grid,
-  .methods,
-  .profile-grid,
-  .contact-grid{
-    grid-template-columns:1fr;
-  }
-
-  .metrics{
-    grid-template-columns:1fr;
-  }
-
-  .modules{
-    grid-template-columns:1fr;
-  }
-
-  .life-course{
-    grid-template-columns:repeat(2,1fr);
-  }
-
-  .footer-inner{
-    flex-direction:column;
-    align-items:flex-start;
-  }
-
-}
-
-@media(max-width:480px){
-
-  .hero h1{
-    font-size:2.65rem;
-  }
-
-  .hero-title{
-    font-size:1.25rem;
-  }
-
-  .life-course{
-    grid-template-columns:1fr;
-  }
-
-  .buttons{
-    flex-direction:column;
-  }
-
-  .btn{
-    width:100%;
-  }
-
-}
-</style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Dr Mluleki Tsawe | Population Studies & Demography</title>
+
+  <meta name="description"
+        content="Dr Mluleki Tsawe is a Senior Lecturer in Population Studies and Demography at North-West University. His research examines population health across the life course in Sub-Saharan Africa.">
+
+  <meta name="author" content="Dr Mluleki Tsawe">
+
+  <meta property="og:title" content="Dr Mluleki Tsawe | Population Studies & Demography">
+  <meta property="og:description"
+        content="Population health across the life course in Sub-Saharan Africa.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://mlulekit.github.io/">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet">
+
+  <style>
+
+    :root {
+      --purple: #6c3d91;
+      --purple-dark: #4d286b;
+      --purple-light: #f3edf7;
+
+      --turquoise: #00889c;
+      --turquoise-light: #eaf7f8;
+
+      --gold: #ffd525;
+      --gold-light: #fff8d8;
+
+      --pink: #e32974;
+      --pink-light: #fcebf2;
+
+      --ink: #17202a;
+      --muted: #65717d;
+      --light: #f7f8fa;
+      --white: #ffffff;
+      --border: #e5e8ec;
+
+      --max-width: 1180px;
+      --radius: 18px;
+      --shadow: 0 12px 35px rgba(25, 32, 40, 0.08);
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: "DM Sans", sans-serif;
+      color: var(--ink);
+      background: var(--white);
+      line-height: 1.65;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    img {
+      max-width: 100%;
+      display: block;
+    }
+
+    .container {
+      width: min(92%, var(--max-width));
+      margin: 0 auto;
+    }
+
+    /* =========================
+       NAVIGATION
+    ========================= */
+
+    .nav {
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      background: rgba(255,255,255,0.96);
+      backdrop-filter: blur(12px);
+      border-bottom: 1px solid var(--border);
+    }
+
+    .nav-inner {
+      min-height: 74px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 30px;
+    }
+
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      font-weight: 700;
+      letter-spacing: -0.02em;
+      white-space: nowrap;
+    }
+
+    .brand-mark {
+      width: 38px;
+      height: 38px;
+      border-radius: 11px;
+      background: var(--purple);
+      color: var(--white);
+      display: grid;
+      place-items: center;
+      font-weight: 700;
+      font-size: 14px;
+    }
+
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: 24px;
+      font-size: 14px;
+      color: #46515c;
+    }
+
+    .nav-links a {
+      transition: color 0.2s ease;
+    }
+
+    .nav-links a:hover {
+      color: var(--purple);
+    }
+
+    /* =========================
+       HERO
+    ========================= */
+
+    .hero {
+      position: relative;
+      overflow: hidden;
+      padding: 100px 0 95px;
+      background:
+        radial-gradient(circle at 90% 15%, rgba(0,136,156,0.08), transparent 28%),
+        radial-gradient(circle at 8% 80%, rgba(108,61,145,0.08), transparent 30%),
+        var(--white);
+    }
+
+    .hero-grid {
+      display: grid;
+      grid-template-columns: 1.35fr 0.65fr;
+      gap: 70px;
+      align-items: center;
+    }
+
+    .eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: 9px;
+      margin-bottom: 22px;
+      color: var(--purple);
+      font-size: 13px;
+      font-weight: 700;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+    }
+
+    .eyebrow::before {
+      content: "";
+      width: 32px;
+      height: 3px;
+      border-radius: 3px;
+      background: var(--gold);
+    }
+
+    h1 {
+      font-family: "Playfair Display", serif;
+      font-size: clamp(48px, 7vw, 82px);
+      line-height: 0.98;
+      letter-spacing: -0.045em;
+      margin-bottom: 25px;
+    }
+
+    .hero-title {
+      max-width: 780px;
+      font-size: clamp(22px, 3vw, 34px);
+      line-height: 1.25;
+      color: var(--purple-dark);
+      font-weight: 600;
+      margin-bottom: 23px;
+    }
+
+    .hero-description {
+      max-width: 760px;
+      font-size: 18px;
+      color: var(--muted);
+      margin-bottom: 34px;
+    }
+
+    .hero-buttons {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 13px;
+    }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 48px;
+      padding: 0 21px;
+      border-radius: 10px;
+      font-size: 14px;
+      font-weight: 700;
+      border: 1px solid transparent;
+      transition: all 0.2s ease;
+    }
+
+    .btn-primary {
+      background: var(--purple);
+      color: var(--white);
+    }
+
+    .btn-primary:hover {
+      background: var(--purple-dark);
+      transform: translateY(-1px);
+    }
+
+    .btn-secondary {
+      background: var(--white);
+      color: var(--purple);
+      border-color: #d8cde0;
+    }
+
+    .btn-secondary:hover {
+      background: var(--purple-light);
+    }
+
+    .identity-card {
+      position: relative;
+      padding: 28px;
+      border-radius: 22px;
+      background: var(--white);
+      border: 1px solid var(--border);
+      box-shadow: var(--shadow);
+    }
+
+    .initials {
+      width: 88px;
+      height: 88px;
+      border-radius: 24px;
+      background: linear-gradient(135deg, var(--purple), var(--turquoise));
+      color: white;
+      display: grid;
+      place-items: center;
+      font-family: "Playfair Display", serif;
+      font-size: 34px;
+      margin-bottom: 22px;
+    }
+
+    .identity-card h3 {
+      font-size: 20px;
+      margin-bottom: 5px;
+    }
+
+    .identity-role {
+      color: var(--muted);
+      font-size: 14px;
+      margin-bottom: 21px;
+    }
+
+    .identity-links {
+      display: grid;
+      gap: 9px;
+    }
+
+    .identity-links a {
+      padding: 9px 11px;
+      border-radius: 8px;
+      background: var(--light);
+      font-size: 13px;
+      font-weight: 600;
+      transition: all 0.2s ease;
+    }
+
+    .identity-links a:hover {
+      background: var(--purple-light);
+      color: var(--purple);
+    }
+
+    /* =========================
+       GENERAL SECTIONS
+    ========================= */
+
+    section {
+      padding: 95px 0;
+      scroll-margin-top: 75px;
+    }
+
+    .section-alt {
+      background: var(--light);
+    }
+
+    .section-heading {
+      max-width: 760px;
+      margin-bottom: 48px;
+    }
+
+    .section-label {
+      color: var(--turquoise);
+      text-transform: uppercase;
+      font-size: 12px;
+      font-weight: 700;
+      letter-spacing: 0.13em;
+      margin-bottom: 12px;
+    }
+
+    h2 {
+      font-family: "Playfair Display", serif;
+      font-size: clamp(34px, 5vw, 51px);
+      line-height: 1.12;
+      letter-spacing: -0.03em;
+      margin-bottom: 17px;
+    }
+
+    .section-intro {
+      color: var(--muted);
+      font-size: 17px;
+      max-width: 730px;
+    }
+
+    /* =========================
+       RESEARCH IDENTITY
+    ========================= */
+
+    .research-question {
+      display: grid;
+      grid-template-columns: 0.35fr 1fr;
+      gap: 35px;
+      padding: 30px 0 55px;
+      border-bottom: 1px solid var(--border);
+      margin-bottom: 55px;
+    }
+
+    .rq-label {
+      font-size: 12px;
+      font-weight: 700;
+      color: var(--purple);
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+    }
+
+    .research-question p {
+      font-family: "Playfair Display", serif;
+      font-size: clamp(23px, 3vw, 31px);
+      line-height: 1.35;
+    }
+
+    .pillars {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 18px;
+    }
+
+    .pillar {
+      position: relative;
+      padding: 27px 23px;
+      min-height: 230px;
+      background: var(--white);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      overflow: hidden;
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
+    }
+
+    .pillar:hover {
+      transform: translateY(-4px);
+      box-shadow: var(--shadow);
+    }
+
+    .pillar-number {
+      font-size: 12px;
+      font-weight: 700;
+      color: var(--purple);
+      margin-bottom: 24px;
+    }
+
+    .pillar h3 {
+      font-size: 18px;
+      line-height: 1.3;
+      margin-bottom: 12px;
+    }
+
+    .pillar p {
+      font-size: 14px;
+      color: var(--muted);
+    }
+
+    .life-course {
+      margin-top: 70px;
+    }
+
+    .life-course h3 {
+      font-size: 20px;
+      margin-bottom: 20px;
+    }
+
+    .life-grid {
+      display: grid;
+      grid-template-columns: repeat(6, 1fr);
+      gap: 8px;
+    }
+
+    .life-stage {
+      padding: 18px 13px;
+      background: var(--white);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      text-align: center;
+      font-size: 13px;
+      font-weight: 600;
+    }
+
+    .life-stage span {
+      display: block;
+      color: var(--turquoise);
+      font-size: 11px;
+      margin-bottom: 5px;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+    }
+
+    /* =========================
+       CURRENT WORK
+    ========================= */
+
+    .work-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 20px;
+    }
+
+    .work-card {
+      padding: 31px;
+      background: var(--white);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      box-shadow: 0 4px 18px rgba(25,32,40,0.03);
+    }
+
+    .work-tag {
+      display: inline-block;
+      margin-bottom: 17px;
+      padding: 5px 9px;
+      border-radius: 6px;
+      background: var(--purple-light);
+      color: var(--purple);
+      font-size: 11px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.07em;
+    }
+
+    .work-card h3 {
+      font-size: 21px;
+      line-height: 1.3;
+      margin-bottom: 13px;
+    }
+
+    .work-card p {
+      color: var(--muted);
+      font-size: 14px;
+    }
+
+    /* =========================
+       SCHOLARSHIP
+    ========================= */
+
+    .publication-list {
+      display: grid;
+      gap: 12px;
+    }
+
+    .publication {
+      display: grid;
+      grid-template-columns: 1fr auto;
+      gap: 25px;
+      align-items: center;
+      padding: 22px 24px;
+      background: var(--white);
+      border: 1px solid var(--border);
+      border-radius: 13px;
+      transition: all 0.2s ease;
+    }
+
+    .publication:hover {
+      border-color: #cdbddd;
+      transform: translateX(3px);
+    }
+
+    .publication h3 {
+      font-size: 16px;
+      line-height: 1.45;
+      margin-bottom: 6px;
+    }
+
+    .publication-meta {
+      font-size: 12px;
+      color: var(--muted);
+    }
+
+    .publication-arrow {
+      color: var(--purple);
+      font-size: 20px;
+      font-weight: 700;
+    }
+
+    .metrics {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 18px;
+      margin-top: 45px;
+    }
+
+    .metric {
+      padding: 28px;
+      background: var(--purple);
+      color: var(--white);
+      border-radius: var(--radius);
+    }
+
+    .metric-number {
+      font-family: "Playfair Display", serif;
+      font-size: 42px;
+      line-height: 1;
+      margin-bottom: 8px;
+    }
+
+    .metric-label {
+      font-size: 13px;
+      opacity: 0.88;
+    }
+
+    /* =========================
+       METHODS
+    ========================= */
+
+    .methods-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 20px;
+    }
+
+    .method-card {
+      padding: 30px;
+      border-radius: var(--radius);
+      background: var(--white);
+      border: 1px solid var(--border);
+    }
+
+    .method-icon {
+      width: 42px;
+      height: 42px;
+      border-radius: 11px;
+      display: grid;
+      place-items: center;
+      background: var(--turquoise-light);
+      color: var(--turquoise);
+      font-weight: 700;
+      margin-bottom: 19px;
+    }
+
+    .method-card h3 {
+      font-size: 18px;
+      margin-bottom: 11px;
+    }
+
+    .method-card p {
+      color: var(--muted);
+      font-size: 14px;
+    }
+
+    .method-list {
+      margin-top: 15px;
+      padding-left: 18px;
+      color: var(--muted);
+      font-size: 13px;
+    }
+
+    .method-list li {
+      margin-bottom: 5px;
+    }
+
+    /* =========================
+       MODULES
+    ========================= */
+
+    .module-table {
+      width: 100%;
+      border-collapse: collapse;
+      background: var(--white);
+      border-radius: var(--radius);
+      overflow: hidden;
+      border: 1px solid var(--border);
+    }
+
+    .module-table th,
+    .module-table td {
+      text-align: left;
+      padding: 17px 20px;
+      border-bottom: 1px solid var(--border);
+    }
+
+    .module-table th {
+      background: var(--purple);
+      color: var(--white);
+      font-size: 12px;
+      text-transform: uppercase;
+      letter-spacing: 0.07em;
+    }
+
+    .module-table td {
+      font-size: 14px;
+    }
+
+    .module-table tr:last-child td {
+      border-bottom: none;
+    }
+
+    .module-code {
+      font-weight: 700;
+      color: var(--purple);
+      white-space: nowrap;
+    }
+
+    /* =========================
+       PROFILE
+    ========================= */
+
+    .profile-grid {
+      display: grid;
+      grid-template-columns: 1.15fr 0.85fr;
+      gap: 60px;
+      align-items: start;
+    }
+
+    .profile-copy p {
+      color: var(--muted);
+      margin-bottom: 17px;
+    }
+
+    .profile-facts {
+      display: grid;
+      gap: 12px;
+    }
+
+    .fact {
+      padding: 19px 20px;
+      background: var(--light);
+      border-radius: 12px;
+      border: 1px solid var(--border);
+    }
+
+    .fact-label {
+      display: block;
+      color: var(--purple);
+      font-size: 11px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      margin-bottom: 4px;
+    }
+
+    .fact-value {
+      font-size: 14px;
+      font-weight: 600;
+    }
+
+    .cv-box {
+      margin-top: 32px;
+      padding: 26px;
+      border-radius: var(--radius);
+      background: var(--gold-light);
+      border: 1px solid #f0dc73;
+    }
+
+    .cv-box h3 {
+      font-size: 18px;
+      margin-bottom: 7px;
+    }
+
+    .cv-box p {
+      font-size: 14px;
+      color: #6b5b12;
+      margin-bottom: 17px;
+    }
+
+    /* =========================
+       CONTACT
+    ========================= */
+
+    .contact {
+      background:
+        linear-gradient(135deg, var(--purple-dark), var(--purple));
+      color: var(--white);
+    }
+
+    .contact-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 70px;
+      align-items: start;
+    }
+
+    .contact h2 {
+      color: var(--white);
+    }
+
+    .contact .section-label {
+      color: var(--gold);
+    }
+
+    .contact-intro {
+      color: rgba(255,255,255,0.82);
+      max-width: 600px;
+      font-size: 17px;
+    }
+
+    .contact-details {
+      display: grid;
+      gap: 13px;
+    }
+
+    .contact-item {
+      padding: 17px 18px;
+      border: 1px solid rgba(255,255,255,0.16);
+      background: rgba(255,255,255,0.07);
+      border-radius: 11px;
+    }
+
+    .contact-label {
+      display: block;
+      color: var(--gold);
+      font-size: 11px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      margin-bottom: 3px;
+    }
+
+    .contact-item a:hover {
+      text-decoration: underline;
+    }
+
+    .profile-links {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 9px;
+      margin-top: 25px;
+    }
+
+    .profile-links a {
+      padding: 8px 12px;
+      border: 1px solid rgba(255,255,255,0.25);
+      border-radius: 8px;
+      font-size: 12px;
+      font-weight: 600;
+      transition: background 0.2s ease;
+    }
+
+    .profile-links a:hover {
+      background: rgba(255,255,255,0.12);
+    }
+
+    /* =========================
+       FOOTER
+    ========================= */
+
+    footer {
+      padding: 27px 0;
+      background: #281635;
+      color: rgba(255,255,255,0.68);
+      font-size: 12px;
+    }
+
+    .footer-inner {
+      display: flex;
+      justify-content: space-between;
+      gap: 20px;
+      align-items: center;
+    }
+
+    /* =========================
+       RESPONSIVE
+    ========================= */
+
+    @media (max-width: 950px) {
+
+      .nav-links {
+        gap: 13px;
+        font-size: 12px;
+      }
+
+      .hero-grid {
+        grid-template-columns: 1fr;
+        gap: 45px;
+      }
+
+      .identity-card {
+        max-width: 520px;
+      }
+
+      .pillars {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      .life-grid {
+        grid-template-columns: repeat(3, 1fr);
+      }
+
+      .methods-grid {
+        grid-template-columns: 1fr 1fr;
+      }
+
+      .profile-grid,
+      .contact-grid {
+        grid-template-columns: 1fr;
+        gap: 40px;
+      }
+    }
+
+    @media (max-width: 760px) {
+
+      .nav-inner {
+        min-height: 66px;
+      }
+
+      .brand {
+        font-size: 13px;
+      }
+
+      .nav-links {
+        display: none;
+      }
+
+      .hero {
+        padding: 70px 0 70px;
+      }
+
+      section {
+        padding: 70px 0;
+      }
+
+      h1 {
+        font-size: 52px;
+      }
+
+      .hero-title {
+        font-size: 24px;
+      }
+
+      .hero-description {
+        font-size: 16px;
+      }
+
+      .research-question {
+        grid-template-columns: 1fr;
+        gap: 12px;
+        padding-top: 0;
+      }
+
+      .pillars,
+      .work-grid,
+      .methods-grid,
+      .metrics {
+        grid-template-columns: 1fr;
+      }
+
+      .life-grid {
+        grid-template-columns: 1fr 1fr;
+      }
+
+      .publication {
+        grid-template-columns: 1fr;
+        gap: 9px;
+      }
+
+      .publication-arrow {
+        display: none;
+      }
+
+      .module-table {
+        display: block;
+        overflow-x: auto;
+      }
+
+      .footer-inner {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+    }
+
+    @media (max-width: 480px) {
+
+      .container {
+        width: 90%;
+      }
+
+      h1 {
+        font-size: 44px;
+      }
+
+      .hero-title {
+        font-size: 21px;
+      }
+
+      .hero-buttons {
+        flex-direction: column;
+        align-items: stretch;
+      }
+
+      .btn {
+        width: 100%;
+      }
+
+      .identity-card {
+        padding: 23px;
+      }
+
+      .life-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+
+  </style>
 </head>
 
 <body>
 
-<a class="skip" href="#main">Skip to content</a>
-
-<!-- NAVIGATION -->
-<nav class="navbar">
-  <div class="container nav-inner">
-
-    <a class="brand" href="#top">
-      Mluleki Tsawe
-      <small>Population Health &amp; Demography</small>
-    </a>
-
-    <ul class="nav-links">
-      <li><a href="#research">Research</a></li>
-      <li><a href="#current">Current Work</a></li>
-      <li><a href="#scholarship">Scholarship</a></li>
-      <li><a href="#methods">Methods</a></li>
-      <li><a href="#modules">Modules</a></li>
-      <li><a href="#profile">Profile</a></li>
-      <li><a href="#contact">Contact</a></li>
-    </ul>
-
-  </div>
-</nav>
-
-<main id="main">
-
-<!-- HERO -->
-<header class="hero" id="top">
-  <div class="container hero-grid">
-
-    <div>
-
-      <div class="eyebrow">
-        Population Studies &amp; Demography
-      </div>
-
-      <h1>
-        Dr <span>Mluleki Tsawe</span>
-      </h1>
-
-      <div class="hero-title">
-        Population health across the life course in Sub-Saharan Africa
-      </div>
-
-      <p>
-        Senior Lecturer in the Department of Population Studies and Demography
-        at North-West University. My research examines demographic change,
-        population health, household relationships, household structures, and
-        social inequalities across the life course in Sub-Saharan Africa.
-      </p>
-
-      <div class="buttons">
-        <a class="btn btn-primary" href="#research">
-          Explore my research
-        </a>
-
-        <a class="btn btn-secondary" href="assets/cv.pdf">
-          Download CV
-        </a>
-      </div>
-
-    </div>
-
-    <aside class="identity-card">
-
-      <div class="initials">MT</div>
-
-      <h2>Dr Mluleki Tsawe</h2>
-
-      <div class="identity-role">
-        Senior Lecturer · Population Studies &amp; Demography
-      </div>
-
-      <div class="profile-links">
-
-        <a href="https://humanities.nwu.ac.za/population-studies-and-demography/mluleki-tsawe" target="_blank" rel="noopener">
-          NWU Profile
-        </a>
-
-        <a href="https://orcid.org/0000-0002-0580-5508" target="_blank" rel="noopener">
-          ORCID
-        </a>
-
-        <a href="https://scholar.google.com/citations?user=1L3IWv4AAAAJ&hl=en" target="_blank" rel="noopener">
-          Google Scholar
-        </a>
-
-        <a href="https://www.researchgate.net/profile/Mluleki-Tsawe-2" target="_blank" rel="noopener">
-          ResearchGate
-        </a>
-
-        <a href="https://github.com/MlulekiT" target="_blank" rel="noopener">
-          GitHub
-        </a>
-
-      </div>
-
-    </aside>
-
-  </div>
-</header>
-
-
-<!-- RESEARCH IDENTITY -->
-<section id="research">
-
-  <div class="container">
-
-    <div class="section-heading">
-
-      <div class="kicker">Research Identity</div>
-
-      <h2>
-        Population health through a demographic and life-course lens
-      </h2>
-
-      <p>
-        My research brings together population studies, demography, and
-        population health to understand how demographic processes,
-        relationships, social structures, and inequalities shape health
-        across the life course.
-      </p>
-
-    </div>
-
-    <div class="research-question">
-
-      <strong>Central research question</strong>
-
-      <p>
-        How do demographic processes, household relationships, and social
-        inequalities shape population health across the life course in
-        Sub-Saharan Africa?
-      </p>
-
-    </div>
-
-    <div class="pillars">
-
-      <article class="pillar">
-        <div class="pillar-number">01</div>
-        <h3>Maternal, reproductive &amp; early-life health</h3>
-        <p>
-          Maternal healthcare, sexual and reproductive health, newborn care,
-          childhood health, and early-life population processes.
-        </p>
-      </article>
-
-      <article class="pillar">
-        <div class="pillar-number">02</div>
-        <h3>Health inequalities &amp; utilisation</h3>
-        <p>
-          Social inequalities, healthcare access, and utilisation, disability,
-          vulnerability, and population health outcomes.
-        </p>
-      </article>
-
-      <article class="pillar">
-        <div class="pillar-number">03</div>
-        <h3>Households &amp; population dynamics</h3>
-        <p>
-          Household structure, composition/kinship, family relationships, fertility,
-          mortality, migration, and changing population relationships.
-        </p>
-      </article>
-
-      <article class="pillar">
-        <div class="pillar-number">04</div>
-        <h3>Ageing &amp; healthy longevity</h3>
-        <p>
-          Population ageing, multimorbidity, functional limitation,
-          care dependence, social protection, and healthy longevity.
-        </p>
-      </article>
-
-    </div>
-
-  </div>
-
-</section>
-
-
-<!-- LIFE COURSE -->
-<section class="section-alt">
-
-  <div class="container">
-
-    <div class="section-heading">
-
-      <div class="kicker">Life Course</div>
-
-      <h2>
-        Connecting demographic processes across life stages
-      </h2>
-
-      <p>
-        Rather than treating population health outcomes as isolated events,
-        my work examines how experiences and relationships accumulate,
-        interact and change across the life course.
-      </p>
-
-    </div>
-
-    <div class="life-course">
-
-      <div class="life-stage">Early lLife</div>
-      <div class="life-stage">Adolescence</div>
-      <div class="life-stage">Reproductive adulthood</div>
-      <div class="life-stage">Family formation</div>
-      <div class="life-stage">Later adulthood</div>
-      <div class="life-stage">Older age</div>
-
-    </div>
-
-  </div>
-
-</section>
-
-
-<!-- CURRENT WORK -->
-<section id="current">
-
-  <div class="container">
-
-    <div class="section-heading">
-
-      <div class="kicker">Current Work</div>
-
-      <h2>Research programmes currently taking shape</h2>
-
-      <p>
-        My current research is developing a coherent programme linking
-        sexual and reproductive health, demographic timing, households,
-        composition/kinship, and healthy ageing.
-      </p>
-
-    </div>
-
-    <div class="work-grid">
-
-      <article class="work-card">
-        <h3>Relationship context and contraceptive use</h3>
-        <p>
-          Examining how partnership status, relationship context, and
-          household circumstances shape contraceptive use among adolescent
-          girls and young women.
-        </p>
-      </article>
-
-      <article class="work-card">
-        <h3>Timing of sexual debut</h3>
-        <p>
-          Applying survival and demographic methods to understand
-          differentials in the timing of first sexual intercourse among
-          young people in Southern and Sub-Saharan Africa.
-        </p>
-      </article>
-
-      <article class="work-card">
-        <h3>Pooled SADC analyses</h3>
-        <p>
-          Comparative population-health analyses using harmonised
-          Demographic and Health Survey data across Southern African
-          countries.
-        </p>
-      </article>
-
-      <article class="work-card">
-        <h3>Households, composition/kinship, and healthy ageing</h3>
-        <p>
-          Building a longer-term research programme on older-person
-          households, household/kinship structures, multimorbidity, disability,
-          care dependence and social protection.
-        </p>
-      </article>
-
-    </div>
-
-  </div>
-
-</section>
-
-
-<!-- SCHOLARSHIP -->
-<section class="section-alt" id="scholarship">
-
-  <div class="container">
-
-    <div class="section-heading">
-
-      <div class="kicker">Selected Scholarship</div>
-
-      <h2>Research on population health and demographic inequality</h2>
-
-      <p>
-        Selected publications showing my work across maternal health,
-        population health, gender, and health inequalities in Sub-Saharan Africa.
-        Click any title to access the publication.
-      </p>
-
-    </div>
-
-    <div class="publications">
-
-      <a class="publication"
-         href="https://link.springer.com/article/10.1186/s12939-015-0162-2"
-         target="_blank"
-         rel="noopener">
-
-        <div class="publication-label">
-          Maternal and child health · Swaziland
-        </div>
-
-        <h3>
-          Factors influencing the use of maternal healthcare services and childhood immunization in Swaziland
-        </h3>
-
-        <span>View publication </span>
-
+  <!-- =========================
+       NAVIGATION
+  ========================== -->
+
+  <nav class="nav">
+    <div class="container nav-inner">
+
+      <a href="#top" class="brand">
+        <span class="brand-mark">MT</span>
+        <span>Dr Mluleki Tsawe</span>
       </a>
 
+      <div class="nav-links">
+        <a href="#research">Research</a>
+        <a href="#current-work">Current Work</a>
+        <a href="#scholarship">Scholarship</a>
+        <a href="#methods">Methods</a>
+        <a href="#modules">Teaching</a>
+        <a href="#profile">Profile</a>
+        <a href="#contact">Contact</a>
+      </div>
 
-      <a class="publication"
-         href="https://link.springer.com/article/10.1186/1756-0500-7-723"
-         target="_blank"
-         rel="noopener">
+    </div>
+  </nav>
 
-        <div class="publication-label">
-          Maternal health · South Africa
+
+  <!-- =========================
+       HERO
+  ========================== -->
+
+  <main id="top">
+
+    <section class="hero">
+
+      <div class="container hero-grid">
+
+        <div>
+
+          <div class="eyebrow">
+            Population Studies &amp; Demography
+          </div>
+
+          <h1>Dr Mluleki Tsawe</h1>
+
+          <div class="hero-title">
+            Population Health Across the Life Course in Sub-Saharan Africa
+          </div>
+
+          <p class="hero-description">
+            Senior Lecturer in Population Studies and Demography at North-West University.
+            My research uses demographic evidence, population-health analytics and
+            large-scale survey data to understand health, households and population
+            processes across the life course.
+          </p>
+
+          <div class="hero-buttons">
+
+            <a href="#research" class="btn btn-primary">
+              Explore my research
+            </a>
+
+            <a href="#profile" class="btn btn-secondary">
+              Academic profile
+            </a>
+
+          </div>
+
         </div>
 
-        <h3>
-          Determinants of access to and use of maternal health care services in the Eastern Cape, South Africa: a quantitative and qualitative investigation
-        </h3>
 
-        <span>View publication </span>
+        <aside class="identity-card">
 
-      </a>
+          <div class="initials">
+            MT
+          </div>
+
+          <h3>Dr Mluleki Tsawe</h3>
+
+          <div class="identity-role">
+            Senior Lecturer<br>
+            Department of Population Studies and Demography<br>
+            North-West University
+          </div>
+
+          <div class="identity-links">
+
+            <a href="https://humanities.nwu.ac.za/population-studies-and-demography/mluleki-tsawe"
+               target="_blank"
+               rel="noopener">
+              NWU academic profile ↗
+            </a>
+
+            <a href="https://orcid.org/0000-0002-0580-5508"
+               target="_blank"
+               rel="noopener">
+              ORCID ↗
+            </a>
+
+            <a href="https://scholar.google.com/citations?user=1L3IWv4AAAAJ&hl=en"
+               target="_blank"
+               rel="noopener">
+              Google Scholar ↗
+            </a>
+
+            <a href="https://www.researchgate.net/profile/Mluleki-Tsawe-2"
+               target="_blank"
+               rel="noopener">
+              ResearchGate ↗
+            </a>
+
+            <a href="https://github.com/MlulekiT"
+               target="_blank"
+               rel="noopener">
+              GitHub ↗
+            </a>
+
+          </div>
+
+        </aside>
+
+      </div>
+
+    </section>
 
 
-      <a class="publication"
-         href="https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0276102"
-         target="_blank"
-         rel="noopener">
+    <!-- =========================
+         RESEARCH IDENTITY
+    ========================== -->
 
-        <div class="publication-label">
-          Health inequalities · Maternal healthcare · Sierra Leone
+    <section id="research">
+
+      <div class="container">
+
+        <div class="section-heading">
+
+          <div class="section-label">
+            Research identity
+          </div>
+
+          <h2>
+            Population health through a demographic and life-course lens
+          </h2>
+
+          <p class="section-intro">
+            My research sits at the intersection of population studies, demography
+            and public health, with a particular focus on how demographic structures,
+            household contexts and social inequalities shape health and wellbeing
+            across the life course in Sub-Saharan Africa.
+          </p>
+
         </div>
 
-        <h3>
-          Inequalities in maternal healthcare use in Sierra Leone: Evidence from the 2008–2019 Demographic and Health Surveys
-        </h3>
 
-        <span>View publication </span>
+        <div class="research-question">
 
-      </a>
+          <div class="rq-label">
+            Core question
+          </div>
 
+          <p>
+            How do population processes, social contexts and inequalities shape
+            health and wellbeing across the life course in Sub-Saharan Africa?
+          </p>
 
-      <a class="publication"
-         href="https://journals.sagepub.com/doi/10.1177/08862605251375404"
-         target="_blank"
-         rel="noopener">
-
-        <div class="publication-label">
-          Gender · Population health · South Africa
         </div>
 
-        <h3>
-          Factors Associated with Experiencing Intimate Partner Violence in the 12 Months Preceding the Survey Among Ever-Partnered Women in South Africa
-        </h3>
 
-        <span>View publication </span>
+        <div class="pillars">
 
-      </a>
+          <article class="pillar">
+            <div class="pillar-number">01</div>
+
+            <h3>
+              Maternal, Reproductive &amp; Early-Life Health
+            </h3>
+
+            <p>
+              Maternal healthcare utilisation, sexual and reproductive health,
+              fertility-related behaviour, newborn care and child health.
+            </p>
+          </article>
 
 
-      <a class="publication"
-         href="https://www.ajrh.info/index.php/ajrh/article/view/7158"
-         target="_blank"
-         rel="noopener">
+          <article class="pillar">
+            <div class="pillar-number">02</div>
 
-        <div class="publication-label">
-          Newborn health · Postnatal care · Eswatini
+            <h3>
+              Health Inequalities &amp; Utilisation
+            </h3>
+
+            <p>
+              Social and demographic inequalities in health, healthcare access,
+              service utilisation, disability, chronic conditions and functioning.
+            </p>
+          </article>
+
+
+          <article class="pillar">
+            <div class="pillar-number">03</div>
+
+            <h3>
+              Households &amp; Population Dynamics
+            </h3>
+
+            <p>
+              Household structure, kinship, family formation, intergenerational
+              relationships and changing population contexts.
+            </p>
+          </article>
+
+
+          <article class="pillar">
+            <div class="pillar-number">04</div>
+
+            <h3>
+              Ageing &amp; Healthy Longevity
+            </h3>
+
+            <p>
+              Population ageing, multimorbidity, disability, care dependence,
+              social protection and the social conditions of healthy ageing.
+            </p>
+          </article>
+
         </div>
 
-        <h3>
-          Investigating the individual and contextual factors associated with non-use of newborn postnatal care in Eswatini
-        </h3>
 
-        <span>View publication </span>
+        <div class="life-course">
 
-      </a>
+          <h3>
+            Life-course perspective
+          </h3>
 
-    </div>
+          <div class="life-grid">
 
+            <div class="life-stage">
+              <span>01</span>
+              Early Life
+            </div>
 
-    <div class="metrics">
+            <div class="life-stage">
+              <span>02</span>
+              Adolescence
+            </div>
 
-      <div class="metric">
-        <strong>7</strong>
-        <span>Google Scholar h-index</span>
-      </div>
+            <div class="life-stage">
+              <span>03</span>
+              Reproductive Adulthood
+            </div>
 
-      <div class="metric">
-        <strong>370+</strong>
-        <span>Google Scholar citations</span>
-      </div>
+            <div class="life-stage">
+              <span>04</span>
+              Family Formation
+            </div>
 
-      <div class="metric">
-        <strong>15+</strong>
-        <span>Master's graduates supervised in the recent five-year period</span>
-      </div>
+            <div class="life-stage">
+              <span>05</span>
+              Later Adulthood
+            </div>
 
-    </div>
+            <div class="life-stage">
+              <span>06</span>
+              Older Age
+            </div>
 
-    <div style="margin-top:25px;">
-      <a class="btn btn-secondary"
-         href="https://scholar.google.com/citations?user=1L3IWv4AAAAJ&hl=en"
-         target="_blank"
-         rel="noopener">
-        View Google Scholar profile
-      </a>
-    </div>
-
-  </div>
-
-</section>
-
-
-<!-- METHODS -->
-<section id="methods">
-
-  <div class="container">
-
-    <div class="section-heading">
-
-      <div class="kicker">Methods &amp; Data</div>
-
-      <h2>Demographic evidence, quantitative analysis and reproducible research</h2>
-
-      <p>
-        My methodological approach combines demographic reasoning with
-        population-health analysis, using nationally representative datasets
-        and transparent quantitative workflows.
-      </p>
-
-    </div>
-
-    <div class="methods">
-
-      <article class="method">
-        <h3>Data Sources</h3>
-        <p>
-          Demographic and Health Surveys (DHS), Multiple Indicator Cluster
-          Surveys (MICS), General Household Survey (GHS), population censuses
-          and national household surveys.
-        </p>
-      </article>
-
-      <article class="method">
-        <h3>Statistical Analysis</h3>
-        <p>
-          Survival analysis, multilevel modelling, count regression,
-          demographic estimation, life tables and population-health analytics.
-        </p>
-      </article>
-
-      <article class="method">
-        <h3>Research Tools</h3>
-        <p>
-          Stata, R, SPSS, GIS and open-source demographic tools, with an
-          emphasis on reproducible workflows and careful measurement.
-        </p>
-      </article>
-
-    </div>
-
-  </div>
-
-</section>
-
-
-<!-- MODULES -->
-<section class="section-alt" id="modules">
-
-  <div class="container">
-
-    <div class="section-heading">
-
-      <div class="kicker">Teaching</div>
-
-      <h2>Recent Modules Taught</h2>
-
-      <p>
-        Postgraduate and advanced undergraduate teaching in research methods,
-        population projections and population policy.
-      </p>
-
-    </div>
-
-    <div class="modules">
-
-      <div class="module">
-        <div class="module-code">HPPA515</div>
-        <div class="module-name">Social Research Methods</div>
-      </div>
-
-      <div class="module">
-        <div class="module-code">HPOP617</div>
-        <div class="module-name">Research Methods</div>
-      </div>
-
-      <div class="module">
-        <div class="module-code">HPOP822</div>
-        <div class="module-name">
-          Population Projections with Particular Relevance to Development Planning
-        </div>
-      </div>
-
-      <div class="module">
-        <div class="module-code">HPOP823</div>
-        <div class="module-name">Population Policies</div>
-      </div>
-
-    </div>
-
-  </div>
-
-</section>
-
-
-<!-- PROFILE -->
-<section id="profile">
-
-  <div class="container">
-
-    <div class="section-heading">
-
-      <div class="kicker">Academic Profile</div>
-
-      <h2>Building a coherent programme of population-health research</h2>
-
-      <p>
-        My academic work sits at the intersection of population studies,
-        demography and public health, with a particular interest in African
-        population data and the social structures through which health
-        inequalities are produced and experienced.
-      </p>
-
-    </div>
-
-    <div class="profile-grid">
-
-      <div class="profile-box">
-
-        <h3>Academic Position</h3>
-
-        <p>
-          Senior Lecturer<br>
-          Department of Population Studies and Demography<br>
-          North-West University<br>
-          Mahikeng Campus, South Africa
-        </p>
-
-        <p>
-          <a href="https://humanities.nwu.ac.za/population-studies-and-demography/mluleki-tsawe"
-             target="_blank"
-             rel="noopener">
-            View NWU academic profile
-          </a>
-        </p>
-
-      </div>
-
-
-      <div class="profile-box">
-
-        <h3>Research Focus</h3>
-
-        <p>
-          Population health across the life course in Sub-Saharan Africa,
-          with emphasis on demographic change, households and kinship,
-          ageing, health inequalities, maternal and reproductive health,
-          and demographic measurement.
-        </p>
-
-        <p>
-          <a href="https://orcid.org/0000-0002-0580-5508"
-             target="_blank"
-             rel="noopener">
-            View ORCID profile
-          </a>
-        </p>
-
-      </div>
-
-
-      <div class="profile-box">
-
-        <h3>Academic Networks</h3>
-
-        <p>
-          Research and scholarly profiles are available through Google
-          Scholar, ResearchGate and ORCID.
-        </p>
-
-        <p>
-          <a href="https://scholar.google.com/citations?user=1L3IWv4AAAAJ&hl=en"
-             target="_blank"
-             rel="noopener">
-            Google Scholar
-          </a>
-        </p>
-
-      </div>
-
-
-      <div class="profile-box">
-
-        <h3>Curriculum Vitae</h3>
-
-        <p>
-          For a detailed overview of academic qualifications, research,
-          publications, supervision, teaching and academic activities,
-          download the full curriculum vitae.
-        </p>
-
-        <p>
-          <a href="assets/cv.pdf">
-            Download full CV
-          </a>
-        </p>
-
-      </div>
-
-    </div>
-
-  </div>
-
-</section>
-
-
-<!-- CONTACT -->
-<section class="contact" id="contact">
-
-  <div class="container">
-
-    <div class="section-heading">
-
-      <div class="kicker">Contact</div>
-
-      <h2>Research, collaboration and postgraduate enquiries</h2>
-
-      <p>
-        I welcome research collaboration, postgraduate research enquiries
-        and opportunities to develop population-health research across
-        Africa.
-      </p>
-
-    </div>
-
-    <div class="contact-grid">
-
-      <div class="contact-card">
-
-        <h3>Academic Profile</h3>
-
-        <div class="contact-links">
-
-          <a href="https://humanities.nwu.ac.za/social-sciences/population-studies-and-demography-staff"
-             target="_blank"
-             rel="noopener">
-            NWU Population Studies &amp; Demography
-          </a>
-
-          <a href="https://orcid.org/0000-0002-0580-5508"
-             target="_blank"
-             rel="noopener">
-            ORCID
-          </a>
-
-          <a href="https://scholar.google.com/citations?user=1L3IWv4AAAAJ&hl=en"
-             target="_blank"
-             rel="noopener">
-            Google Scholar
-          </a>
-
-          <a href="https://www.researchgate.net/profile/Mluleki-Tsawe-2"
-             target="_blank"
-             rel="noopener">
-            ResearchGate
-          </a>
-
-          <a href="https://github.com/MlulekiT"
-             target="_blank"
-             rel="noopener">
-            GitHub
-          </a>
+          </div>
 
         </div>
 
       </div>
 
+    </section>
 
-      <div class="contact-card">
 
-        <h3>Institution</h3>
+    <!-- =========================
+         CURRENT WORK
+    ========================== -->
 
-        <p>
-          Dr Mluleki Tsawe<br>
-          Department of Population Studies and Demography<br>
-          North-West University<br>
-          Mahikeng Campus<br>
-          South Africa
-        </p>
+    <section id="current-work" class="section-alt">
 
-        <p style="margin-top:15px;">
-          Research area:<br>
-          <strong>
-            Population health across the life course in Sub-Saharan Africa
-          </strong>
-        </p>
+      <div class="container">
 
+        <div class="section-heading">
+
+          <div class="section-label">
+            Current research
+          </div>
+
+          <h2>
+            Building a coherent research programme
+          </h2>
+
+          <p class="section-intro">
+            Current work develops connected empirical strands around reproductive
+            health, demographic behaviour, households, kinship and healthy ageing.
+            The emphasis is on rigorous analysis of African population data and
+            producing evidence that can inform scholarship, policy and practice.
+          </p>
+
+        </div>
+
+
+        <div class="work-grid">
+
+          <article class="work-card">
+
+            <span class="work-tag">
+              Sexual &amp; reproductive health
+            </span>
+
+            <h3>
+              Relationship Context and Contraceptive Use
+            </h3>
+
+            <p>
+              Examining how partnership context, relationship characteristics
+              and household circumstances shape contraceptive behaviour among
+              adolescent girls and young women in South Africa.
+            </p>
+
+          </article>
+
+
+          <article class="work-card">
+
+            <span class="work-tag">
+              Demographic methods
+            </span>
+
+            <h3>
+              Timing of Sexual Debut
+            </h3>
+
+            <p>
+              Investigating the timing and determinants of sexual initiation
+              using survival analysis and harmonised Demographic and Health
+              Survey data across Southern Africa.
+            </p>
+
+          </article>
+
+
+          <article class="work-card">
+
+            <span class="work-tag">
+              Comparative population health
+            </span>
+
+            <h3>
+              Pooled SADC Analyses
+            </h3>
+
+            <p>
+              Comparative analyses across Southern African countries to identify
+              demographic, socioeconomic and contextual inequalities in population
+              and reproductive health outcomes.
+            </p>
+
+          </article>
+
+
+          <article class="work-card">
+
+            <span class="work-tag">
+              Ageing &amp; households
+            </span>
+
+            <h3>
+              Households, Kinship and Healthy Ageing
+            </h3>
+
+            <p>
+              Developing a research programme on older-person household structure,
+              kinship, multimorbidity, disability, care dependence and social
+              protection in South Africa.
+            </p>
+
+          </article>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- =========================
+         SCHOLARSHIP
+    ========================== -->
+
+    <section id="scholarship">
+
+      <div class="container">
+
+        <div class="section-heading">
+
+          <div class="section-label">
+            Selected scholarship
+          </div>
+
+          <h2>
+            Research grounded in African population data
+          </h2>
+
+          <p class="section-intro">
+            Selected publications illustrating my work across maternal health,
+            reproductive health, inequalities, violence, child health and
+            newborn care.
+          </p>
+
+        </div>
+
+
+        <div class="publication-list">
+
+          <a class="publication"
+             href="https://link.springer.com/article/10.1186/s12939-015-0162-2"
+             target="_blank"
+             rel="noopener">
+
+            <div>
+              <h3>
+                Factors influencing the use of maternal healthcare services and childhood immunization in Swaziland
+              </h3>
+
+              <div class="publication-meta">
+                International Journal for Equity in Health · 2015
+              </div>
+            </div>
+
+            <div class="publication-arrow">↗</div>
+
+          </a>
+
+
+          <a class="publication"
+             href="https://link.springer.com/article/10.1186/1756-0500-7-723"
+             target="_blank"
+             rel="noopener">
+
+            <div>
+              <h3>
+                Determinants of access to and use of maternal health care services in the Eastern Cape, South Africa
+              </h3>
+
+              <div class="publication-meta">
+                BMC Research Notes · 2014
+              </div>
+            </div>
+
+            <div class="publication-arrow">↗</div>
+
+          </a>
+
+
+          <a class="publication"
+             href="https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0276102"
+             target="_blank"
+             rel="noopener">
+
+            <div>
+              <h3>
+                Inequalities in maternal healthcare use in Sierra Leone: Evidence from the 2008–2019 Demographic and Health Surveys
+              </h3>
+
+              <div class="publication-meta">
+                PLOS ONE · 2022
+              </div>
+            </div>
+
+            <div class="publication-arrow">↗</div>
+
+          </a>
+
+
+          <a class="publication"
+             href="https://journals.sagepub.com/doi/10.1177/08862605251375404"
+             target="_blank"
+             rel="noopener">
+
+            <div>
+              <h3>
+                Factors Associated with Experiencing Intimate Partner Violence in the 12 Months Preceding the Survey Among Ever-Partnered Women in South Africa
+              </h3>
+
+              <div class="publication-meta">
+                Journal of Interpersonal Violence · 2025
+              </div>
+            </div>
+
+            <div class="publication-arrow">↗</div>
+
+          </a>
+
+
+          <a class="publication"
+             href="https://www.ajrh.info/index.php/ajrh/article/view/7158"
+             target="_blank"
+             rel="noopener">
+
+            <div>
+              <h3>
+                Investigating the individual and contextual factors associated with non-use of newborn postnatal care in Eswatini
+              </h3>
+
+              <div class="publication-meta">
+                African Journal of Reproductive Health · 2026
+              </div>
+            </div>
+
+            <div class="publication-arrow">↗</div>
+
+          </a>
+
+        </div>
+
+
+        <div class="metrics">
+
+          <div class="metric">
+
+            <div class="metric-number">
+              6
+            </div>
+
+            <div class="metric-label">
+              Google Scholar h-index
+            </div>
+
+          </div>
+
+
+          <div class="metric">
+
+            <div class="metric-number">
+              370+
+            </div>
+
+            <div class="metric-label">
+              Google Scholar citations
+            </div>
+
+          </div>
+
+
+          <div class="metric">
+
+            <div class="metric-number">
+              13
+            </div>
+
+            <div class="metric-label">
+              Master's graduates supervised in the recent five-year period
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- =========================
+         METHODS
+    ========================== -->
+
+    <section id="methods" class="section-alt">
+
+      <div class="container">
+
+        <div class="section-heading">
+
+          <div class="section-label">
+            Methods &amp; data
+          </div>
+
+          <h2>
+            Demographic evidence, quantitative methods and reproducible analysis
+          </h2>
+
+          <p class="section-intro">
+            My methodological approach combines demographic reasoning with
+            quantitative population-health analysis, with particular emphasis
+            on African survey and census data.
+          </p>
+
+        </div>
+
+
+        <div class="methods-grid">
+
+          <article class="method-card">
+
+            <div class="method-icon">
+              D
+            </div>
+
+            <h3>
+              Population data
+            </h3>
+
+            <p>
+              Large-scale population and health datasets provide the empirical
+              foundation for comparative and country-specific analyses.
+            </p>
+
+            <ul class="method-list">
+              <li>Demographic and Health Surveys</li>
+              <li>Multiple Indicator Cluster Surveys</li>
+              <li>General Household Survey</li>
+              <li>Population Census</li>
+              <li>National household surveys</li>
+            </ul>
+
+          </article>
+
+
+          <article class="method-card">
+
+            <div class="method-icon">
+              Q
+            </div>
+
+            <h3>
+              Statistical analysis
+            </h3>
+
+            <p>
+              Quantitative methods are selected according to the demographic
+              structure of the outcome and the research question.
+            </p>
+
+            <ul class="method-list">
+              <li>Multilevel modelling</li>
+              <li>Survival analysis</li>
+              <li>Count regression</li>
+              <li>Demographic estimation</li>
+              <li>Population-health analytics</li>
+            </ul>
+
+          </article>
+
+
+          <article class="method-card">
+
+            <div class="method-icon">
+              R
+            </div>
+
+            <h3>
+              Research tools
+            </h3>
+
+            <p>
+              Analysis and research workflows combine established statistical
+              software with open-source tools and reproducible practices.
+            </p>
+
+            <ul class="method-list">
+              <li>Stata</li>
+              <li>R</li>
+              <li>SPSS</li>
+              <li>SAS</li>
+              <li>GIS and demographic tools</li>
+            </ul>
+
+          </article>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- =========================
+         MODULES
+    ========================== -->
+
+    <section id="modules">
+
+      <div class="container">
+
+        <div class="section-heading">
+
+          <div class="section-label">
+            Teaching
+          </div>
+
+          <h2>
+            Recent postgraduate and population studies teaching
+          </h2>
+
+          <p class="section-intro">
+            Teaching connects demographic theory, research methods, population
+            data and development planning, with an emphasis on applied analysis.
+          </p>
+
+        </div>
+
+
+        <table class="module-table">
+
+          <thead>
+            <tr>
+              <th>Module</th>
+              <th>Focus</th>
+              <th>Recent teaching</th>
+            </tr>
+          </thead>
+
+          <tbody>
+
+            <tr>
+              <td class="module-code">HPPA 515</td>
+              <td>
+                Basic Research Methods in Population Studies
+              </td>
+              <td>
+                2026
+              </td>
+            </tr>
+
+            <tr>
+              <td class="module-code">HPOP 617</td>
+              <td>
+                Research Methods
+              </td>
+              <td>
+                2026
+              </td>
+            </tr>
+
+            <tr>
+              <td class="module-code">HPOP 822</td>
+              <td>
+                Population Projections with Particular Relevance to Development Planning
+              </td>
+              <td>
+                2026
+              </td>
+            </tr>
+
+            <tr>
+              <td class="module-code">HPOP 823</td>
+              <td>
+                Population Policies Relevant to Population Processes and Strategies of Development
+              </td>
+              <td>
+                Recent
+              </td>
+            </tr>
+
+          </tbody>
+
+        </table>
+
+      </div>
+
+    </section>
+
+
+    <!-- =========================
+         ACADEMIC PROFILE
+    ========================== -->
+
+    <section id="profile" class="section-alt">
+
+      <div class="container">
+
+        <div class="profile-grid">
+
+          <div class="profile-copy">
+
+            <div class="section-label">
+              Academic profile
+            </div>
+
+            <h2>
+              Demographer, population-health researcher and educator
+            </h2>
+
+            <p>
+              I am a Senior Lecturer in the Department of Population Studies
+              and Demography at North-West University, Mahikeng Campus.
+            </p>
+
+            <p>
+              My academic work focuses on the relationship between population
+              dynamics, demographic behaviour, household contexts and population
+              health in Sub-Saharan Africa. I work primarily with secondary
+              population and health datasets, using quantitative demographic
+              and statistical methods to generate evidence on health inequalities,
+              service utilisation, reproductive health, households and ageing.
+            </p>
+
+            <p>
+              I also contribute to postgraduate research supervision, examination,
+              research coordination and academic programme development. I lead
+              the Population Dynamics sub-programme within the Population and
+              Health Research Entity at North-West University.
+            </p>
+
+
+            <div class="cv-box">
+
+              <h3>
+                Full academic CV
+              </h3>
+
+              <p>
+                For complete details on education, employment, publications,
+                supervision, examination, teaching and academic service,
+                please download the full academic CV.
+              </p>
+
+              <!--
+                Replace the href below with the filename of your CV
+                after uploading it to the GitHub repository.
+
+                Example:
+                href="Dr-Mluleki-Tsawe-Academic-CV.pdf"
+              -->
+
+              <a href="Dr-Mluleki-Tsawe-Academic-CV.pdf"
+                 class="btn btn-primary"
+                 target="_blank"
+                 rel="noopener">
+                Download full academic CV
+              </a>
+
+            </div>
+
+          </div>
+
+
+          <div class="profile-facts">
+
+            <div class="fact">
+
+              <span class="fact-label">
+                Current position
+              </span>
+
+              <div class="fact-value">
+                Senior Lecturer, North-West University
+              </div>
+
+            </div>
+
+
+            <div class="fact">
+
+              <span class="fact-label">
+                Department
+              </span>
+
+              <div class="fact-value">
+                Population Studies and Demography
+              </div>
+
+            </div>
+
+
+            <div class="fact">
+
+              <span class="fact-label">
+                Research entity
+              </span>
+
+              <div class="fact-value">
+                Population and Health Research Entity
+              </div>
+
+            </div>
+
+
+            <div class="fact">
+
+              <span class="fact-label">
+                Leadership
+              </span>
+
+              <div class="fact-value">
+                Population Dynamics sub-programme
+              </div>
+
+            </div>
+
+
+            <div class="fact">
+
+              <span class="fact-label">
+                PhD
+              </span>
+
+              <div class="fact-value">
+                Population Studies, University of the Western Cape
+              </div>
+
+            </div>
+
+
+            <div class="fact">
+
+              <span class="fact-label">
+                Core analytical approach
+              </span>
+
+              <div class="fact-value">
+                Demography · Population Health · Quantitative Methods
+              </div>
+
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- =========================
+         CONTACT
+    ========================== -->
+
+    <section id="contact" class="contact">
+
+      <div class="container contact-grid">
+
+        <div>
+
+          <div class="section-label">
+            Contact
+          </div>
+
+          <h2>
+            Research, collaboration and postgraduate enquiries
+          </h2>
+
+          <p class="contact-intro">
+            I welcome research collaboration, postgraduate research enquiries,
+            scholarly engagement and opportunities that contribute to population
+            and health research in Africa.
+          </p>
+
+
+          <div class="profile-links">
+
+            <a href="https://humanities.nwu.ac.za/population-studies-and-demography/mluleki-tsawe"
+               target="_blank"
+               rel="noopener">
+              NWU Profile
+            </a>
+
+            <a href="https://orcid.org/0000-0002-0580-5508"
+               target="_blank"
+               rel="noopener">
+              ORCID
+            </a>
+
+            <a href="https://scholar.google.com/citations?user=1L3IWv4AAAAJ&hl=en"
+               target="_blank"
+               rel="noopener">
+              Google Scholar
+            </a>
+
+            <a href="https://www.researchgate.net/profile/Mluleki-Tsawe-2"
+               target="_blank"
+               rel="noopener">
+              ResearchGate
+            </a>
+
+            <a href="https://github.com/MlulekiT"
+               target="_blank"
+               rel="noopener">
+              GitHub
+            </a>
+
+          </div>
+
+        </div>
+
+
+        <div class="contact-details">
+
+          <div class="contact-item">
+
+            <span class="contact-label">
+              Institution
+            </span>
+
+            North-West University · Mahikeng Campus
+
+          </div>
+
+
+          <div class="contact-item">
+
+            <span class="contact-label">
+              Department
+            </span>
+
+            Department of Population Studies and Demography
+
+          </div>
+
+
+          <div class="contact-item">
+
+            <span class="contact-label">
+              Email
+            </span>
+
+            <a href="mailto:Mluleki.Tsawe@nwu.ac.za">
+              Mluleki.Tsawe@nwu.ac.za
+            </a>
+
+          </div>
+
+
+          <div class="contact-item">
+
+            <span class="contact-label">
+              Telephone
+            </span>
+
+            <a href="tel:+27183892426">
+              +27 (0)18 389 2426
+            </a>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </section>
+
+  </main>
+
+
+  <!-- =========================
+       FOOTER
+  ========================== -->
+
+  <footer>
+
+    <div class="container footer-inner">
+
+      <div>
+        © 2026 Dr Mluleki Tsawe
+      </div>
+
+      <div>
+        Population Studies &amp; Demography · North-West University
       </div>
 
     </div>
 
-  </div>
-
-</section>
-
-</main>
-
-
-<!-- FOOTER -->
-<footer>
-
-  <div class="container footer-inner">
-
-    <div>
-      <div class="footer-name">Dr Mluleki Tsawe</div>
-
-      <div class="footer-sub">
-        Population health across the life course in Sub-Saharan Africa
-      </div>
-    </div>
-
-    <div class="footer-copy">
-      &copy; 2026 Dr Mluleki Tsawe
-    </div>
-
-  </div>
-
-</footer>
+  </footer>
 
 </body>
 </html>
