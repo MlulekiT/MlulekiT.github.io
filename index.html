@@ -16,12 +16,36 @@
         content="Population health across the life course in Sub-Saharan Africa.">
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://mlulekit.github.io/">
+  <meta property="og:image" content="https://humanities.nwu.ac.za/sites/humanities.nwu.ac.za/files/files/staff/Mluleki-5.png">
+  <meta name="twitter:card" content="summary">
+  <meta name="theme-color" content="#6c3d91">
+  <link rel="canonical" href="https://mlulekit.github.io/">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%236c3d91'/%3E%3Ctext x='32' y='42' font-family='Georgia,serif' font-size='28' font-weight='700' text-anchor='middle' fill='white'%3EMT%3C/text%3E%3C/svg%3E">
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
   <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap"
         rel="stylesheet">
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "Mluleki Tsawe",
+    "honorificPrefix": "Dr",
+    "jobTitle": "Senior Lecturer in Population Studies and Demography",
+    "affiliation": { "@type": "CollegeOrUniversity", "name": "North-West University" },
+    "url": "https://mlulekit.github.io/",
+    "identifier": "https://orcid.org/0000-0002-0580-5508",
+    "sameAs": [
+      "https://orcid.org/0000-0002-0580-5508",
+      "https://scholar.google.com/citations?user=1L3IWv4AAAAJ",
+      "https://www.researchgate.net/profile/Mluleki-Tsawe-2",
+      "https://www.linkedin.com/in/dr-mluleki-tsawe-8969ab155"
+    ]
+  }
+  </script>
 
   <style>
 
@@ -1620,6 +1644,64 @@
       }
     }
 
+
+    /* Selected publications */
+    .pubs { margin-top: 72px; }
+    .pubs-head { display: flex; justify-content: space-between; align-items: baseline; gap: 16px; flex-wrap: wrap; margin-bottom: 28px; }
+    .pubs-head h3 { font-family: 'Playfair Display', serif; font-size: 1.7rem; margin: 0; color: var(--ink); }
+    .pubs-head a { color: var(--purple); font-weight: 600; text-decoration: none; }
+    .pubs-head a:hover { text-decoration: underline; }
+    .pub-book { background: var(--purple-light); border-left: 5px solid var(--purple); border-radius: var(--radius); padding: 26px 30px; margin-bottom: 28px; }
+    .pub-kicker { font-size: .78rem; letter-spacing: .08em; text-transform: uppercase; font-weight: 700; color: var(--purple); margin-bottom: 8px; }
+    .pub-book h4 { font-family: 'Playfair Display', serif; font-size: 1.35rem; margin: 0 0 8px; color: var(--ink); }
+    .pub-book p { margin: 0 0 12px; color: var(--muted); }
+    .pub-list { list-style: none; margin: 0; padding: 0; }
+    .pub-item { display: grid; grid-template-columns: 76px 1fr; gap: 20px; padding: 22px 0; border-top: 1px solid var(--border); }
+    .pub-year { font-family: 'Playfair Display', serif; font-weight: 700; font-size: 1.2rem; color: var(--turquoise); }
+    .pub-title { font-weight: 600; color: var(--ink); line-height: 1.45; margin: 0 0 6px; }
+    .pub-meta { color: var(--muted); font-size: .95rem; margin: 0 0 8px; }
+    .pub-meta strong { color: var(--ink); }
+    .pub-link { color: var(--purple); font-weight: 600; font-size: .92rem; text-decoration: none; }
+    .pub-link:hover { text-decoration: underline; }
+    @media (max-width: 760px) { .pub-item { grid-template-columns: 1fr; gap: 6px; } .pub-book { padding: 22px; } }
+
+    /* Mentoring & service */
+    .supervision-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 24px; }
+    .supervision-card { background: var(--white); border: 1px solid var(--border); border-radius: var(--radius); padding: 32px; box-shadow: var(--shadow-small); position: relative; overflow: hidden; }
+    .supervision-card::before { content: ""; position: absolute; top: 0; left: 0; width: 5px; height: 100%; background: var(--purple); }
+    .supervision-card:nth-child(2)::before { background: var(--turquoise); }
+    .supervision-card h3 { font-family: "Playfair Display", serif; font-size: 22px; line-height: 1.3; margin-bottom: 12px; color: var(--purple-dark); }
+    .supervision-card p { color: var(--muted); font-size: 14px; margin-bottom: 18px; }
+    .service-list { list-style: none; }
+    .service-list li { display: flex; justify-content: space-between; align-items: center; gap: 14px; flex-wrap: wrap; padding: 12px 0; border-top: 1px solid var(--border); font-size: 14px; color: var(--ink); }
+    .service-tag { background: var(--purple-light); color: var(--purple); font-size: 11px; font-weight: 700; padding: 4px 10px; border-radius: 999px; letter-spacing: .03em; white-space: nowrap; }
+    .supervision-card:nth-child(2) .service-tag { background: var(--turquoise-light); color: var(--turquoise); }
+
+    /* Polish */
+    body { -webkit-font-smoothing: antialiased; text-rendering: optimizeLegibility; }
+    ::selection { background: var(--purple); color: var(--white); }
+    :focus-visible { outline: 3px solid var(--turquoise); outline-offset: 3px; border-radius: 6px; }
+    .nav-links a { white-space: nowrap; position: relative; padding: 4px 0; }
+    .nav-links a::after { content: ""; position: absolute; left: 0; bottom: -2px; width: 100%; height: 2px; background: var(--gold); transform: scaleX(0); transform-origin: left; transition: transform .2s ease; }
+    .nav-links a:hover::after { transform: scaleX(1); }
+    .identity-card, .work-card, .method-card, .supervision-card, .fact { transition: transform .2s ease, box-shadow .2s ease; }
+    .work-card:hover, .method-card:hover, .supervision-card:hover { transform: translateY(-3px); box-shadow: var(--shadow); }
+    .pub-item { transition: background .2s ease; }
+    .pub-item:hover { background: linear-gradient(90deg, var(--light), transparent); }
+    .pub-book { box-shadow: var(--shadow-small); }
+    .scholarship-links a { transition: transform .2s ease, border-color .2s ease; }
+    .scholarship-links a:hover { transform: translateX(3px); }
+    .cv-box { box-shadow: var(--shadow-small); }
+    @media (max-width: 1100px) { .nav-links { gap: 15px; font-size: 12px; } .brand span:last-child { font-size: 14px; } }
+    @media (max-width: 950px) { .supervision-grid { grid-template-columns: 1fr; } }
+    @media (max-width: 760px) {
+      .nav-inner { flex-wrap: wrap; gap: 0; padding-top: 10px; }
+      .nav-links { display: flex !important; width: 100%; overflow-x: auto; gap: 20px; padding: 10px 0 12px; font-size: 13px; scrollbar-width: none; }
+      .nav-links::-webkit-scrollbar { display: none; }
+      .supervision-card { padding: 26px; }
+      section { scroll-margin-top: 112px; }
+    }
+    @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } *, *::before, *::after { transition: none !important; animation: none !important; } }
   </style>
 </head>
 
@@ -1655,6 +1737,8 @@
         <a href="#methods">Methods</a>
 
         <a href="#teaching">Teaching</a>
+
+        <a href="#mentoring">Mentoring &amp; Service</a>
 
         <a href="#profile">Profile</a>
 
@@ -1762,6 +1846,19 @@
               target="_blank"
               rel="noopener">
               ResearchGate
+            </a>
+
+
+            <a
+
+              href="https://orcid.org/0000-0002-0580-5508"
+
+              target="_blank"
+
+              rel="noopener">
+
+              ORCID
+
             </a>
 
             <a
@@ -2313,8 +2410,30 @@
               </a>
 
 
+
               <a
-                href="https://humanities.nwu.ac.za/social-sciences/population-studies-and-demography-staff"
+
+
+                href="https://orcid.org/0000-0002-0580-5508"
+
+
+                target="_blank"
+
+
+                rel="noopener">
+
+
+                <span>ORCID</span>
+
+
+                <span>↗</span>
+
+
+              </a>
+
+
+              <a
+                href="https://humanities.nwu.ac.za/population-studies-and-demography/mluleki-tsawe"
                 target="_blank"
                 rel="noopener">
 
@@ -2327,6 +2446,62 @@
 
           </aside>
 
+
+        </div>
+
+        <div class="pubs" id="publications">
+
+          <div class="pubs-head">
+            <h3>Selected publications</h3>
+            <a href="https://scholar.google.com/citations?user=1L3IWv4AAAAJ&hl=en" target="_blank" rel="noopener">Full list on Google Scholar ↗</a>
+          </div>
+
+          <div class="pub-book">
+            <div class="pub-kicker">Edited book</div>
+            <h4>Reproductive health issues among young people in southern Africa</h4>
+            <p>Edited by Karabo Mhele, Mluleki Tsawe and Martin E. Palamuleni. AOSIS Books.</p>
+            <a class="pub-link" href="https://books.aosis.co.za/index.php/ob/catalog/book/374" target="_blank" rel="noopener">View book ↗</a>
+          </div>
+
+          <ul class="pub-list">
+
+            <li class="pub-item">
+              <div class="pub-year">2024</div>
+              <div>
+                <p class="pub-title">Determinants of self-reported chronic disease diagnoses among older persons in South Africa</p>
+                <p class="pub-meta">Temane MD, Mbele SK, <strong>Tsawe M</strong>. <em>African Journal of Primary Health Care &amp; Family Medicine</em> 16(1): a4425.</p>
+                <a class="pub-link" href="https://doi.org/10.4102/phcfm.v16i1.4425" target="_blank" rel="noopener">DOI ↗</a>
+              </div>
+            </li>
+
+            <li class="pub-item">
+              <div class="pub-year">2022</div>
+              <div>
+                <p class="pub-title">Inequalities in maternal healthcare use in Sierra Leone: Evidence from the 2008–2019 Demographic and Health Surveys</p>
+                <p class="pub-meta"><strong>Tsawe M</strong>, Susuman AS. <em>PLoS ONE</em> 17(10): e0276102.</p>
+                <a class="pub-link" href="https://doi.org/10.1371/journal.pone.0276102" target="_blank" rel="noopener">DOI ↗</a>
+              </div>
+            </li>
+
+            <li class="pub-item">
+              <div class="pub-year">2020</div>
+              <div>
+                <p class="pub-title">Examining inequality of opportunity in the use of maternal and reproductive health interventions in Sierra Leone</p>
+                <p class="pub-meta"><strong>Tsawe M</strong>, Susuman AS. <em>Journal of Public Health</em> 42(2): 254–261.</p>
+                <a class="pub-link" href="https://academic.oup.com/jpubhealth/article-abstract/42/2/254/5374488" target="_blank" rel="noopener">Article ↗</a>
+              </div>
+            </li>
+
+            <li class="pub-item">
+              <div class="pub-year">2015</div>
+              <div>
+                <p class="pub-title">Factors influencing the use of maternal healthcare services and childhood immunization in Swaziland</p>
+                <p class="pub-meta"><strong>Tsawe M</strong>, Moto A, Netshivhera T, Ralesego L, et al. <em>International Journal for Equity in Health</em>.</p>
+                <a class="pub-link" href="https://doi.org/10.1186/s12939-015-0162-1" target="_blank" rel="noopener">DOI ↗</a>
+              </div>
+            </li>
+
+          </ul>
 
         </div>
 
@@ -2583,6 +2758,56 @@
 
 
     <!-- =====================================================
+         MENTORING & SERVICE
+    ====================================================== -->
+
+    <section id="mentoring" class="section-alt">
+
+      <div class="container">
+
+        <div class="section-heading">
+          <div class="section-label">Academic leadership &amp; service</div>
+          <h2>Postgraduate supervision and editorial contributions</h2>
+          <p class="section-intro">
+            Active involvement in mentoring the next generation of demographic researchers and contributing to peer-reviewed academic publishing and community standards.
+          </p>
+        </div>
+
+        <div class="supervision-grid">
+
+          <article class="supervision-card">
+            <h3>Postgraduate supervision &amp; mentoring</h3>
+            <p>
+              As coordinator of departmental postgraduate research activities at North-West University, I actively guide master’s and doctoral candidates through rigorous population studies research.
+            </p>
+            <ul class="service-list">
+              <li><span>Current PhD supervision / co-supervision</span> <span class="service-tag">4 candidates</span></li>
+              <li><span>Completed Master’s &amp; PhD supervision</span> <span class="service-tag">19 graduates</span></li>
+              <li><span>External examination (UWC, Wits, UKZN)</span> <span class="service-tag">Active examiner</span></li>
+            </ul>
+          </article>
+
+          <article class="supervision-card">
+            <h3>Editorial &amp; peer review service</h3>
+            <p>
+              Contributing to global public health and demographic scholarship through editorial leadership and ad hoc reviews for accredited academic journals.
+            </p>
+            <ul class="service-list">
+              <li><span>Journal editorial activities (Associate Editor)</span> <span class="service-tag">Reproductive Health</span></li>
+              <li><span>Ad hoc peer reviewer (global health &amp; equity)</span> <span class="service-tag">7+ journals</span></li>
+              <li><span>Methodological &amp; policy review standards</span> <span class="service-tag">Active</span></li>
+            </ul>
+          </article>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+
+    <!-- =====================================================
          PROFILE
     ====================================================== -->
 
@@ -2810,6 +3035,25 @@
             </a>
 
 
+
+            <a
+
+
+              href="https://orcid.org/0000-0002-0580-5508"
+
+
+              target="_blank"
+
+
+              rel="noopener">
+
+
+              ORCID
+
+
+            </a>
+
+
             <a
               href="https://www.linkedin.com/in/dr-mluleki-tsawe-8969ab155"
               target="_blank"
@@ -2909,6 +3153,7 @@
     </div>
 
   </footer>
+
 
 
 </body>
