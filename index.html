@@ -184,14 +184,13 @@
 
 
     /* =========================================================
-       HERO (PADDING REDUCED HERE)
+       HERO
     ========================================================= */
 
     .hero {
       position: relative;
       overflow: hidden;
 
-      /* Top padding reduced from 105px to 40px to eliminate top gap */
       padding: 40px 0 100px;
 
       background:
@@ -269,14 +268,49 @@
       margin-bottom: 24px;
     }
 
+    .hero-lead {
+      font-size: 19px;
+      font-weight: 500;
+      color: var(--ink);
+      margin-bottom: 20px;
+    }
+
     .hero-description {
       max-width: 760px;
 
-      font-size: 18px;
+      font-size: 17px;
 
       color: var(--muted);
 
+      margin-bottom: 28px;
+    }
+
+    .hero-quote-box {
       margin-bottom: 34px;
+      padding: 18px 22px;
+      border-left: 4px solid var(--purple);
+      background: var(--purple-light);
+      border-radius: 0 12px 12px 0;
+      font-style: italic;
+      color: var(--purple-deep);
+      font-size: 15px;
+    }
+
+    .hero-identity-pills {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin-bottom: 34px;
+    }
+
+    .hero-pill {
+      font-size: 12px;
+      font-weight: 600;
+      padding: 6px 12px;
+      border-radius: 8px;
+      background: var(--light);
+      border: 1px solid var(--border);
+      color: var(--purple-dark);
     }
 
     .hero-buttons {
@@ -754,7 +788,6 @@
       text-transform: uppercase;
     }
 
-    /* Styling for the stage cards */
     .stage-card {
       border-radius: 12px;
       padding: 1.5rem;
@@ -762,13 +795,11 @@
       color: #1e293b;
     }
 
-    /* Hover effect */
     .stage-card:hover {
       transform: translateY(-4px);
       box-shadow: 0 10px 20px rgba(0,0,0,0.08);
     }
 
-    /* Individual Stage Colors (Soft Pastel Gradients) */
     .stage-01 { background: linear-gradient(135deg, #e0f2fe 0%, #bae6fd 100%); border: 1px solid #7dd3fc; }
     .stage-02 { background: linear-gradient(135deg, #fce7f3 0%, #fbcfe8 100%); border: 1px solid #f472b6; }
     .stage-03 { background: linear-gradient(135deg, #fef3c7 0%, #fde68a 100%); border: 1px solid #fbbf24; }
@@ -776,7 +807,6 @@
     .stage-05 { background: linear-gradient(135deg, #f3e8ff 0%, #e9d5ff 100%); border: 1px solid #c084fc; }
     .stage-06 { background: linear-gradient(135deg, #ffedd5 0%, #fed7aa 100%); border: 1px solid #fb923c; }
 
-    /* Stage Label Colors */
     .stage-card .stage-label {
       font-weight: 700;
       letter-spacing: 0.05em;
@@ -1066,25 +1096,47 @@
 
 
     /* =========================================================
-       METHODS
+       METHODS (RESTRUCTURED TWO-COLUMN LAYOUT)
     ========================================================= */
 
     .methods-grid {
       display: grid;
 
-      grid-template-columns: repeat(3, 1fr);
+      grid-template-columns: repeat(2, 1fr);
 
-      gap: 20px;
+      gap: 30px;
     }
 
     .method-card {
-      padding: 30px;
+      padding: 35px;
 
       border-radius: var(--radius);
 
       background: var(--white);
 
       border: 1px solid var(--border);
+      
+      box-shadow: var(--shadow-small);
+      
+      display: flex;
+      flex-direction: column;
+      
+      position: relative;
+      overflow: hidden;
+    }
+
+    .method-card::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 5px;
+      height: 100%;
+      background: var(--purple);
+    }
+
+    .method-card:nth-child(2)::before {
+      background: var(--turquoise);
     }
 
     .method-icon {
@@ -1096,17 +1148,22 @@
       display: grid;
       place-items: center;
 
-      background: var(--turquoise-light);
+      background: var(--purple-light);
 
-      color: var(--turquoise);
+      color: var(--purple);
 
       font-weight: 700;
 
       margin-bottom: 19px;
     }
 
+    .method-card:nth-child(2) .method-icon {
+      background: var(--turquoise-light);
+      color: var(--turquoise);
+    }
+
     .method-card h3 {
-      font-size: 18px;
+      font-size: 20px;
 
       margin-bottom: 11px;
     }
@@ -1115,20 +1172,37 @@
       color: var(--muted);
 
       font-size: 14px;
+      
+      margin-bottom: 20px;
     }
 
     .method-list {
-      margin-top: 15px;
-
-      padding-left: 18px;
+      list-style: none;
+      padding-left: 0;
 
       color: var(--muted);
 
       font-size: 13px;
+      
+      margin-top: auto;
     }
 
     .method-list li {
-      margin-bottom: 5px;
+      margin-bottom: 12px;
+      padding-bottom: 12px;
+      border-bottom: 1px dashed var(--border);
+    }
+    
+    .method-list li:last-child {
+      margin-bottom: 0;
+      padding-bottom: 0;
+      border-bottom: none;
+    }
+
+    .method-list strong {
+      color: var(--ink);
+      display: inline-block;
+      margin-right: 4px;
     }
 
 
@@ -1179,6 +1253,7 @@
       overflow: hidden;
 
       border: 1px solid var(--border);
+      margin-top: 40px;
     }
 
     .module-table th,
@@ -1216,6 +1291,27 @@
       color: var(--purple);
 
       white-space: nowrap;
+    }
+
+    .teaching-philosophy {
+      margin-top: 50px;
+      padding: 34px;
+      border-radius: var(--radius);
+      background: var(--purple-light);
+      border: 1px solid #dfd2e8;
+    }
+
+    .teaching-philosophy h3 {
+      font-family: "Playfair Display", serif;
+      font-size: 24px;
+      margin-bottom: 15px;
+      color: var(--purple-dark);
+    }
+
+    .teaching-philosophy p {
+      color: #5d5265;
+      font-size: 15px;
+      margin-bottom: 15px;
     }
 
 
@@ -1343,6 +1439,7 @@
       max-width: 600px;
 
       font-size: 17px;
+      margin-bottom: 25px;
     }
 
     .contact-details {
@@ -1480,7 +1577,7 @@
       }
 
       .methods-grid {
-        grid-template-columns: 1fr 1fr;
+        grid-template-columns: 1fr;
       }
 
       .profile-grid,
@@ -1655,7 +1752,7 @@
     @media (max-width: 760px) { .pub-item { grid-template-columns: 1fr; gap: 6px; } .pub-book { padding: 22px; } }
 
     /* Mentoring & service */
-    .supervision-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 24px; }
+    .supervision-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 24px; margin-top: 40px; }
     .supervision-card { background: var(--white); border: 1px solid var(--border); border-radius: var(--radius); padding: 32px; box-shadow: var(--shadow-small); position: relative; overflow: hidden; }
     .supervision-card::before { content: ""; position: absolute; top: 0; left: 0; width: 5px; height: 100%; background: var(--purple); }
     .supervision-card:nth-child(2)::before { background: var(--turquoise); }
@@ -1668,6 +1765,24 @@
 
     a.service-tag { transition: background .2s ease, color .2s ease; }
     a.service-tag:hover { background: var(--turquoise); color: var(--white); }
+
+    .mentoring-principle {
+      margin-top: 40px;
+      padding: 34px;
+      border-radius: var(--radius);
+      background: var(--purple-light);
+      border: 1px solid #dfd2e8;
+    }
+    .mentoring-principle h3 {
+      font-family: "Playfair Display", serif;
+      font-size: 22px;
+      margin-bottom: 12px;
+      color: var(--purple-dark);
+    }
+    .mentoring-principle p {
+      color: #5d5265;
+      font-size: 15px;
+    }
 
     /* Polish */
     body { -webkit-font-smoothing: antialiased; text-rendering: optimizeLegibility; }
@@ -1747,13 +1862,23 @@
 <div class="hero-title">
             Population health across the life course in Sub-Saharan Africa
           </div>
-<p class="hero-description">
-            Senior Lecturer in Population Studies and Demography at
-            North-West University. My research uses demographic evidence,
-            population-health analytics, and large-scale survey data to
-            understand health, households, and population processes across
-            the life course.
+<p class="hero-lead">
+            I am a population scientist interested in how population change, social inequalities, households and health intersect across the life course.
           </p>
+<p class="hero-description">
+            My research uses demographic evidence and large-scale population data to understand population health, health inequalities and demographic processes across Sub-Saharan Africa; this includes maternal and reproductive health and early-life outcomes to adult health, ageing, disability, and healthy longevity.
+          </p>
+<div class="hero-identity-pills">
+<span class="hero-pill">Demography</span>
+<span class="hero-pill">Population health</span>
+<span class="hero-pill">Health inequalities</span>
+<span class="hero-pill">Households &amp; families</span>
+<span class="hero-pill">Ageing</span>
+<span class="hero-pill">Population dynamics</span>
+</div>
+<div class="hero-quote-box">
+            My work is grounded in the idea that health cannot be understood independently of the populations, households, and demographic contexts in which people live.
+          </div>
 <div class="hero-buttons">
 <a class="btn btn-primary" href="#research">
               Explore my research
@@ -1995,29 +2120,42 @@
             Current work
           </div>
 <h2>
-            Questions shaping the next phase of the programme
+            Questions shaping the next phase of the research programme
           </h2>
 <p class="section-intro">
-            Current work increasingly connects population structure,
-            household relationships and health across the life course,
-            with a particular focus on South Africa and Sub-Saharan Africa.
+            My current work examines how population change, household relationships and health interact across the life course. The themes below are connected rather than separate areas of research: demographic change shapes household structures; households and kinship organise care, resources and vulnerability; and these social contexts influence health, disability and ageing.
+          </p>
+<p style="margin-top: 12px; color: var(--muted); font-size: 15px;">
+            This programme brings together demography, population health and household analysis to understand how people experience demographic and health transitions within changing social environments, with a particular focus on South Africa and Sub-Saharan Africa.
           </p>
 </div>
 <div class="work-grid">
 <article class="work-card">
 <span class="work-tag">
-              Ageing
+              Population dynamics
             </span>
 <h3>
-              Ageing beyond the individual
+              Population structure &amp; African data
             </h3>
 <p>
-              Examining older people within the households and kinship
-              systems in which care, support, vulnerability and dependence
-              are organised.
+              I examine fertility, mortality, migration, population structure and spatial inequalities as demographic processes that shape the populations and households in which people live.
             </p>
 <div class="work-footer">
-              Households · Kinship · Healthy ageing
+              Fertility · Mortality · Migration · Population structure · DHS · MICS · GHS · Census
+            </div>
+</article>
+<article class="work-card">
+<span class="work-tag">
+              Households &amp; kinship
+            </span>
+<h3>
+              Living arrangements, intergenerational relations &amp; vulnerability
+            </h3>
+<p>
+              I investigate how demographic change is experienced within households, and how household composition, kinship and intergenerational relationships shape access to care, resources and social support across the life course.
+            </p>
+<div class="work-footer">
+              Living arrangements · Kinship · Care · Intergenerational relations · Social protection
             </div>
 </article>
 <article class="work-card">
@@ -2028,46 +2166,29 @@
               Multimorbidity &amp; functional health
             </h3>
 <p>
-              Moving beyond individual diseases to examine combinations
-              of health conditions, functional limitations and the
-              consequences of population ageing.
+              I examine how health conditions and functional limitations accumulate within populations and households, and how these patterns contribute to vulnerability, disability and differences in healthy longevity.
             </p>
 <div class="work-footer">
-              Multimorbidity · Disability · Longevity
+              Multimorbidity · Disability · Functional health · Health inequalities · Longevity
             </div>
 </article>
 <article class="work-card">
 <span class="work-tag">
-              Households
+              Ageing
             </span>
 <h3>
-              Kinship, living arrangements &amp; vulnerability
+              Ageing beyond the individual
             </h3>
 <p>
-              Investigating how household composition and intergenerational
-              relationships influence the resources and social environments
-              available to people at different stages of life.
+              I examine ageing within the wider demographic and household context, asking how changing population structures, living arrangements and kinship systems shape the experience of later life, care, dependence and healthy ageing.
             </p>
 <div class="work-footer">
-              Living arrangements · Care · Social protection
+              Ageing · Kinship · Household structure · Care · Healthy ageing
             </div>
 </article>
-<article class="work-card">
-<span class="work-tag">
-              Demography
-            </span>
-<h3>
-              Population dynamics &amp; African data
-            </h3>
-<p>
-              Applying demographic methods to fertility, mortality,
-              migration, population structure and spatial inequalities
-              using large-scale African population datasets.
-            </p>
-<div class="work-footer">
-              DHS · MICS · GHS · Census
-            </div>
-</article>
+</div>
+<div class="hero-quote-box" style="margin-top: 40px;">
+<strong>The connecting question:</strong> How do demographic change and population structure shape the households in which people live, and how do these household contexts influence health, vulnerability and ageing across the life course?
 </div>
 </div>
 </section>
@@ -2081,37 +2202,27 @@
             Scholarship
           </div>
 <h2>
-            Evidence-driven research with an African population perspective
+            Evidence-driven population research in Sub-Saharan Africa
           </h2>
 </div>
 <div class="scholarship-layout">
 <div class="scholarship-copy">
 <p>
-              My scholarship is grounded in population-level evidence and
-              quantitative analysis. I work primarily with nationally
-              representative surveys, censuses and other large-scale
-              population datasets.
+              My scholarship is grounded in population-level evidence, demographic thinking and quantitative analysis. I work primarily with nationally representative surveys, censuses and other large-scale population datasets to examine patterns of population health, inequality and demographic change.
             </p>
 <p>
-              A recurring concern across my work is how demographic evidence
-              can be used to understand unequal health experiences without
-              losing sight of the populations, households and social contexts
-              behind the numbers.
+              Across my work, I am interested in what demographic evidence reveals about unequal health experiences, changing populations and the social contexts in which people live. This includes research on maternal and reproductive health, health inequalities, households and ageing, as well as broader questions of population dynamics.
             </p>
 <p>
-              Increasingly, this means bringing demographic thinking into
-              population health questions and bringing population structure,
-              households and intergenerational relationships into health
-              research.
+              Increasingly, my scholarship brings these strands together: bringing demographic thinking into population health, and bringing population structure, households and intergenerational relationships into the study of health across the life course.
             </p>
 </div>
 <aside class="scholarship-box">
 <h3>
-              Find my research
+              Research profiles
             </h3>
 <p>
-              Publication records and academic profiles are maintained on
-              external scholarly platforms.
+              Publication records and academic profiles are maintained on external scholarly platforms.
             </p>
 <div class="scholarship-links">
 <a href="https://scholar.google.com/citations?user=1L3IWv4AAAAJ&amp;hl=en" rel="noopener" target="_blank">
@@ -2136,11 +2247,12 @@
 <div class="pubs" id="publications">
 <div class="pubs-head">
 <h3>Selected publications</h3>
-<a href="https://scholar.google.com/citations?user=1L3IWv4AAAAJ&amp;hl=en" rel="noopener" target="_blank">Full list on Google Scholar ↗</a>
+<a href="https://scholar.google.com/citations?user=1L3IWv4AAAAJ&amp;hl=en" rel="noopener" target="_blank">Full publication record: Google Scholar ↗</a>
 </div>
+<p style="color: var(--muted); font-size: 15px; margin-bottom: 25px;">A selection of publications illustrating the development of my research programme.</p>
 <div class="pub-book">
 <div class="pub-kicker">Edited book</div>
-<h4>Reproductive health issues among young people in southern Africa</h4>
+<h4>Sexual and Reproductive Health Issues among Young People in Southern Africa</h4>
 <p>Edited by Karabo Mhele, Mluleki Tsawe and Martin E. Palamuleni. AOSIS Books.</p>
 <a class="pub-link" href="https://books.aosis.co.za/index.php/ob/catalog/book/374" rel="noopener" target="_blank">View book ↗</a>
 </div>
@@ -2149,7 +2261,7 @@
 <div class="pub-year">2024</div>
 <div>
 <p class="pub-title">Determinants of self-reported chronic disease diagnoses among older persons in South Africa</p>
-<p class="pub-meta">Temane MD, Mbele SK, <strong>Tsawe M</strong>. <em>African Journal of Primary Health Care &amp; Family Medicine</em> 16(1): a4425.</p>
+<p class="pub-meta">Temane MD, Mbele SK, <strong>Tsawe M</strong>. <em>African Journal of Primary Health Care &amp; Family Medicine</em>, 16(1): a4425.</p>
 <a class="pub-link" href="https://doi.org/10.4102/phcfm.v16i1.4425" rel="noopener" target="_blank">DOI ↗</a>
 </div>
 </li>
@@ -2157,7 +2269,7 @@
 <div class="pub-year">2022</div>
 <div>
 <p class="pub-title">Inequalities in maternal healthcare use in Sierra Leone: Evidence from the 2008–2019 Demographic and Health Surveys</p>
-<p class="pub-meta"><strong>Tsawe M</strong>, Susuman AS. <em>PLoS ONE</em> 17(10): e0276102.</p>
+<p class="pub-meta"><strong>Tsawe M</strong>, Susuman AS. <em>PLOS ONE</em>, 17(10): e0276102.</p>
 <a class="pub-link" href="https://doi.org/10.1371/journal.pone.0276102" rel="noopener" target="_blank">DOI ↗</a>
 </div>
 </li>
@@ -2165,7 +2277,7 @@
 <div class="pub-year">2020</div>
 <div>
 <p class="pub-title">Examining inequality of opportunity in the use of maternal and reproductive health interventions in Sierra Leone</p>
-<p class="pub-meta"><strong>Tsawe M</strong>, Susuman AS. <em>Journal of Public Health</em> 42(2): 254–261.</p>
+<p class="pub-meta"><strong>Tsawe M</strong>, Susuman AS. <em>Journal of Public Health</em>, 42(2): 254–261.</p>
 <a class="pub-link" href="https://academic.oup.com/jpubhealth/article-abstract/42/2/254/5374488" rel="noopener" target="_blank">Article ↗</a>
 </div>
 </li>
@@ -2182,9 +2294,9 @@
 </div>
 </section>
 <!-- =====================================================
-         METHODS
+         METHODS (RESTRUCTURED TWO-COLUMN LAYOUT)
     ====================================================== -->
-<section aria-hidden="true" class="section-alt page-view" data-page="methods" id="methods" role="region" aria-label="Methods">
+<section aria-hidden="true" class="section-alt page-view" data-page="methods" id="methods" role="region" aria-label="Methods & Data">
 <div class="container">
 <div class="section-heading">
 <div class="section-label">
@@ -2194,82 +2306,62 @@
             Demographic questions require demographic evidence
           </h2>
 <p class="section-intro">
-            Quantitative methods are used not simply to model associations,
-            but to understand population patterns, inequalities and change
-            with appropriate attention to measurement and data quality.
+            My research uses quantitative and demographic methods to understand population patterns, inequalities and change. Methods are selected according to the research question, the structure of the population process and the characteristics of the available data.
+          </p>
+<p style="margin-top: 12px; color: var(--muted); font-size: 15px;">
+            I place particular emphasis on measurement, data quality and contextual interpretation, recognising that robust population research depends not only on sophisticated analysis but also on understanding how population data are collected, defined and constructed.
           </p>
 </div>
+
 <div class="methods-grid">
+<!-- Column 1: Data & Evidence Sources -->
 <article class="method-card">
 <div class="method-icon">
               01
             </div>
 <h3>
-              Population data
+              Data &amp; Evidence Sources
             </h3>
 <p>
-              Large-scale datasets provide the empirical foundation for
-              examining population health and demographic change.
+              Core empirical foundations, nationally representative datasets, and rigorous measurement validation principles.
             </p>
 <ul class="method-list">
-<li>DHS</li>
-<li>MICS</li>
-<li>General Household Survey</li>
-<li>Census data</li>
-<li>National population surveys</li>
+<li><strong>DHS:</strong> Demographic and Health Surveys for cross-national health and fertility indicators.</li>
+<li><strong>MICS:</strong> Multiple Indicator Cluster Surveys for child and maternal welfare monitoring.</li>
+<li><strong>GHS:</strong> General Household Survey for living conditions and socio-economic dynamics.</li>
+<li><strong>Census Data:</strong> Population and housing census records for broad demographic structures.</li>
+<li><strong>Measurement &amp; Validation:</strong> Questionnaire-first interpretation, metadata and variable assessment, official-report cross-checking, and reproducible workflows.</li>
 </ul>
 </article>
+
+<!-- Column 2: Analytical Methods -->
 <article class="method-card">
 <div class="method-icon">
               02
             </div>
 <h3>
-              Quantitative analysis
+              Analytical Methods
             </h3>
 <p>
-              Statistical and demographic methods are selected according
-              to the structure of the population process and research
-              question.
+              Advanced statistical and demographic techniques applied to evaluate population dynamics and health patterns.
             </p>
 <ul class="method-list">
-<li>Multilevel modelling</li>
-<li>Survival analysis</li>
-<li>Demographic estimation</li>
-<li>Population projections</li>
-<li>Spatial analysis</li>
-</ul>
-</article>
-<article class="method-card">
-<div class="method-icon">
-              03
-            </div>
-<h3>
-              Measurement &amp; evidence
-            </h3>
-<p>
-              Particular attention is given to how variables are defined,
-              measured and interpreted within African population datasets.
-            </p>
-<ul class="method-list">
-<li>Questionnaire-first interpretation</li>
-<li>Metadata and variable assessment</li>
-<li>Official-report validation</li>
-<li>Measurement under uncertainty</li>
-<li>Reproducible analysis</li>
+<li><strong>Multilevel modelling:</strong> Examining variation and nested structures across individuals, households, and geographic contexts.</li>
+<li><strong>Survival analysis:</strong> Investigating timing, duration, and transition rates across life-course events.</li>
+<li><strong>Spatial analysis:</strong> Mapping and evaluating geographic patterns and regional inequalities in health outcomes.</li>
+<li><strong>Demographic estimation &amp; Projections:</strong> Quantifying fertility, mortality, migration, and future population structures for planning.</li>
 </ul>
 </article>
 </div>
+
+<div style="margin-top: 50px;">
+<h3 style="font-size: 18px; margin-bottom: 12px; font-family: 'Playfair Display', serif;">Analytical tools</h3>
 <div class="data-strip">
-<span class="data-tag">DHS</span>
-<span class="data-tag">MICS</span>
-<span class="data-tag">GHS</span>
-<span class="data-tag">Census</span>
-<span class="data-tag">Population surveys</span>
 <span class="data-tag">Stata</span>
-<span class="data-tag">RStudio</span>
+<span class="data-tag">R</span>
 <span class="data-tag">Basic SAS</span>
 <span class="data-tag">Demographic methods</span>
-<span class="data-tag">Basic spatial methods</span>
+</div>
 </div>
 </div>
 </section>
@@ -2283,11 +2375,13 @@
             Teaching
           </div>
 <h2>
-            Teaching demography as a way of understanding populations
+            Teaching demography through evidence, methods and population change
           </h2>
 <p class="section-intro">
-            Teaching spans social research methods, population projections,
-            population policies and applied demographic analysis.
+            My teaching connects demographic concepts and population processes with the practical skills required to conduct social research, analyse population data and interpret demographic evidence.
+          </p>
+<p style="margin-top: 12px; color: var(--muted); font-size: 15px;">
+            Teaching spans social research methods, demographic analysis, population projections, population policy and applied population research, with an emphasis on rigorous research design, appropriate methods and evidence-based interpretation.
           </p>
 </div>
 <table class="module-table">
@@ -2328,6 +2422,18 @@
 </tr>
 </tbody>
 </table>
+<div class="teaching-philosophy">
+<h3>Teaching philosophy</h3>
+<p>
+            My teaching is student-centred, constructivist and pragmatic, connecting demographic concepts and methods to authentic population, health and development problems.
+          </p>
+<p>
+            I encourage students to move beyond learning concepts in isolation and to develop the ability to ask meaningful questions, work critically with population data, select appropriate methods and interpret evidence within its social and demographic context.
+          </p>
+<p style="margin-bottom: 0;">
+            The aim is not simply to teach students how to analyse data, but to develop independent, critical and evidence-oriented population researchers.
+          </p>
+</div>
 </div>
 </section>
 <!-- =====================================================
@@ -2336,35 +2442,40 @@
 <section aria-hidden="true" class="section-alt page-view" data-page="mentoring" id="mentoring" role="region" aria-label="Mentoring & Service">
 <div class="container">
 <div class="section-heading">
-<div class="section-label">Academic leadership &amp; service</div>
-<h2>Postgraduate supervision and editorial contributions</h2>
+<div class="section-label">Supporting researchers and contributing to the academic community</div>
+<h2>Postgraduate supervision, editorial contributions &amp; academic service</h2>
 <p class="section-intro">
-            Active involvement in mentoring the next generation of demographic researchers and contributing to peer-reviewed academic publishing and community standards.
+            My academic work extends beyond research and teaching to include postgraduate supervision, research mentoring, academic examination, editorial work and peer review. I contribute to the development of emerging population researchers and to the quality of scholarly research in population health, demography and related fields.
           </p>
 </div>
 <div class="supervision-grid">
 <article class="supervision-card">
 <h3>Postgraduate supervision &amp; mentoring</h3>
 <p>
-              As coordinator of departmental postgraduate research activities at North-West University, I actively guide master’s and doctoral candidates through rigorous population studies research.
+              I supervise and co-supervise Master's and doctoral research in Population Studies and Demography, with particular interests in population health, health inequalities, demographic processes, households and ageing. My approach to supervision emphasises clear research questions, appropriate research design, rigorous use of population data, methodological reasoning and careful interpretation of evidence.
             </p>
 <ul class="service-list">
 <li><span>Current PhD supervision / co-supervision</span> <span class="service-tag">4 candidates</span></li>
-<li><span>Completed Master’s &amp; PhD supervision</span> <span class="service-tag">19 graduates</span></li>
-<li><span>External examination (UWC, Wits, UKZN)</span> <span class="service-tag">Active examiner</span></li>
+<li><span>Completed Master's &amp; PhD supervision</span> <span class="service-tag">19 graduates</span></li>
 </ul>
 </article>
 <article class="supervision-card">
-<h3>Editorial &amp; peer review service</h3>
+<h3>Academic examination &amp; Editorial service</h3>
 <p>
-              Contributing to global public health and demographic scholarship through editorial leadership and ad hoc reviews for accredited academic journals.
+              Contributing to external examining of research at different stages of development and supporting scholarly publishing through editorial responsibilities and peer review.
             </p>
 <ul class="service-list">
+<li><span>External examination (UWC, Wits, UKZN)</span> <span class="service-tag">Active</span></li>
 <li><span>Journal editorial activities (Associate Editor)</span> <a class="service-tag" href="https://link.springer.com/journal/12978/editorial-board" rel="noopener" target="_blank">Reproductive Health ↗</a></li>
-<li><span>Ad hoc peer reviewer (global health &amp; equity)</span> <span class="service-tag">7+ journals</span></li>
-<li><span>Methodological &amp; policy review standards</span> <span class="service-tag">Active</span></li>
+<li><span>Ad hoc peer reviewer (7+ academic journals)</span> <span class="service-tag">Active</span></li>
 </ul>
 </article>
+</div>
+<div class="mentoring-principle">
+<h3>Mentoring principle</h3>
+<p>
+            I see postgraduate research as both a process of producing new knowledge and developing independent researchers. My aim is to help emerging researchers move from using population data to asking meaningful population questions, making defensible methodological choices and communicating evidence clearly.
+          </p>
 </div>
 </div>
 </section>
@@ -2378,38 +2489,39 @@
             Profile
           </div>
 <h2>
-            About my academic work
+            Academic profile
           </h2>
 </div>
 <div class="profile-grid">
 <div class="profile-copy">
 <p>
-              I am a Senior Lecturer in Population Studies and Demography
-              at North-West University, where I work on demographic,
-              population-health and social research questions with a focus
-              on Sub-Saharan Africa.
+              I am a Senior Lecturer in Population Studies and Demography at North-West University, where I work at the intersection of demography, population health and social research, with a focus on South Africa and Sub-Saharan Africa.
             </p>
 <p>
-              My research interests have developed from maternal and
-              reproductive health toward a broader population-health
-              perspective that connects health with households, kinship,
-              population dynamics and ageing.
+              My academic work has evolved from an earlier focus on maternal and reproductive health toward a broader population-health programme examining how demographic processes, social inequalities, households and health intersect across the life course. This trajectory increasingly brings together questions of population change, household and kinship relations, ageing, disability and healthy longevity.
             </p>
 <p>
-              Across these areas, I am interested in producing evidence that
-              is methodologically rigorous, substantively relevant and
-              attentive to the realities of African populations and data.
+              I am particularly interested in using large-scale population data to produce evidence that is methodologically rigorous, substantively meaningful and attentive to the contexts in which African populations live. My approach combines demographic reasoning with quantitative analysis, with careful attention to measurement, data quality and interpretation.
+            </p>
+<p>
+              Before joining academia, I worked at Statistics South Africa, gaining practical experience with census and large-scale survey data. This experience continues to inform my approach to demographic research, particularly my interest in how population data are produced, measured and interpreted.
             </p>
 <div class="cv-box">
 <h3>
-                Academic profile
+                Academic qualifications
               </h3>
 <p>
-                For institutional information, academic affiliations and
-                current profile details, visit my North-West University page.
+<strong>PhD in Population Studies</strong><br/>University of the Western Cape · 2019
+              </p>
+<p style="margin-bottom: 17px;">
+<strong>MPhil in Population Studies</strong><br/>University of the Western Cape · 2015
+              </p>
+<h3 style="font-size: 16px; margin-bottom: 7px;">Institutional profile</h3>
+<p>
+                For institutional information, academic affiliations and current university details:
               </p>
 <a class="btn btn-primary" href="https://humanities.nwu.ac.za/social-sciences/population-studies-and-demography-staff" rel="noopener" target="_blank">
-                View NWU profile
+                View North-West University profile ↗
               </a>
 </div>
 </div>
@@ -2459,7 +2571,7 @@
                 Core evidence
               </span>
 <span class="fact-value">
-                Surveys · Census · Demographic data
+                Census · DHS · MICS · Household surveys · Demographic data
               </span>
 </div>
 </div>
@@ -2479,53 +2591,51 @@
             Research, collaboration &amp; academic enquiries
           </h2>
 <p class="contact-intro">
-            I welcome conversations around population studies, demographic
-            research, population health, postgraduate research and
-            collaborative work involving African population data.
+            I welcome conversations around population studies, demographic research, population health, postgraduate research, and collaborative work involving African population data.
+          </p>
+<p class="contact-intro" style="font-size: 15px; opacity: 0.9;">
+            I am particularly interested in research collaborations, postgraduate research enquiries, scholarly discussions and opportunities to contribute to population and health research in South Africa and beyond. I am also open to visiting researcher opportunities, invited academic engagements and opportunities to present or collaborate at universities and research institutions elsewhere.
           </p>
 <div class="profile-links">
 <a href="https://humanities.nwu.ac.za/population-studies-and-demography/mluleki-tsawe" rel="noopener" target="_blank">
-              NWU
+              NWU profile ↗
             </a>
 <a href="https://scholar.google.com/citations?user=1L3IWv4AAAAJ&amp;hl=en" rel="noopener" target="_blank">
-              Google Scholar
+              Google Scholar ↗
             </a>
 <a href="https://www.researchgate.net/profile/Mluleki-Tsawe-2" rel="noopener" target="_blank">
-              ResearchGate
+              ResearchGate ↗
             </a>
 <a href="https://orcid.org/0000-0002-0580-5508" rel="noopener" target="_blank">
-              ORCID
+              ORCID ↗
             </a>
 <a href="https://www.linkedin.com/in/dr-mluleki-tsawe-8969ab155" rel="noopener" target="_blank">
-              LinkedIn
+              LinkedIn ↗
             </a>
 </div>
 </div>
 <div class="contact-details">
 <div class="contact-item">
 <span class="contact-label">
-              Institution
+              Academic affiliation
             </span>
-            North-West University
+            North-West University<br/>Population Studies &amp; Demography<br/>Faculty of Humanities<br/>Mahikeng Campus, South Africa
           </div>
 <div class="contact-item">
 <span class="contact-label">
-              Academic field
+              Research focus
             </span>
-            Population Studies &amp; Demography
+            Population health · Demography · Health inequalities · Households · Ageing
           </div>
 <div class="contact-item">
 <span class="contact-label">
-              Research
-            </span>
-            Population health · Demography · Households · Ageing
-          </div>
-<div class="contact-item">
-<span class="contact-label">
-              Professional network
+              Professional network &amp; profiles
             </span>
 <a href="https://www.linkedin.com/in/dr-mluleki-tsawe-8969ab155" rel="noopener" target="_blank">
               Connect on LinkedIn ↗
+            </a><br/>
+<a href="https://scholar.google.com/citations?user=1L3IWv4AAAAJ&amp;hl=en" rel="noopener" target="_blank">
+              View Google Scholar citations ↗
             </a>
 </div>
 </div>
