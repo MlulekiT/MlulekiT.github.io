@@ -4,10 +4,10 @@
 <meta charset="utf-8"/>
 <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
 <title>Dr Mluleki Tsawe | Population Studies &amp; Demography</title>
-<meta content="Mluleki Tsawe is a Senior Lecturer in Population Studies and Demography at North-West University. His research examines population health across the life course in Sub-Saharan Africa." name="description"/>
+<meta content="Mluleki Tsawe is a Senior Lecturer in Population Studies and Demography at North-West University. His research examines population dynamics, households, and health across the life course in South Africa and Sub-Saharan Africa." name="description"/>
 <meta content="Mluleki Tsawe" name="author"/>
 <meta content="Mluleki Tsawe | Population Studies &amp; Demography" property="og:title"/>
-<meta content="Population health across the life course in Sub-Saharan Africa." property="og:description"/>
+<meta content="Population dynamics, households, and health across the life course." property="og:description"/>
 <meta content="website" property="og:type"/>
 <meta content="https://mlulekit.github.io/" property="og:url"/>
 <meta content="https://humanities.nwu.ac.za/sites/humanities.nwu.ac.za/files/files/staff/Mluleki-5.png" property="og:image"/>
@@ -18,6 +18,13 @@
 <link href="https://fonts.googleapis.com" rel="preconnect"/>
 <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
 <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&amp;family=Playfair+Display:wght@500;600;700&amp;display=swap" rel="stylesheet"/>
+
+<!-- Font Awesome (for GitHub, LinkedIn) -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+<!-- Academicons (for Google Scholar, ResearchGate, ORCID, Scopus) -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+
 <script type="application/ld+json">
   {
     "@context": "https://schema.org",
@@ -35,7 +42,7 @@
       "https://www.linkedin.com/in/dr-mluleki-tsawe-8969ab155"
     ]
   }
-  </script>
+</script>
 <style>
 
     /* =========================================================
@@ -168,7 +175,7 @@
     .nav-links {
       display: flex;
       align-items: center;
-      gap: 23px;
+      gap: 20px;
 
       font-size: 13px;
       color: #46515c;
@@ -269,20 +276,22 @@
     }
 
     .hero-lead {
-      font-size: 19px;
+      font-size: 18px;
       font-weight: 500;
       color: var(--ink);
-      margin-bottom: 20px;
+      margin-bottom: 18px;
+      line-height: 1.6;
     }
 
     .hero-description {
       max-width: 760px;
 
-      font-size: 17px;
+      font-size: 16px;
 
       color: var(--muted);
 
       margin-bottom: 28px;
+      line-height: 1.65;
     }
 
     .hero-quote-box {
@@ -493,8 +502,7 @@
     }
 
     .section-heading {
-      max-width: 780px;
-
+      max-width: 100%;
       margin-bottom: 48px;
     }
 
@@ -528,7 +536,7 @@
 
       font-size: 17px;
 
-      max-width: 730px;
+      max-width: 100%;
     }
 
 
@@ -1021,6 +1029,119 @@
 
 
     /* =========================================================
+       RESEARCH LAB
+    ========================================================= */
+
+    .lab-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(340px, 1fr));
+      gap: 24px;
+      margin-top: 30px;
+    }
+
+    .lab-card {
+      background: var(--white);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 24px;
+      box-shadow: var(--shadow-small);
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
+    }
+
+    .lab-card:hover {
+      transform: translateY(-3px);
+      box-shadow: var(--shadow);
+    }
+
+    .lab-card-header {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 16px;
+      margin-bottom: 20px;
+      text-align: left;
+    }
+
+    /* Student Photo Container (28 mm x 36 mm) */
+    .student-photo-container {
+      width: 28mm;
+      height: 36mm;
+      border-radius: 6px;
+      overflow: hidden;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+      border: 1px solid var(--border);
+      background-color: #f8fafc;
+    }
+
+    .student-photo-container img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: top center;
+    }
+
+    .lab-name {
+      font-weight: 700;
+      font-size: 17px;
+      color: var(--ink);
+      text-align: left;
+    }
+
+    .lab-affiliation {
+      font-size: 12px;
+      color: var(--turquoise);
+      font-weight: 600;
+      margin-top: 2px;
+      text-align: left;
+    }
+
+    .lab-body {
+      margin-bottom: 16px;
+    }
+
+    .lab-field-label {
+      font-size: 11px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      color: var(--purple);
+      margin-bottom: 4px;
+    }
+
+    .lab-text {
+      font-size: 14px;
+      color: var(--muted);
+      line-height: 1.5;
+    }
+
+    .lab-meta {
+      font-size: 12px;
+      color: var(--ink);
+      font-weight: 600;
+      padding-top: 12px;
+      border-top: 1px dashed var(--border);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .lab-subheading {
+      font-family: 'Playfair Display', serif;
+      font-size: 24px;
+      margin: 40px 0 20px;
+      color: var(--purple-dark);
+      border-bottom: 2px solid var(--purple-light);
+      padding-bottom: 8px;
+    }
+
+
+    /* =========================================================
        SCHOLARSHIP
     ========================================================= */
 
@@ -1096,7 +1217,7 @@
 
 
     /* =========================================================
-       METHODS (RESTRUCTURED TWO-COLUMN LAYOUT)
+       METHODS
     ========================================================= */
 
     .methods-grid {
@@ -1105,6 +1226,7 @@
       grid-template-columns: repeat(2, 1fr);
 
       gap: 30px;
+      margin-top: 24px;
     }
 
     .method-card {
@@ -1478,32 +1600,104 @@
       text-decoration: underline;
     }
 
-    .profile-links {
+    /* Contact Tab Social Links Styling */
+    .social-links {
       display: flex;
-
+      gap: 18px;
+      align-items: center;
       flex-wrap: wrap;
-
-      gap: 9px;
-
       margin-top: 25px;
     }
 
-    .profile-links a {
-      padding: 8px 12px;
-
-      border: 1px solid rgba(255,255,255,0.25);
-
-      border-radius: 8px;
-
-      font-size: 12px;
-
-      font-weight: 600;
-
-      transition: background 0.2s ease;
+    .social-links a {
+      position: relative;
+      color: #ffffff; /* High contrast on dark contact background */
+      font-size: 28px;
+      text-decoration: none;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      transition: color 0.25s ease, transform 0.25s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+      border-radius: 50%;
+      padding: 2px;
     }
 
-    .profile-links a:hover {
-      background: rgba(255,255,255,0.12);
+    /* Accessibility focus ring for keyboard navigation */
+    .social-links a:focus-visible {
+      outline: 2px solid #ffd525;
+      outline-offset: 4px;
+    }
+
+    /* Hover magnification and lift effect */
+    .social-links a:hover {
+      transform: translateY(-3px) scale(1.18); /* Magnifies icon by 18% */
+    }
+
+    /* Brand hover colors */
+    .social-links a.nwu:hover { color: #d8b4fe; }          /* NWU Purple (Lightened for dark bg) */
+    .social-links a.scholar:hover { color: #4285F4; }      /* Google Scholar Blue */
+    .social-links a.researchgate:hover { color: #00CCBB; } /* ResearchGate Teal */
+    .social-links a.orcid:hover { color: #A6CE39; }        /* ORCID Green */
+    .social-links a.scopus:hover { color: #FF6C00; }       /* Scopus Orange */
+    .social-links a.wos:hover { color: #a78bfa; }          /* Web of Science Purple (Lightened) */
+    .social-links a.linkedin:hover { color: #38bdf8; }     /* LinkedIn Blue (Lightened) */
+    .social-links a.github:hover { color: #f1f5f9; }       /* GitHub Light */
+
+    /* Image-Based Logo Styling (NWU & Web of Science) */
+    .img-icon {
+      width: 28px;
+      height: 28px;
+      border-radius: 50%;
+      object-fit: cover;
+      vertical-align: middle;
+      filter: grayscale(100%) opacity(0.85); /* Matches default neutral state */
+      transition: filter 0.25s ease;
+    }
+
+    .social-links a:hover .img-icon {
+      filter: none; /* Restores full logo color on hover */
+    }
+
+    /* Screen-reader text (invisible visually) */
+    .sr-only {
+      position: absolute;
+      width: 1px;
+      height: 1px;
+      padding: 0;
+      margin: -1px;
+      overflow: hidden;
+      clip: rect(0, 0, 0, 0);
+      white-space: nowrap;
+      border: 0;
+    }
+
+    /* Custom Hover Tooltips */
+    .social-links a::after {
+      content: attr(data-tooltip);
+      position: absolute;
+      bottom: 125%;
+      left: 50%;
+      transform: translateX(-50%) translateY(4px);
+      background-color: #1f2937;
+      color: #ffffff;
+      font-family: system-ui, -apple-system, sans-serif;
+      font-size: 12px;
+      font-weight: 500;
+      padding: 4px 8px;
+      border-radius: 4px;
+      white-space: nowrap;
+      opacity: 0;
+      visibility: hidden;
+      pointer-events: none;
+      transition: opacity 0.2s ease, transform 0.2s ease;
+      box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+      z-index: 10;
+    }
+
+    .social-links a:hover::after {
+      opacity: 1;
+      visibility: visible;
+      transform: translateX(-50%) translateY(0);
     }
 
 
@@ -1638,7 +1832,8 @@
 
       .pillars,
       .work-grid,
-      .methods-grid {
+      .methods-grid,
+      .lab-grid {
         grid-template-columns: 1fr;
       }
 
@@ -1791,8 +1986,8 @@
     .nav-links a { white-space: nowrap; position: relative; padding: 4px 0; }
     .nav-links a::after { content: ""; position: absolute; left: 0; bottom: -2px; width: 100%; height: 2px; background: var(--gold); transform: scaleX(0); transform-origin: left; transition: transform .2s ease; }
     .nav-links a:hover::after { transform: scaleX(1); }
-    .identity-card, .work-card, .method-card, .supervision-card, .fact { transition: transform .2s ease, box-shadow .2s ease; }
-    .work-card:hover, .method-card:hover, .supervision-card:hover { transform: translateY(-3px); box-shadow: var(--shadow); }
+    .identity-card, .work-card, .method-card, .supervision-card, .fact, .lab-card { transition: transform .2s ease, box-shadow .2s ease; }
+    .work-card:hover, .method-card:hover, .supervision-card:hover, .lab-card:hover { transform: translateY(-3px); box-shadow: var(--shadow); }
     .pub-item { transition: background .2s ease; }
     .pub-item:hover { background: linear-gradient(90deg, var(--light), transparent); }
     .pub-book { box-shadow: var(--shadow-small); }
@@ -1841,6 +2036,7 @@
 <a data-route="methods" href="#methods">Methods</a>
 <a data-route="teaching" href="#teaching">Teaching</a>
 <a data-route="mentoring" href="#mentoring">Mentoring &amp; Service</a>
+<a data-route="lab" href="#lab">Research Lab</a>
 <a data-route="profile" href="#profile">Profile</a>
 <a data-route="contact" href="#contact">Contact</a>
 </div>
@@ -1860,35 +2056,35 @@
             Mluleki Tsawe
           </h1>
 <div class="hero-title">
-            Population health across the life course in Sub-Saharan Africa
+            Population dynamics, households, and health across the life course
           </div>
 <p class="hero-lead">
-            I am a Senior Lecturer in Population Studies and Demography at North-West University, examining how population change, social inequalities, households, and health intersect across the life course.
+            I am a Senior Lecturer in Population Studies and Demography at North-West University. My research examines how demographic change, household contexts, and social inequalities shape health and wellbeing across the life course in South Africa and Sub-Saharan Africa.
           </p>
 <p class="hero-description">
-            My research combines demographic evidence and large-scale population data to analyze maternal and reproductive health, early-life outcomes, health inequalities, disability, ageing, and healthy longevity across Sub-Saharan Africa.
+            Using demographic methods and large-scale population datasets, I investigate maternal and reproductive health, child and adolescent wellbeing, health inequalities, disability, ageing, and healthy longevity. My work seeks to generate evidence that informs population policy, public health, and sustainable development.
           </p>
 <div class="hero-identity-pills">
 <span class="hero-pill">Demography</span>
-<span class="hero-pill">Population health</span>
-<span class="hero-pill">Health inequalities</span>
-<span class="hero-pill">Households &amp; families</span>
-<span class="hero-pill">Ageing</span>
 <span class="hero-pill">Population dynamics</span>
+<span class="hero-pill">Population health</span>
+<span class="hero-pill">Ageing</span>
+<span class="hero-pill">Household &amp; composition</span>
+<span class="hero-pill">Health inequalities</span>
 </div>
 <div class="hero-quote-box">
             My work is grounded in the idea that health cannot be understood independently of the populations, households, and demographic contexts in which people live.
           </div>
 <div class="hero-buttons">
 <a class="btn btn-primary" href="#research">
-              Explore my research
+              Explore My Research
             </a>
 <a class="btn btn-secondary" href="#profile">
-              Academic profile
+              Academic Profile
             </a>
 </div>
 </div>
-<!-- Identity card -->
+<!-- Identity card (Home page) -->
 <aside class="identity-card">
 <img alt="Mluleki Tsawe" class="profile-photo" src="https://humanities.nwu.ac.za/sites/humanities.nwu.ac.za/files/files/staff/Mluleki-5.png"/>
 <h3>
@@ -1899,7 +2095,7 @@
           </div>
 <div class="identity-links">
 <a href="https://humanities.nwu.ac.za/social-sciences/population-studies-and-demography-staff" rel="noopener" target="_blank">
-              NWU profile
+              NWU Profile
             </a>
 <a href="https://scholar.google.com/citations?user=1L3IWv4AAAAJ&amp;hl=en" rel="noopener" target="_blank">
               Google Scholar
@@ -1917,6 +2113,7 @@
 </aside>
 </div>
 </section>
+
 <!-- =====================================================
          RESEARCH
     ====================================================== -->
@@ -2110,6 +2307,7 @@
 </div>
 </div>
 </section>
+
 <!-- =====================================================
          CURRENT WORK
     ====================================================== -->
@@ -2120,13 +2318,13 @@
             Current work
           </div>
 <h2>
-            Questions shaping the next phase of the research programme
+            Current research programme
           </h2>
 <p class="section-intro">
-            My current work examines how population change, household relationships and health interact across the life course. The themes below are connected rather than separate areas of research: demographic change shapes household structures; households and kinship organise care, resources and vulnerability; and these social contexts influence health, disability and ageing.
+            My research examines how demographic change, household relationships and health interact across the life course. Rather than treating these as separate fields of inquiry, I investigate how population processes shape household and kinship systems, how households organise care, resources and vulnerability, and how these social contexts influence health, disability and ageing.
           </p>
-<p style="margin-top: 12px; color: var(--muted); font-size: 15px;">
-            This programme brings together demography, population health and household analysis to understand how people experience demographic and health transitions within changing social environments, with a particular focus on South Africa and Sub-Saharan Africa.
+<p class="section-intro" style="margin-top: 12px;">
+            Bringing together demography, population health and household studies, my work seeks to understand how individuals experience demographic and health transitions within changing social environments, with a particular focus on South Africa and Sub-Saharan Africa.
           </p>
 </div>
 <div class="work-grid">
@@ -2188,10 +2386,11 @@
 </article>
 </div>
 <div class="hero-quote-box" style="margin-top: 40px;">
-<strong>The connecting question:</strong> How do demographic change and population structure shape the households in which people live, and how do these household contexts influence health, vulnerability and ageing across the life course?
+<strong>The connecting question:</strong> How do demographic change and population structure shape the households in which people live, and how do these household contexts influence health, vulnerability, and ageing across the life course?
 </div>
 </div>
 </section>
+
 <!-- =====================================================
          SCHOLARSHIP
     ====================================================== -->
@@ -2225,6 +2424,10 @@
               Publication records and academic profiles are maintained on external scholarly platforms.
             </p>
 <div class="scholarship-links">
+<a href="https://humanities.nwu.ac.za/population-studies-and-demography/mluleki-tsawe" rel="noopener" target="_blank">
+<span>NWU Profile</span>
+<span>↗</span>
+</a>
 <a href="https://scholar.google.com/citations?user=1L3IWv4AAAAJ&amp;hl=en" rel="noopener" target="_blank">
 <span>Google Scholar</span>
 <span>↗</span>
@@ -2237,8 +2440,12 @@
 <span>ORCID</span>
 <span>↗</span>
 </a>
-<a href="https://humanities.nwu.ac.za/social-sciences/population-studies-and-demography-staff" rel="noopener" target="_blank">
-<span>NWU academic profile</span>
+<a href="https://www.scopus.com/authid/detail.uri?authorId=56584500100" rel="noopener" target="_blank">
+<span>Scopus</span>
+<span>↗</span>
+</a>
+<a href="https://www-webofscience-com.nwulib.idm.oclc.org/wos/author/record/2040358" rel="noopener" target="_blank">
+<span>Web of Science</span>
 <span>↗</span>
 </a>
 </div>
@@ -2317,8 +2524,9 @@
 </div>
 </div>
 </section>
+
 <!-- =====================================================
-         METHODS
+         METHODS & DATA
     ====================================================== -->
 <section aria-hidden="true" class="section-alt page-view" data-page="methods" id="methods" role="region" aria-label="Methods & Data">
 <div class="container">
@@ -2332,7 +2540,7 @@
 <p class="section-intro">
             My research uses quantitative and demographic methods to understand population patterns, inequalities and change. Methods are selected according to the research question, the structure of the population process and the characteristics of the available data.
           </p>
-<p style="margin-top: 12px; color: var(--muted); font-size: 15px;">
+<p class="section-intro" style="margin-top: 12px;">
             I place particular emphasis on measurement, data quality and contextual interpretation, recognising that robust population research depends not only on sophisticated analysis but also on understanding how population data are collected, defined and constructed.
           </p>
 </div>
@@ -2353,8 +2561,8 @@
 <li><strong>DHS:</strong> Demographic and Health Surveys for cross-national health and fertility indicators.</li>
 <li><strong>MICS:</strong> Multiple Indicator Cluster Surveys for child and maternal welfare monitoring.</li>
 <li><strong>GHS:</strong> General Household Survey for living conditions and socio-economic dynamics.</li>
-<li><strong>Census Data:</strong> Population and housing census records for broad demographic structures.</li>
-<li><strong>Measurement &amp; Validation:</strong> Questionnaire-first interpretation, metadata and variable assessment, official-report cross-checking, and reproducible workflows.</li>
+<li><strong>Census data:</strong> Population and housing census records for broad demographic structures.</li>
+<li><strong>Measurement &amp; validation:</strong> Questionnaire-first interpretation, metadata and variable assessment, official-report cross-checking, and reproducible workflows.</li>
 </ul>
 </article>
 
@@ -2389,6 +2597,7 @@
 </div>
 </div>
 </section>
+
 <!-- =====================================================
          TEACHING
     ====================================================== -->
@@ -2404,7 +2613,7 @@
 <p class="section-intro">
             My teaching connects demographic concepts and population processes with the practical skills required to conduct social research, analyse population data and interpret demographic evidence.
           </p>
-<p style="margin-top: 12px; color: var(--muted); font-size: 15px;">
+<p class="section-intro" style="margin-top: 12px;">
             Teaching spans social research methods, demographic analysis, population projections, population policy and applied population research, with an emphasis on rigorous research design, appropriate methods and evidence-based interpretation.
           </p>
 </div>
@@ -2460,6 +2669,7 @@
 </div>
 </div>
 </section>
+
 <!-- =====================================================
          MENTORING & SERVICE
     ====================================================== -->
@@ -2479,8 +2689,8 @@
               I supervise and co-supervise Master's and doctoral research in Population Studies and Demography, with particular interests in population health, health inequalities, demographic processes, households and ageing. My approach to supervision emphasises clear research questions, appropriate research design, rigorous use of population data, methodological reasoning and careful interpretation of evidence.
             </p>
 <ul class="service-list">
-<li><span>Current PhD supervision / co-supervision</span> <span class="service-tag">4 candidates</span></li>
-<li><span>Completed Master's &amp; PhD supervision</span> <span class="service-tag">19 graduates</span></li>
+<li><span>Current PhD promotion / co-promotion</span> <span class="service-tag">9 candidates</span></li>
+<li><span>Completed Master's &amp; PhD supervision</span> <span class="service-tag">21 graduates</span></li>
 </ul>
 </article>
 <article class="supervision-card">
@@ -2503,6 +2713,290 @@
 </div>
 </div>
 </section>
+
+<!-- =====================================================
+         RESEARCH LAB
+    ====================================================== -->
+<section aria-hidden="true" class="page-view" data-page="lab" id="lab" role="region" aria-label="Research Lab">
+<div class="container">
+<div class="section-heading">
+<h2>Research Lab</h2>
+<p class="section-intro">
+            The Research Lab brings together postgraduate students working on population dynamics, population health, ageing, fertility, sexual and reproductive health, migration, and health inequalities in South Africa and across Africa. Through quantitative and qualitative research, lab members contribute to evidence-based scholarship that informs policy, development, and population wellbeing.
+          </p>
+</div>
+
+<h3 class="lab-subheading">Current doctoral students</h3>
+<div class="lab-grid">
+
+<article class="lab-card">
+<div>
+<div class="lab-card-header">
+<div class="student-photo-container">
+  <img alt="Thandiwe Lisa Wiessie" src="https://github.com/MlulekiT/MlulekiT.github.io/blob/main/Image%20placeholder2.jpg?raw=true"/>
+</div>
+<div>
+<div class="lab-name">Thandiwe Lisa Wiessie</div>
+</div>
+</div>
+<div class="lab-body">
+<div class="lab-field-label">Focus area</div>
+<p class="lab-text">Adolescent reproductive health, sociodemographic drivers, and health decision-making in regional South Africa.</p>
+</div>
+</div>
+<div class="lab-meta">
+<span>Role: Promoter</span>
+</div>
+</article>
+
+<article class="lab-card">
+<div>
+<div class="lab-card-header">
+<div class="student-photo-container">
+  <img alt="Stemary Letloenyane" src="https://github.com/MlulekiT/MlulekiT.github.io/blob/main/Image%20placeholder2.jpg?raw=true"/>
+</div>
+<div>
+<div class="lab-name">Stemary Letloenyane</div>
+</div>
+</div>
+<div class="lab-body">
+<div class="lab-field-label">Focus area</div>
+<p class="lab-text">Maternal healthcare access, service timing, and health-seeking behaviour among rural reproductive-age women.</p>
+</div>
+</div>
+<div class="lab-meta">
+<span>Role: Promoter</span>
+</div>
+</article>
+
+<article class="lab-card">
+<div>
+<div class="lab-card-header">
+<div class="student-photo-container">
+  <img alt="Mpho Nothukela Mnguni" src="https://p16-common-sign.tiktokcdn.com/tos-maliva-avt-0068/3560e230c253097b3c221946f28bbb36~tplv-tiktokx-cropcenter:1080:1080.jpeg?dr=14579&amp;refresh_token=f3dcc3af&amp;x-expires=1790992800&amp;x-signature=HYCZdHNGph46AduEdXKDKZKh1ag%3D&amp;t=4d5b0474&amp;ps=13740610&amp;shp=a5d48078&amp;shcp=81f88b70&amp;idc=sg1"/>
+</div>
+<div>
+<div class="lab-name">Mpho Nothukela Mnguni</div>
+</div>
+</div>
+<div class="lab-body">
+<div class="lab-field-label">Focus area</div>
+<p class="lab-text">Non-communicable diseases, multimorbidity patterns, and health trajectories among older women in South Africa.</p>
+</div>
+</div>
+<div class="lab-meta">
+<span>Role: Promoter</span>
+</div>
+</article>
+
+<article class="lab-card">
+<div>
+<div class="lab-card-header">
+<div class="student-photo-container">
+  <img alt="Dikago Puoeng" src="https://github.com/MlulekiT/MlulekiT.github.io/blob/main/Image%20placeholder2.jpg?raw=true"/>
+</div>
+<div>
+<div class="lab-name">Dikago Puoeng</div>
+</div>
+</div>
+<div class="lab-body">
+<div class="lab-field-label">Focus area</div>
+<p class="lab-text">Healthcare access barriers, health equity, and living experiences among older adult populations.</p>
+</div>
+</div>
+<div class="lab-meta">
+<span>Role: Co-Promoter</span>
+</div>
+</article>
+
+<article class="lab-card">
+<div>
+<div class="lab-card-header">
+<div class="student-photo-container">
+  <img alt="Itumeleng Dinku" src="https://github.com/MlulekiT/MlulekiT.github.io/blob/main/Image%20placeholder2.jpg?raw=true"/>
+</div>
+<div>
+<div class="lab-name">Itumeleng Dinku</div>
+</div>
+</div>
+<div class="lab-body">
+<div class="lab-field-label">Focus area</div>
+<p class="lab-text">Multilevel socio-structural determinants of sexual and reproductive health service utilisation across Sub-Saharan Africa.</p>
+</div>
+</div>
+<div class="lab-meta">
+<span>Role: Co-Promoter</span>
+</div>
+</article>
+
+<article class="lab-card">
+<div>
+<div class="lab-card-header">
+<div class="student-photo-container">
+  <img alt="Boipelo Tlalang" src="https://github.com/MlulekiT/MlulekiT.github.io/blob/main/Image%20placeholder2.jpg?raw=true"/>
+</div>
+<div>
+<div class="lab-name">Boipelo Tlalang</div>
+</div>
+</div>
+<div class="lab-body">
+<div class="lab-field-label">Focus area</div>
+<p class="lab-text">Socio-cultural dynamics, family dynamics, and contraceptive decision-making among young women.</p>
+</div>
+</div>
+<div class="lab-meta">
+<span>Role: Co-Promoter</span>
+</div>
+</article>
+
+<article class="lab-card">
+<div>
+<div class="lab-card-header">
+<div class="student-photo-container">
+  <img alt="Tsholofelo Seokamo" src="https://media.licdn.com/dms/image/v2/D4D03AQHqmIXe3rdMMQ/profile-displayphoto-shrink_400_400/profile-displayphoto-shrink_400_400/0/1697403806051?e=1792627200&amp;v=beta&amp;t=X_rKZpao-TKWHSi9qFEdWs60wFlSsg3ltAeS0rO5NkU"/>
+</div>
+<div>
+<div class="lab-name">Tsholofelo Seokamo</div>
+</div>
+</div>
+<div class="lab-body">
+<div class="lab-field-label">Focus area</div>
+<p class="lab-text">High-risk fertility behaviours, maternal-child health factors, and early-life mortality in Sub-Saharan Africa.</p>
+</div>
+</div>
+<div class="lab-meta">
+<span>Role: Promoter</span>
+</div>
+</article>
+
+<article class="lab-card">
+<div>
+<div class="lab-card-header">
+<div class="student-photo-container">
+  <img alt="Nthabiseng Seima" src="https://github.com/MlulekiT/MlulekiT.github.io/blob/main/Image%20placeholder2.jpg?raw=true"/>
+</div>
+<div>
+<div class="lab-name">Nthabiseng Seima</div>
+</div>
+</div>
+<div class="lab-body">
+<div class="lab-field-label">Focus area</div>
+<p class="lab-text">Chronic disease epidemiology, multimorbidity, and behavioural health risks in adult population groups.</p>
+</div>
+</div>
+<div class="lab-meta">
+<span>Role: Promoter</span>
+</div>
+</article>
+
+<article class="lab-card">
+<div>
+<div class="lab-card-header">
+<div class="student-photo-container">
+  <img alt="Kagiso Phake" src="https://humanities.nwu.ac.za/sites/humanities.nwu.ac.za/files/files/staff/kagiso.png"/>
+</div>
+<div>
+<div class="lab-name">Kagiso Phake</div>
+<div class="lab-affiliation">Affiliation: Development Studies</div>
+</div>
+</div>
+<div class="lab-body">
+<div class="lab-field-label">Focus area</div>
+<p class="lab-text">Migrant entrepreneurship, informal economies, social networks, community livelihoods, and local economic development.</p>
+</div>
+</div>
+<div class="lab-meta">
+<span>Role: Co-Promoter</span>
+</div>
+</article>
+
+</div>
+
+<h3 class="lab-subheading">Doctoral alumni</h3>
+<div class="lab-grid">
+<article class="lab-card">
+<div>
+<div class="lab-card-header">
+<div class="lab-name">Germinah Motshegwa</div>
+</div>
+<div class="lab-body">
+<div class="lab-field-label">Dissertation</div>
+<p class="lab-text">Examining the attitudes and determinants of contraceptive use among male students at the North-West University.</p>
+</div>
+</div>
+<div class="lab-meta">
+<span>Role: Promoter</span>
+<span>Year Graduated: 2026</span>
+</div>
+</article>
+
+<article class="lab-card">
+<div>
+<div class="lab-card-header">
+<div class="lab-name">Zama Portia Nkosi</div>
+</div>
+<div class="lab-body">
+<div class="lab-field-label">Dissertation</div>
+<p class="lab-text">Determinants of reproductive preferences and unmet need for family planning among women in selected Southern African countries.</p>
+</div>
+</div>
+<div class="lab-meta">
+<span>Role: Promoter</span>
+<span>Year Graduated: 2026</span>
+</div>
+</article>
+
+<article class="lab-card">
+<div>
+<div class="lab-card-header">
+<div class="lab-name">Mashapa Marinkie Malatji</div>
+</div>
+<div class="lab-body">
+<div class="lab-field-label">Dissertation</div>
+<p class="lab-text">Examining the trends and factors influencing short birth spacing among women of reproductive age in Ethiopia.</p>
+</div>
+</div>
+<div class="lab-meta">
+<span>Role: Co-Promoter</span>
+<span>Year Graduated: 2026</span>
+</div>
+</article>
+
+<article class="lab-card">
+<div>
+<div class="lab-card-header">
+<div class="lab-name">Kgomotso Mbele</div>
+</div>
+<div class="lab-body">
+<div class="lab-field-label">Dissertation</div>
+<p class="lab-text">Determinants of HIV-related behaviour and HIV seropositivity among young women in Southern African countries: A multilevel modelling approach.</p>
+</div>
+</div>
+<div class="lab-meta">
+<span>Role: Promoter</span>
+<span>Year Graduated: 2025</span>
+</div>
+</article>
+
+<article class="lab-card">
+<div>
+<div class="lab-card-header">
+<div class="lab-name">Boitshwarelo K.M. Ngake</div>
+</div>
+<div class="lab-body">
+<div class="lab-field-label">Dissertation</div>
+<p class="lab-text">Correlates of dual method contraception among adolescent girls in Ratlou Local Municipality, South Africa.</p>
+</div>
+</div>
+<div class="lab-meta">
+<span>Role: Co-Promoter</span>
+<span>Year Graduated: 2023</span>
+</div>
+</article>
+</div>
+</div>
+</section>
+
 <!-- =====================================================
          PROFILE
     ====================================================== -->
@@ -2544,8 +3038,8 @@
 <p>
                 For institutional information, academic affiliations and current university details:
               </p>
-<a class="btn btn-primary" href="https://humanities.nwu.ac.za/social-sciences/population-studies-and-demography-staff" rel="noopener" target="_blank">
-                View North-West University profile ↗
+<a class="btn btn-primary" href="https://humanities.nwu.ac.za/population-studies-and-demography/mluleki-tsawe" rel="noopener" target="_blank">
+                View my NWU profile ↗
               </a>
 </div>
 </div>
@@ -2582,159 +3076,210 @@
                 South Africa &amp; Sub-Saharan Africa
               </span>
 </div>
-<div class="fact">
-<span class="fact-label">
-                Research lens
-              </span>
-<span class="fact-value">
-                Population health across the life course
-              </span>
-</div>
-<div class="fact">
-<span class="fact-label">
-                Core evidence
-              </span>
-<span class="fact-value">
-                Census · DHS · MICS · Household surveys · Demographic data
-              </span>
-</div>
 </div>
 </div>
 </div>
 </section>
+
 <!-- =====================================================
          CONTACT
     ====================================================== -->
 <section aria-hidden="true" class="contact page-view" data-page="contact" id="contact" role="region" aria-label="Contact">
-<div class="container contact-grid">
+<div class="container">
+<div class="contact-grid">
 <div>
 <div class="section-label">
             Contact
           </div>
 <h2>
-            Research, collaboration &amp; academic enquiries
+            Connect and collaborate
           </h2>
 <p class="contact-intro">
             I welcome conversations around population studies, demographic research, population health, postgraduate research, and collaborative work involving African population data.
           </p>
-<p class="contact-intro" style="font-size: 15px; opacity: 0.9;">
+<p class="contact-intro">
             I am particularly interested in research collaborations, postgraduate research enquiries, scholarly discussions and opportunities to contribute to population and health research in South Africa and beyond. I am also open to visiting researcher opportunities, invited academic engagements and opportunities to present or collaborate at universities and research institutions elsewhere.
           </p>
-<div class="profile-links">
-<a href="https://humanities.nwu.ac.za/population-studies-and-demography/mluleki-tsawe" rel="noopener" target="_blank">
-              NWU profile ↗
-            </a>
-<a href="https://scholar.google.com/citations?user=1L3IWv4AAAAJ&amp;hl=en" rel="noopener" target="_blank">
-              Google Scholar ↗
-            </a>
-<a href="https://www.researchgate.net/profile/Mluleki-Tsawe-2" rel="noopener" target="_blank">
-              ResearchGate ↗
-            </a>
-<a href="https://orcid.org/0000-0002-0580-5508" rel="noopener" target="_blank">
-              ORCID ↗
-            </a>
-<a href="https://www.linkedin.com/in/dr-mluleki-tsawe-8969ab155" rel="noopener" target="_blank">
-              LinkedIn ↗
-            </a>
+
+<!-- Incorporating Academic & Professional Links -->
+<div class="social-links" role="navigation" aria-label="Academic and social profiles">
+    <!-- 1. NWU Profile -->
+    <a href="https://humanities.nwu.ac.za/population-studies-and-demography/mluleki-tsawe" 
+       class="nwu" 
+       target="_blank" 
+       rel="noopener noreferrer" 
+       data-tooltip="NWU Profile">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSkOoKIWXSq_ECVcYRI0qoD3_GgXbN6ft2WYWe9SUTZ9Q&s=10" alt="NWU Logo" class="img-icon">
+        <span class="sr-only">Dr. Mluleki Tsawe on NWU Profile</span>
+    </a>
+
+    <!-- 2. Google Scholar -->
+    <a href="https://scholar.google.com/citations?hl=en&user=1L3IWv4AAAAJ" 
+       class="scholar" 
+       target="_blank" 
+       rel="noopener noreferrer" 
+       data-tooltip="Google Scholar">
+        <i class="ai ai-google-scholar" aria-hidden="true"></i>
+        <span class="sr-only">Dr. Mluleki Tsawe on Google Scholar</span>
+    </a>
+
+    <!-- 3. ResearchGate -->
+    <a href="https://www.researchgate.net/profile/Mluleki-Tsawe-2" 
+       class="researchgate" 
+       target="_blank" 
+       rel="noopener noreferrer" 
+       data-tooltip="ResearchGate">
+        <i class="ai ai-researchgate" aria-hidden="true"></i>
+        <span class="sr-only">Dr. Mluleki Tsawe on ResearchGate</span>
+    </a>
+
+    <!-- 4. ORCID -->
+    <a href="https://orcid.org/0000-0002-0580-5508" 
+       class="orcid" 
+       target="_blank" 
+       rel="noopener noreferrer" 
+       data-tooltip="ORCID">
+        <i class="ai ai-orcid" aria-hidden="true"></i>
+        <span class="sr-only">Dr. Mluleki Tsawe on ORCID</span>
+    </a>
+
+    <!-- 5. Scopus -->
+    <a href="https://www.scopus.com/authid/detail.uri?authorId=56584500100" 
+       class="scopus" 
+       target="_blank" 
+       rel="noopener noreferrer" 
+       data-tooltip="Scopus">
+        <i class="ai ai-scopus" aria-hidden="true"></i>
+        <span class="sr-only">Dr. Mluleki Tsawe on Scopus</span>
+    </a>
+
+    <!-- 6. Web of Science -->
+    <a href="https://www-webofscience-com.nwulib.idm.oclc.org/wos/author/record/2040358" 
+       class="wos" 
+       target="_blank" 
+       rel="noopener noreferrer" 
+       data-tooltip="Web of Science">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRYaEpCReMh_4e93fNKCU1FIfySObEVhV35qhwe8HE6yg&s=10" alt="Web of Science Logo" class="img-icon">
+        <span class="sr-only">Dr. Mluleki Tsawe on Web of Science</span>
+    </a>
+
+    <!-- 7. LinkedIn -->
+    <a href="https://www.linkedin.com/in/dr-mluleki-tsawe-8969ab155" 
+       class="linkedin" 
+       target="_blank" 
+       rel="noopener noreferrer" 
+       data-tooltip="LinkedIn">
+        <i class="fa-brands fa-linkedin" aria-hidden="true"></i>
+        <span class="sr-only">Dr. Mluleki Tsawe on LinkedIn</span>
+    </a>
+
+    <!-- 8. GitHub -->
+    <a href="https://github.com/MlulekiT" 
+       class="github" 
+       target="_blank" 
+       rel="noopener noreferrer" 
+       data-tooltip="GitHub">
+        <i class="fa-brands fa-github" aria-hidden="true"></i>
+        <span class="sr-only">Dr. Mluleki Tsawe on GitHub</span>
+    </a>
 </div>
+
 </div>
 <div class="contact-details">
 <div class="contact-item">
 <span class="contact-label">
-              Academic affiliation
+              Academic role
             </span>
-            North-West University<br/>Population Studies &amp; Demography<br/>Faculty of Humanities<br/>Mahikeng Campus, South Africa
+            Senior Lecturer in Population Studies &amp; Demography
           </div>
 <div class="contact-item">
 <span class="contact-label">
-              Research focus
+              Institution
             </span>
-            Population health · Demography · Health inequalities · Households · Ageing
+            North-West University
           </div>
 <div class="contact-item">
 <span class="contact-label">
-              Professional network &amp; profiles
+              Email
             </span>
-<a href="https://www.linkedin.com/in/dr-mluleki-tsawe-8969ab155" rel="noopener" target="_blank">
-              Connect on LinkedIn ↗
-            </a><br/>
-<a href="https://scholar.google.com/citations?user=1L3IWv4AAAAJ&amp;hl=en" rel="noopener" target="_blank">
-              View Google Scholar citations ↗
-            </a>
+<a href="mailto:Mluleki.Tsawe@nwu.ac.za" style="color: #ffffff;">Mluleki.Tsawe@nwu.ac.za</a>
+</div>
+<div class="contact-item">
+<span class="contact-label">
+              Office
+            </span>
+            North-West University, Potchefstroom Campus
+          </div>
 </div>
 </div>
 </div>
 </section>
 </main>
+
 <!-- =======================================================
        FOOTER
   ======================================================== -->
 <footer>
 <div class="container footer-inner">
 <div>
-        © 2026 Mluleki Tsawe
+        © 2026 Dr Mluleki Tsawe · Population Studies &amp; Demography · North-West University
       </div>
 <div>
-        Population Studies &amp; Demography · North-West University
+        
       </div>
 </div>
 </footer>
-<script>
-  /* =========================================================
-     SINGLE-FILE MULTIPAGE ROUTER
-     One index.html; each major section behaves like a page.
-  ========================================================= */
-  (() => {
-    const pages = Array.from(document.querySelectorAll('.page-view'));
-    const navLinks = Array.from(document.querySelectorAll('[data-route]'));
-    const pageTitles = {
-      home: 'Home', research: 'Research', 'current-work': 'Current Work',
-      scholarship: 'Scholarship', methods: 'Methods', teaching: 'Teaching',
-      mentoring: 'Supervision & Service', profile: 'Profile', contact: 'Contact'
-    };
 
-    function routeFromHash() {
-      const raw = window.location.hash.replace(/^#/, '').trim();
-      return pages.some(page => page.dataset.page === raw) ? raw : 'home';
+<!-- Single-file Routing Script -->
+<script>
+  (function() {
+    const pages = Array.from(document.querySelectorAll('.page-view'));
+    const navLinks = Array.from(document.querySelectorAll('.nav-links a'));
+    const brandLink = document.querySelector('.brand');
+
+    function getRouteFromHash() {
+      const hash = window.location.hash.replace('#', '').trim();
+      return hash || 'home';
     }
 
-    function showPage(route, push = false) {
-      const target = pages.some(page => page.dataset.page === route) ? route : 'home';
+    function showPage(route) {
+      let matched = pages.find(p => p.getAttribute('data-page') === route);
+      if (!matched) {
+        route = 'home';
+        matched = pages.find(p => p.getAttribute('data-page') === 'home');
+      }
 
-      pages.forEach(page => {
-        const active = page.dataset.page === target;
-        page.classList.toggle('active-page', active);
-        page.setAttribute('aria-hidden', active ? 'false' : 'true');
+      pages.forEach(p => {
+        const isActive = (p === matched);
+        p.classList.toggle('active-page', isActive);
+        p.setAttribute('aria-hidden', !isActive);
       });
 
       navLinks.forEach(link => {
-        const active = link.dataset.route === target;
-        link.classList.toggle('active', active);
-        if (active) link.setAttribute('aria-current', 'page');
-        else link.removeAttribute('aria-current');
+        const linkRoute = link.getAttribute('data-route');
+        if (linkRoute === route) {
+          link.classList.add('active');
+          link.setAttribute('aria-current', 'page');
+        } else {
+          link.classList.remove('active');
+          link.removeAttribute('aria-current');
+        }
       });
-
-      document.title = target === 'home'
-        ? 'Mluleki Tsawe | Population Studies & Demography'
-        : `${pageTitles[target]} | Mluleki Tsawe`;
-
-      if (push && window.location.hash !== `#${target}`) {
-        history.pushState({ page: target }, '', `#${target}`);
-      }
 
       window.scrollTo(0, 0);
+      if (matched) {
+        matched.focus();
+      }
     }
 
-    navLinks.forEach(link => {
-      link.addEventListener('click', event => {
-        event.preventDefault();
-        showPage(link.dataset.route, true);
-      });
+    window.addEventListener('hashchange', () => {
+      showPage(getRouteFromHash());
     });
 
-    window.addEventListener('hashchange', () => showPage(routeFromHash()));
-    window.addEventListener('popstate', () => showPage(routeFromHash()));
-    showPage(routeFromHash());
+    document.addEventListener('DOMContentLoaded', () => {
+      showPage(getRouteFromHash());
+    });
   })();
-</script></body>
+</script>
+</body>
 </html>
