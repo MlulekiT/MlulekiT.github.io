@@ -84,7 +84,7 @@
 
 
     /* =========================================================
-       RESET
+       RESET & UNIVERSAL RESPONSIVE IMAGE SCALING
     ========================================================= */
 
     * {
@@ -109,8 +109,10 @@
       text-decoration: none;
     }
 
+    /* Universal non-hardcoded auto-resizing images */
     img {
       max-width: 100%;
+      height: auto;
       display: block;
     }
 
@@ -121,7 +123,7 @@
 
 
     /* =========================================================
-       NAVIGATION
+       NAVIGATION & HAMBURGER MENU
     ========================================================= */
 
     .nav {
@@ -187,6 +189,17 @@
 
     .nav-links a:hover {
       color: var(--purple);
+    }
+
+    /* Hamburger Toggle Button (Hidden on Desktop) */
+    .menu-toggle {
+      display: none;
+      background: transparent;
+      border: none;
+      font-size: 24px;
+      color: var(--purple);
+      cursor: pointer;
+      padding: 8px;
     }
 
 
@@ -1785,21 +1798,43 @@
 
 
     /* =========================================================
-       RESPONSIVE — MOBILE
+       RESPONSIVE — MOBILE & HAMBURGER MENU
     ========================================================= */
 
     @media (max-width: 760px) {
 
       .nav-inner {
         min-height: 66px;
+        position: relative;
       }
 
       .brand {
         font-size: 13px;
       }
 
+      /* Display hamburger button on mobile */
+      .menu-toggle {
+        display: block;
+      }
+
+      /* Collapsible vertical overlay menu for mobile */
       .nav-links {
         display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+        background: var(--white);
+        padding: 20px;
+        border-bottom: 1px solid var(--border);
+        box-shadow: var(--shadow);
+        gap: 15px;
+        align-items: flex-start;
+      }
+
+      .nav-links.active {
+        display: flex;
       }
 
       .hero {
@@ -1996,13 +2031,6 @@
     .cv-box { box-shadow: var(--shadow-small); }
     @media (max-width: 1100px) { .nav-links { gap: 15px; font-size: 12px; } .brand span:last-child { font-size: 14px; } }
     @media (max-width: 950px) { .supervision-grid { grid-template-columns: 1fr; } }
-    @media (max-width: 760px) {
-      .nav-inner { flex-wrap: wrap; gap: 0; padding-top: 10px; }
-      .nav-links { display: flex !important; width: 100%; overflow-x: auto; gap: 20px; padding: 10px 0 12px; font-size: 13px; scrollbar-width: none; }
-      .nav-links::-webkit-scrollbar { display: none; }
-      .supervision-card { padding: 26px; }
-      section { scroll-margin-top: 112px; }
-    }
     @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } *, *::before, *::after { transition: none !important; animation: none !important; } }
   
     /* =========================================================
@@ -2029,7 +2057,11 @@
 <span class="brand-mark">MT</span>
 <span>Mluleki Tsawe</span>
 </a>
-<div class="nav-links" role="navigation" aria-label="Main Navigation">
+<!-- Hamburger Menu Toggle Button -->
+<button class="menu-toggle" id="menu-toggle" aria-label="Toggle Navigation Menu">
+  <i class="fa-solid fa-bars"></i>
+</button>
+<div class="nav-links" id="nav-links" role="navigation" aria-label="Main Navigation">
 <a data-route="research" href="#research">Research</a>
 <a data-route="current-work" href="#current-work">Current Work</a>
 <a data-route="scholarship" href="#scholarship">Scholarship</a>
@@ -3230,12 +3262,26 @@
 </div>
 </footer>
 
-<!-- Single-file Routing Script -->
+<!-- Single-file Routing & Interactive Navigation Script -->
 <script>
   (function() {
     const pages = Array.from(document.querySelectorAll('.page-view'));
+    const navLinksContainer = document.getElementById('nav-links');
     const navLinks = Array.from(document.querySelectorAll('.nav-links a'));
-    const brandLink = document.querySelector('.brand');
+    const menuToggle = document.getElementById('menu-toggle');
+
+    // Hamburger Menu Toggle Handler
+    if (menuToggle && navLinksContainer) {
+      menuToggle.addEventListener('click', (e) => {
+        e.stopPropagation();
+        navLinksContainer.classList.toggle('active');
+        const icon = menuToggle.querySelector('i');
+        if (icon) {
+          icon.classList.toggle('fa-bars');
+          icon.classList.toggle('fa-xmark');
+        }
+      });
+    }
 
     function getRouteFromHash() {
       const hash = window.location.hash.replace('#', '').trim();
@@ -3265,6 +3311,18 @@
           link.removeAttribute('aria-current');
         }
       });
+
+      // Auto-close hamburger menu on mobile upon clicking a link
+      if (navLinksContainer && navLinksContainer.classList.contains('active')) {
+        navLinksContainer.classList.remove('active');
+        if (menuToggle) {
+          const icon = menuToggle.querySelector('i');
+          if (icon) {
+            icon.classList.add('fa-bars');
+            icon.classList.remove('fa-xmark');
+          }
+        }
+      }
 
       window.scrollTo(0, 0);
       if (matched) {
