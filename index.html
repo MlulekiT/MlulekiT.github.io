@@ -17,7 +17,7 @@
 <link href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%236c3d91'/%3E%3Ctext x='32' y='42' font-family='Georgia,serif' font-size='28' font-weight='700' text-anchor='middle' fill='white'%3EMT%3C/text%3E%3C/svg%3E" rel="icon"/>
 <link href="https://fonts.googleapis.com" rel="preconnect"/>
 <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
-<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&amp;family=Playfair+Display:wght@500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;500;600&amp;family=Merriweather:ital,wght@0,400;0,700;1,400&amp;family=Source+Sans+3:ital,wght@0,400;0,500;0,600;0,700;1,400&amp;display=swap" rel="stylesheet"/>
 
 <!-- Font Awesome (for GitHub, LinkedIn) -->
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
@@ -39,14 +39,15 @@
       "https://orcid.org/0000-0002-0580-5508",
       "https://scholar.google.com/citations?user=1L3IWv4AAAAJ",
       "https://www.researchgate.net/profile/Mluleki-Tsawe-2",
-      "https://www.linkedin.com/in/dr-mluleki-tsawe-8969ab155"
+      "https://www.linkedin.com/in/dr-mluleki-tsawe-8969ab155",
+      "https://github.com/MlulekiT"
     ]
   }
 </script>
 <style>
 
     /* =========================================================
-       DESIGN SYSTEM
+       DESIGN SYSTEM & ACADEMIC TYPOGRAPHY (MERRIWEATHER + SOURCE SANS 3)
     ========================================================= */
 
     :root {
@@ -98,10 +99,19 @@
     }
 
     body {
-      font-family: "DM Sans", sans-serif;
+      font-family: "Source Sans 3", sans-serif;
       color: var(--ink);
       background: var(--white);
       line-height: 1.65;
+      text-align: justify;
+    }
+
+    p {
+      text-align: justify;
+    }
+
+    h1, h2, h3, h4, h5, h6 {
+      text-align: left;
     }
 
     a {
@@ -109,7 +119,6 @@
       text-decoration: none;
     }
 
-    /* Universal non-hardcoded auto-resizing images */
     img {
       max-width: 100%;
       height: auto;
@@ -144,7 +153,7 @@
       align-items: center;
       justify-content: space-between;
 
-      gap: 30px;
+      gap: 20px;
     }
 
     .brand {
@@ -156,6 +165,7 @@
       letter-spacing: -0.02em;
 
       white-space: nowrap;
+      text-align: left;
     }
 
     .brand-mark {
@@ -172,26 +182,27 @@
 
       font-weight: 700;
       font-size: 14px;
+      font-family: "Source Sans 3", sans-serif;
     }
 
     .nav-links {
       display: flex;
       align-items: center;
-      gap: 20px;
+      gap: 16px;
 
-      font-size: 13px;
+      font-size: 14px;
       color: #46515c;
     }
 
     .nav-links a {
       transition: color 0.2s ease;
+      text-align: left;
     }
 
     .nav-links a:hover {
       color: var(--purple);
     }
 
-    /* Hamburger Toggle Button (Hidden on Desktop) */
     .menu-toggle {
       display: none;
       background: transparent;
@@ -250,6 +261,7 @@
 
       letter-spacing: 0.14em;
       text-transform: uppercase;
+      text-align: left;
     }
 
     .eyebrow::before {
@@ -264,28 +276,30 @@
     }
 
     h1 {
-      font-family: "Playfair Display", serif;
+      font-family: "Merriweather", serif;
 
-      font-size: clamp(50px, 7vw, 82px);
+      font-size: clamp(46px, 6.5vw, 76px);
 
-      line-height: 0.98;
-      letter-spacing: -0.045em;
+      line-height: 1.1;
+      letter-spacing: -0.03em;
 
       margin-bottom: 25px;
+      text-align: left;
     }
 
     .hero-title {
       max-width: 790px;
 
-      font-size: clamp(23px, 3vw, 35px);
+      font-size: clamp(22px, 2.8vw, 32px);
 
-      line-height: 1.25;
+      line-height: 1.3;
 
       color: var(--purple-dark);
 
       font-weight: 600;
 
       margin-bottom: 24px;
+      text-align: left;
     }
 
     .hero-lead {
@@ -294,6 +308,7 @@
       color: var(--ink);
       margin-bottom: 18px;
       line-height: 1.6;
+      text-align: justify;
     }
 
     .hero-description {
@@ -305,6 +320,7 @@
 
       margin-bottom: 28px;
       line-height: 1.65;
+      text-align: justify;
     }
 
     .hero-quote-box {
@@ -316,6 +332,7 @@
       font-style: italic;
       color: var(--purple-deep);
       font-size: 15px;
+      text-align: justify;
     }
 
     .hero-identity-pills {
@@ -333,6 +350,7 @@
       background: var(--light);
       border: 1px solid var(--border);
       color: var(--purple-dark);
+      text-align: left;
     }
 
     .hero-buttons {
@@ -450,9 +468,11 @@
     }
 
     .identity-card h3 {
-      font-size: 20px;
+      font-family: "Merriweather", serif;
+      font-size: 19px;
       margin-bottom: 5px;
       width: 100%;
+      text-align: center;
     }
 
     .identity-role {
@@ -461,6 +481,7 @@
 
       margin-bottom: 22px;
       width: 100%;
+      text-align: center;
     }
 
     .identity-links {
@@ -486,6 +507,7 @@
       transition:
         background 0.2s ease,
         color 0.2s ease;
+      text-align: left;
     }
 
     .identity-links a::after {
@@ -517,6 +539,7 @@
     .section-heading {
       max-width: 100%;
       margin-bottom: 48px;
+      text-align: left;
     }
 
     .section-label {
@@ -530,18 +553,20 @@
       letter-spacing: 0.14em;
 
       margin-bottom: 12px;
+      text-align: left;
     }
 
     h2 {
-      font-family: "Playfair Display", serif;
+      font-family: "Merriweather", serif;
 
-      font-size: clamp(35px, 5vw, 52px);
+      font-size: clamp(32px, 4.2vw, 48px);
 
-      line-height: 1.12;
+      line-height: 1.2;
 
-      letter-spacing: -0.03em;
+      letter-spacing: -0.02em;
 
       margin-bottom: 17px;
+      text-align: left;
     }
 
     .section-intro {
@@ -550,6 +575,7 @@
       font-size: 17px;
 
       max-width: 100%;
+      text-align: justify;
     }
 
 
@@ -581,14 +607,16 @@
       text-transform: uppercase;
 
       letter-spacing: 0.11em;
+      text-align: left;
     }
 
     .research-question p {
-      font-family: "Playfair Display", serif;
+      font-family: "Merriweather", serif;
 
-      font-size: clamp(24px, 3vw, 32px);
+      font-size: clamp(22px, 2.7vw, 29px);
 
-      line-height: 1.36;
+      line-height: 1.45;
+      text-align: justify;
     }
 
 
@@ -624,6 +652,8 @@
       flex-direction: column;
 
       justify-content: space-between;
+
+      text-align: justify;
 
       transition:
         transform 0.2s ease,
@@ -680,20 +710,24 @@
       color: var(--purple);
 
       margin-bottom: 24px;
+      text-align: left;
     }
 
     .pillar h3 {
-      font-size: 18px;
+      font-family: "Merriweather", serif;
+      font-size: 17px;
 
-      line-height: 1.3;
+      line-height: 1.35;
 
       margin-bottom: 12px;
+      text-align: left;
     }
 
     .pillar p {
       font-size: 14px;
 
       color: var(--muted);
+      text-align: justify;
     }
 
     .pillar-question {
@@ -708,6 +742,7 @@
       line-height: 1.5;
 
       color: var(--purple-dark);
+      text-align: justify;
     }
 
     .pillar-question strong {
@@ -722,6 +757,7 @@
       color: var(--purple);
 
       margin-bottom: 4px;
+      text-align: left;
     }
 
 
@@ -746,7 +782,9 @@
     }
 
     .life-course h3 {
+      font-family: "Merriweather", serif;
       font-size: 20px;
+      text-align: left;
     }
 
     .life-course-note {
@@ -756,7 +794,7 @@
 
       max-width: 430px;
 
-      text-align: right;
+      text-align: justify;
     }
 
     .life-grid {
@@ -770,7 +808,7 @@
     .life-stage {
       position: relative;
 
-      text-align: center;
+      text-align: left;
 
       font-size: 13px;
 
@@ -868,11 +906,12 @@
     }
 
     .trajectory-header h3 {
-      font-family: "Playfair Display", serif;
+      font-family: "Merriweather", serif;
 
-      font-size: 27px;
+      font-size: 24px;
 
-      line-height: 1.3;
+      line-height: 1.35;
+      text-align: left;
     }
 
     .trajectory-line {
@@ -903,6 +942,7 @@
       position: relative;
 
       padding-top: 27px;
+      text-align: justify;
     }
 
     .trajectory-dot {
@@ -922,17 +962,20 @@
     }
 
     .trajectory-item h4 {
+      font-family: "Merriweather", serif;
       font-size: 15px;
 
       margin-bottom: 7px;
+      text-align: left;
     }
 
     .trajectory-item p {
       color: rgba(255,255,255,0.70);
 
-      font-size: 12px;
+      font-size: 13px;
 
       line-height: 1.55;
+      text-align: justify;
     }
 
 
@@ -962,6 +1005,7 @@
       box-shadow: var(--shadow-small);
 
       overflow: hidden;
+      text-align: justify;
     }
 
     .work-card::before {
@@ -1010,20 +1054,24 @@
       text-transform: uppercase;
 
       letter-spacing: 0.08em;
+      text-align: left;
     }
 
     .work-card h3 {
-      font-size: 21px;
+      font-family: "Merriweather", serif;
+      font-size: 20px;
 
-      line-height: 1.3;
+      line-height: 1.35;
 
       margin-bottom: 13px;
+      text-align: left;
     }
 
     .work-card p {
       color: var(--muted);
 
       font-size: 14px;
+      text-align: justify;
     }
 
     .work-footer {
@@ -1038,6 +1086,167 @@
       font-size: 12px;
 
       font-weight: 700;
+      text-align: left;
+    }
+
+
+    /* =========================================================
+       SOFTWARE STYLES
+    ========================================================= */
+
+    .software-featured {
+      background: var(--white);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 36px;
+      box-shadow: var(--shadow);
+      position: relative;
+      overflow: hidden;
+      margin-bottom: 45px;
+      text-align: justify;
+    }
+
+    .software-featured::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 6px;
+      height: 100%;
+      background: var(--purple);
+    }
+
+    .software-header-meta {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      margin-bottom: 16px;
+      flex-wrap: wrap;
+    }
+
+    .badge-stata {
+      background: #1a5b8c;
+      color: #ffffff;
+      font-size: 11px;
+      font-weight: 700;
+      padding: 4px 10px;
+      border-radius: 6px;
+      letter-spacing: 0.05em;
+      text-transform: uppercase;
+    }
+
+    .badge-version {
+      background: var(--purple-light);
+      color: var(--purple);
+      font-size: 11px;
+      font-weight: 700;
+      padding: 4px 10px;
+      border-radius: 6px;
+    }
+
+    .software-featured h3 {
+      font-family: "Merriweather", serif;
+      font-size: 26px;
+      color: var(--ink);
+      margin-bottom: 12px;
+      text-align: left;
+    }
+
+    .software-featured p {
+      color: var(--muted);
+      font-size: 15px;
+      line-height: 1.6;
+      margin-bottom: 24px;
+      max-width: 100%;
+      text-align: justify;
+    }
+
+    .code-box-container {
+      background: #1e242b;
+      border-radius: 12px;
+      padding: 18px 22px;
+      margin-bottom: 24px;
+      border: 1px solid #2d3540;
+      text-align: left;
+    }
+
+    .code-box-label {
+      font-family: "Source Sans 3", sans-serif;
+      font-size: 11px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      color: #94a3b8;
+      margin-bottom: 8px;
+    }
+
+    .code-box {
+      font-family: "Fira Code", monospace;
+      font-size: 13px;
+      color: #38bdf8;
+      word-break: break-all;
+      line-height: 1.5;
+    }
+
+    .software-actions {
+      display: flex;
+      gap: 12px;
+      flex-wrap: wrap;
+    }
+
+    .upcoming-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+      gap: 20px;
+      margin-top: 24px;
+    }
+
+    .upcoming-card {
+      background: var(--white);
+      border: 1px solid var(--border);
+      border-radius: var(--radius-small);
+      padding: 24px;
+      box-shadow: var(--shadow-small);
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      text-align: justify;
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
+    }
+
+    .upcoming-card:hover {
+      transform: translateY(-3px);
+      box-shadow: var(--shadow);
+    }
+
+    .upcoming-title {
+      font-family: "Fira Code", monospace;
+      font-weight: 600;
+      font-size: 17px;
+      color: var(--purple-dark);
+      margin-bottom: 8px;
+      text-align: left;
+    }
+
+    .upcoming-badge {
+      display: inline-block;
+      font-size: 10px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      color: var(--turquoise);
+      background: var(--turquoise-light);
+      padding: 3px 8px;
+      border-radius: 4px;
+      margin-bottom: 12px;
+      text-align: left;
+    }
+
+    .upcoming-desc {
+      font-size: 13px;
+      color: var(--muted);
+      line-height: 1.5;
+      text-align: justify;
     }
 
 
@@ -1061,6 +1270,7 @@
       display: flex;
       flex-direction: column;
       justify-content: space-between;
+      text-align: justify;
       transition: transform 0.2s ease, box-shadow 0.2s ease;
     }
 
@@ -1078,7 +1288,6 @@
       text-align: left;
     }
 
-    /* Student Photo Container (28 mm x 36 mm) */
     .student-photo-container {
       width: 28mm;
       height: 36mm;
@@ -1100,8 +1309,9 @@
     }
 
     .lab-name {
+      font-family: "Merriweather", serif;
       font-weight: 700;
-      font-size: 17px;
+      font-size: 16px;
       color: var(--ink);
       text-align: left;
     }
@@ -1116,6 +1326,7 @@
 
     .lab-body {
       margin-bottom: 16px;
+      text-align: justify;
     }
 
     .lab-field-label {
@@ -1125,12 +1336,14 @@
       letter-spacing: 0.05em;
       color: var(--purple);
       margin-bottom: 4px;
+      text-align: left;
     }
 
     .lab-text {
       font-size: 14px;
       color: var(--muted);
       line-height: 1.5;
+      text-align: justify;
     }
 
     .lab-meta {
@@ -1145,12 +1358,13 @@
     }
 
     .lab-subheading {
-      font-family: 'Playfair Display', serif;
-      font-size: 24px;
+      font-family: "Merriweather", serif;
+      font-size: 22px;
       margin: 40px 0 20px;
       color: var(--purple-dark);
       border-bottom: 2px solid var(--purple-light);
       padding-bottom: 8px;
+      text-align: left;
     }
 
 
@@ -1172,6 +1386,7 @@
       color: var(--muted);
 
       margin-bottom: 17px;
+      text-align: justify;
     }
 
     .scholarship-box {
@@ -1182,12 +1397,15 @@
       background: var(--purple-light);
 
       border: 1px solid #dfd2e8;
+      text-align: justify;
     }
 
     .scholarship-box h3 {
-      font-size: 19px;
+      font-family: "Merriweather", serif;
+      font-size: 18px;
 
       margin-bottom: 11px;
+      text-align: left;
     }
 
     .scholarship-box p {
@@ -1196,6 +1414,7 @@
       font-size: 14px;
 
       margin-bottom: 20px;
+      text-align: justify;
     }
 
     .scholarship-links {
@@ -1220,6 +1439,7 @@
       font-weight: 600;
 
       border: 1px solid #e1d7e8;
+      text-align: left;
     }
 
     .scholarship-links a:hover {
@@ -1255,6 +1475,8 @@
       
       display: flex;
       flex-direction: column;
+
+      text-align: justify;
       
       position: relative;
       overflow: hidden;
@@ -1298,9 +1520,11 @@
     }
 
     .method-card h3 {
-      font-size: 20px;
+      font-family: "Merriweather", serif;
+      font-size: 19px;
 
       margin-bottom: 11px;
+      text-align: left;
     }
 
     .method-card p {
@@ -1309,6 +1533,7 @@
       font-size: 14px;
       
       margin-bottom: 20px;
+      text-align: justify;
     }
 
     .method-list {
@@ -1320,6 +1545,7 @@
       font-size: 13px;
       
       margin-top: auto;
+      text-align: justify;
     }
 
     .method-list li {
@@ -1373,7 +1599,7 @@
 
 
     /* =========================================================
-       TEACHING
+       TEACHING & MENTORING
     ========================================================= */
 
     .module-table {
@@ -1388,7 +1614,8 @@
       overflow: hidden;
 
       border: 1px solid var(--border);
-      margin-top: 40px;
+      margin-top: 24px;
+      text-align: left;
     }
 
     .module-table th,
@@ -1429,24 +1656,62 @@
     }
 
     .teaching-philosophy {
-      margin-top: 50px;
+      margin-top: 40px;
       padding: 34px;
       border-radius: var(--radius);
       background: var(--purple-light);
       border: 1px solid #dfd2e8;
+      text-align: justify;
     }
 
     .teaching-philosophy h3 {
-      font-family: "Playfair Display", serif;
-      font-size: 24px;
+      font-family: "Merriweather", serif;
+      font-size: 22px;
       margin-bottom: 15px;
       color: var(--purple-dark);
+      text-align: left;
     }
 
     .teaching-philosophy p {
       color: #5d5265;
       font-size: 15px;
       margin-bottom: 15px;
+      text-align: justify;
+    }
+
+    .supervision-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 24px; margin-top: 40px; }
+    .supervision-card { background: var(--white); border: 1px solid var(--border); border-radius: var(--radius); padding: 32px; box-shadow: var(--shadow-small); position: relative; overflow: hidden; text-align: justify; }
+    .supervision-card::before { content: ""; position: absolute; top: 0; left: 0; width: 5px; height: 100%; background: var(--purple); }
+    .supervision-card:nth-child(2)::before { background: var(--turquoise); }
+    .supervision-card h3 { font-family: "Merriweather", serif; font-size: 20px; line-height: 1.35; margin-bottom: 12px; color: var(--purple-dark); text-align: left; }
+    .supervision-card p { color: var(--muted); font-size: 14px; margin-bottom: 18px; text-align: justify; }
+    .service-list { list-style: none; text-align: left; }
+    .service-list li { display: flex; justify-content: space-between; align-items: center; gap: 14px; flex-wrap: wrap; padding: 12px 0; border-top: 1px solid var(--border); font-size: 14px; color: var(--ink); }
+    .service-tag { background: var(--purple-light); color: var(--purple); font-size: 11px; font-weight: 700; padding: 4px 10px; border-radius: 999px; letter-spacing: .03em; white-space: nowrap; }
+    .supervision-card:nth-child(2) .service-tag { background: var(--turquoise-light); color: var(--turquoise); }
+
+    a.service-tag { transition: background .2s ease, color .2s ease; }
+    a.service-tag:hover { background: var(--turquoise); color: var(--white); }
+
+    .mentoring-principle {
+      margin-top: 40px;
+      padding: 34px;
+      border-radius: var(--radius);
+      background: var(--purple-light);
+      border: 1px solid #dfd2e8;
+      text-align: justify;
+    }
+    .mentoring-principle h3 {
+      font-family: "Merriweather", serif;
+      font-size: 20px;
+      margin-bottom: 12px;
+      color: var(--purple-dark);
+      text-align: left;
+    }
+    .mentoring-principle p {
+      color: #5d5265;
+      font-size: 15px;
+      text-align: justify;
     }
 
 
@@ -1468,6 +1733,7 @@
       color: var(--muted);
 
       margin-bottom: 17px;
+      text-align: justify;
     }
 
     .profile-facts {
@@ -1484,6 +1750,7 @@
       border-radius: 12px;
 
       border: 1px solid var(--border);
+      text-align: left;
     }
 
     .fact-label {
@@ -1518,12 +1785,15 @@
       background: var(--gold-light);
 
       border: 1px solid #f0dc73;
+      text-align: justify;
     }
 
     .cv-box h3 {
-      font-size: 18px;
+      font-family: "Merriweather", serif;
+      font-size: 17px;
 
       margin-bottom: 7px;
+      text-align: left;
     }
 
     .cv-box p {
@@ -1532,6 +1802,7 @@
       color: #6b5b12;
 
       margin-bottom: 17px;
+      text-align: justify;
     }
 
 
@@ -1575,12 +1846,14 @@
 
       font-size: 17px;
       margin-bottom: 25px;
+      text-align: justify;
     }
 
     .contact-details {
       display: grid;
 
       gap: 13px;
+      text-align: left;
     }
 
     .contact-item {
@@ -1613,7 +1886,6 @@
       text-decoration: underline;
     }
 
-    /* Contact Tab Social Links Styling */
     .social-links {
       display: flex;
       gap: 18px;
@@ -1624,7 +1896,7 @@
 
     .social-links a {
       position: relative;
-      color: #ffffff; /* High contrast on dark contact background */
+      color: #ffffff;
       font-size: 28px;
       text-decoration: none;
       display: inline-flex;
@@ -1635,43 +1907,38 @@
       padding: 2px;
     }
 
-    /* Accessibility focus ring for keyboard navigation */
     .social-links a:focus-visible {
       outline: 2px solid #ffd525;
       outline-offset: 4px;
     }
 
-    /* Hover magnification and lift effect */
     .social-links a:hover {
-      transform: translateY(-3px) scale(1.18); /* Magnifies icon by 18% */
+      transform: translateY(-3px) scale(1.18);
     }
 
-    /* Brand hover colors */
-    .social-links a.nwu:hover { color: #d8b4fe; }          /* NWU Purple (Lightened for dark bg) */
-    .social-links a.scholar:hover { color: #4285F4; }      /* Google Scholar Blue */
-    .social-links a.researchgate:hover { color: #00CCBB; } /* ResearchGate Teal */
-    .social-links a.orcid:hover { color: #A6CE39; }        /* ORCID Green */
-    .social-links a.scopus:hover { color: #FF6C00; }       /* Scopus Orange */
-    .social-links a.wos:hover { color: #a78bfa; }          /* Web of Science Purple (Lightened) */
-    .social-links a.linkedin:hover { color: #38bdf8; }     /* LinkedIn Blue (Lightened) */
-    .social-links a.github:hover { color: #f1f5f9; }       /* GitHub Light */
+    .social-links a.nwu:hover { color: #d8b4fe; }
+    .social-links a.scholar:hover { color: #4285F4; }
+    .social-links a.researchgate:hover { color: #00CCBB; }
+    .social-links a.orcid:hover { color: #A6CE39; }
+    .social-links a.scopus:hover { color: #FF6C00; }
+    .social-links a.wos:hover { color: #a78bfa; }
+    .social-links a.linkedin:hover { color: #38bdf8; }
+    .social-links a.github:hover { color: #f1f5f9; }
 
-    /* Image-Based Logo Styling (NWU & Web of Science) */
     .img-icon {
       width: 28px;
       height: 28px;
       border-radius: 50%;
       object-fit: cover;
       vertical-align: middle;
-      filter: grayscale(100%) opacity(0.85); /* Matches default neutral state */
+      filter: grayscale(100%) opacity(0.85);
       transition: filter 0.25s ease;
     }
 
     .social-links a:hover .img-icon {
-      filter: none; /* Restores full logo color on hover */
+      filter: none;
     }
 
-    /* Screen-reader text (invisible visually) */
     .sr-only {
       position: absolute;
       width: 1px;
@@ -1684,7 +1951,6 @@
       border: 0;
     }
 
-    /* Custom Hover Tooltips */
     .social-links a::after {
       content: attr(data-tooltip);
       position: absolute;
@@ -1746,7 +2012,7 @@
     @media (max-width: 950px) {
 
       .nav-links {
-        gap: 13px;
+        gap: 12px;
 
         font-size: 11px;
       }
@@ -1789,7 +2055,8 @@
 
       .profile-grid,
       .contact-grid,
-      .scholarship-layout {
+      .scholarship-layout,
+      .supervision-grid {
         grid-template-columns: 1fr;
 
         gap: 40px;
@@ -1812,12 +2079,10 @@
         font-size: 13px;
       }
 
-      /* Display hamburger button on mobile */
       .menu-toggle {
         display: block;
       }
 
-      /* Collapsible vertical overlay menu for mobile */
       .nav-links {
         display: none;
         flex-direction: column;
@@ -1846,11 +2111,11 @@
       }
 
       h1 {
-        font-size: 52px;
+        font-size: 48px;
       }
 
       .hero-title {
-        font-size: 24px;
+        font-size: 22px;
       }
 
       .hero-description {
@@ -1868,7 +2133,8 @@
       .pillars,
       .work-grid,
       .methods-grid,
-      .lab-grid {
+      .lab-grid,
+      .upcoming-grid {
         grid-template-columns: 1fr;
       }
 
@@ -1930,11 +2196,11 @@
       }
 
       h1 {
-        font-size: 44px;
+        font-size: 40px;
       }
 
       .hero-title {
-        font-size: 21px;
+        font-size: 20px;
       }
 
       .hero-buttons {
@@ -1964,55 +2230,22 @@
     /* Selected publications */
     .pubs { margin-top: 72px; }
     .pubs-head { display: flex; justify-content: space-between; align-items: baseline; gap: 16px; flex-wrap: wrap; margin-bottom: 28px; }
-    .pubs-head h3 { font-family: 'Playfair Display', serif; font-size: 1.7rem; margin: 0; color: var(--ink); }
+    .pubs-head h3 { font-family: "Merriweather", serif; font-size: 1.6rem; margin: 0; color: var(--ink); text-align: left; }
     .pubs-head a { color: var(--purple); font-weight: 600; text-decoration: none; }
     .pubs-head a:hover { text-decoration: underline; }
-    .pub-book { background: var(--purple-light); border-left: 5px solid var(--purple); border-radius: var(--radius); padding: 26px 30px; margin-bottom: 28px; }
-    .pub-kicker { font-size: .78rem; letter-spacing: .08em; text-transform: uppercase; font-weight: 700; color: var(--purple); margin-bottom: 8px; }
-    .pub-book h4 { font-family: 'Playfair Display', serif; font-size: 1.35rem; margin: 0 0 8px; color: var(--ink); }
-    .pub-book p { margin: 0 0 12px; color: var(--muted); }
-    .pub-list { list-style: none; margin: 0; padding: 0; }
+    .pub-book { background: var(--purple-light); border-left: 5px solid var(--purple); border-radius: var(--radius); padding: 26px 30px; margin-bottom: 28px; text-align: justify; }
+    .pub-kicker { font-size: .78rem; letter-spacing: .08em; text-transform: uppercase; font-weight: 700; color: var(--purple); margin-bottom: 8px; text-align: left; }
+    .pub-book h4 { font-family: "Merriweather", serif; font-size: 1.25rem; margin: 0 0 8px; color: var(--ink); text-align: left; }
+    .pub-book p { margin: 0 0 12px; color: var(--muted); text-align: justify; }
+    .pub-list { list-style: none; margin: 0; padding: 0; text-align: justify; }
     .pub-item { display: grid; grid-template-columns: 76px 1fr; gap: 20px; padding: 22px 0; border-top: 1px solid var(--border); }
-    .pub-year { font-family: 'Playfair Display', serif; font-weight: 700; font-size: 1.2rem; color: var(--turquoise); }
-    .pub-title { font-weight: 600; color: var(--ink); line-height: 1.45; margin: 0 0 6px; }
-    .pub-meta { color: var(--muted); font-size: .95rem; margin: 0 0 8px; }
+    .pub-year { font-family: "Merriweather", serif; font-weight: 700; font-size: 1.15rem; color: var(--turquoise); text-align: left; }
+    .pub-title { font-weight: 600; color: var(--ink); line-height: 1.45; margin: 0 0 6px; text-align: justify; }
+    .pub-meta { color: var(--muted); font-size: .95rem; margin: 0 0 8px; text-align: left; }
     .pub-meta strong { color: var(--ink); }
-    .pub-link { color: var(--purple); font-weight: 600; font-size: .92rem; text-decoration: none; }
+    .pub-link { color: var(--purple); font-weight: 600; font-size: .92rem; text-decoration: none; text-align: left; }
     .pub-link:hover { text-decoration: underline; }
     @media (max-width: 760px) { .pub-item { grid-template-columns: 1fr; gap: 6px; } .pub-book { padding: 22px; } }
-
-    /* Mentoring & service */
-    .supervision-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 24px; margin-top: 40px; }
-    .supervision-card { background: var(--white); border: 1px solid var(--border); border-radius: var(--radius); padding: 32px; box-shadow: var(--shadow-small); position: relative; overflow: hidden; }
-    .supervision-card::before { content: ""; position: absolute; top: 0; left: 0; width: 5px; height: 100%; background: var(--purple); }
-    .supervision-card:nth-child(2)::before { background: var(--turquoise); }
-    .supervision-card h3 { font-family: "Playfair Display", serif; font-size: 22px; line-height: 1.3; margin-bottom: 12px; color: var(--purple-dark); }
-    .supervision-card p { color: var(--muted); font-size: 14px; margin-bottom: 18px; }
-    .service-list { list-style: none; }
-    .service-list li { display: flex; justify-content: space-between; align-items: center; gap: 14px; flex-wrap: wrap; padding: 12px 0; border-top: 1px solid var(--border); font-size: 14px; color: var(--ink); }
-    .service-tag { background: var(--purple-light); color: var(--purple); font-size: 11px; font-weight: 700; padding: 4px 10px; border-radius: 999px; letter-spacing: .03em; white-space: nowrap; }
-    .supervision-card:nth-child(2) .service-tag { background: var(--turquoise-light); color: var(--turquoise); }
-
-    a.service-tag { transition: background .2s ease, color .2s ease; }
-    a.service-tag:hover { background: var(--turquoise); color: var(--white); }
-
-    .mentoring-principle {
-      margin-top: 40px;
-      padding: 34px;
-      border-radius: var(--radius);
-      background: var(--purple-light);
-      border: 1px solid #dfd2e8;
-    }
-    .mentoring-principle h3 {
-      font-family: "Playfair Display", serif;
-      font-size: 22px;
-      margin-bottom: 12px;
-      color: var(--purple-dark);
-    }
-    .mentoring-principle p {
-      color: #5d5265;
-      font-size: 15px;
-    }
 
     /* Polish */
     body { -webkit-font-smoothing: antialiased; text-rendering: optimizeLegibility; }
@@ -2029,8 +2262,7 @@
     .scholarship-links a { transition: transform .2s ease, border-color .2s ease; }
     .scholarship-links a:hover { transform: translateX(3px); }
     .cv-box { box-shadow: var(--shadow-small); }
-    @media (max-width: 1100px) { .nav-links { gap: 15px; font-size: 12px; } .brand span:last-child { font-size: 14px; } }
-    @media (max-width: 950px) { .supervision-grid { grid-template-columns: 1fr; } }
+    @media (max-width: 1100px) { .nav-links { gap: 12px; font-size: 12px; } .brand span:last-child { font-size: 14px; } }
     @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } *, *::before, *::after { transition: none !important; animation: none !important; } }
   
     /* =========================================================
@@ -2065,19 +2297,22 @@
 <a data-route="research" href="#research">Research</a>
 <a data-route="current-work" href="#current-work">Current Work</a>
 <a data-route="scholarship" href="#scholarship">Scholarship</a>
+<a data-route="software" href="#software">Software</a>
 <a data-route="methods" href="#methods">Methods</a>
-<a data-route="teaching" href="#teaching">Teaching</a>
-<a data-route="mentoring" href="#mentoring">Mentoring &amp; Service</a>
+<a data-route="teaching-mentoring" href="#teaching-mentoring">Teaching &amp; Mentoring</a>
 <a data-route="lab" href="#lab">Research Lab</a>
 <a data-route="profile" href="#profile">Profile</a>
 <a data-route="contact" href="#contact">Contact</a>
 </div>
 </div>
 </nav>
+
 <!-- =======================================================
        MAIN CONTENT SECTIONS (VIEWS)
   ======================================================== -->
 <main id="site-pages" tabindex="-1">
+
+<!-- HOME -->
 <section aria-hidden="false" class="hero page-view active-page" data-page="home" id="home" role="region" aria-label="Home">
 <div class="container hero-grid">
 <div>
@@ -2146,9 +2381,7 @@
 </div>
 </section>
 
-<!-- =====================================================
-         RESEARCH
-    ====================================================== -->
+<!-- RESEARCH -->
 <section aria-hidden="true" class="page-view" data-page="research" id="research" role="region" aria-label="Research">
 <div class="container">
 <div class="section-heading">
@@ -2243,7 +2476,7 @@
             </div>
 </article>
 </div>
-<!-- Life course -->
+
 <div class="life-course">
 <div class="life-course-header">
 <h3>
@@ -2281,7 +2514,7 @@
             </div>
 </div>
 </div>
-<!-- Research trajectory -->
+
 <div class="trajectory">
 <div class="trajectory-header">
 <div>
@@ -2301,7 +2534,7 @@
                 Maternal &amp; reproductive health
               </h4>
 <p>
-                Healthcare utilisation, reproductive health and maternal
+                Healthcare utilisation, reproductive health, and maternal
                 and newborn outcomes.
               </p>
 </div>
@@ -2332,7 +2565,7 @@
               </h4>
 <p>
                 Extending the programme toward multimorbidity, vulnerability,
-                care and healthy ageing.
+                care, and healthy ageing.
               </p>
 </div>
 </div>
@@ -2340,9 +2573,7 @@
 </div>
 </section>
 
-<!-- =====================================================
-         CURRENT WORK
-    ====================================================== -->
+<!-- CURRENT WORK -->
 <section aria-hidden="true" class="section-alt page-view" data-page="current-work" id="current-work" role="region" aria-label="Current Work">
 <div class="container">
 <div class="section-heading">
@@ -2423,9 +2654,7 @@
 </div>
 </section>
 
-<!-- =====================================================
-         SCHOLARSHIP
-    ====================================================== -->
+<!-- SCHOLARSHIP -->
 <section aria-hidden="true" class="page-view" data-page="scholarship" id="scholarship" role="region" aria-label="Scholarship">
 <div class="container">
 <div class="section-heading">
@@ -2557,10 +2786,116 @@
 </div>
 </section>
 
-<!-- =====================================================
-         METHODS & DATA
-    ====================================================== -->
-<section aria-hidden="true" class="section-alt page-view" data-page="methods" id="methods" role="region" aria-label="Methods & Data">
+<!-- SOFTWARE -->
+<section aria-hidden="true" class="section-alt page-view" data-page="software" id="software" role="region" aria-label="Software">
+<div class="container">
+<div class="section-heading">
+<div class="section-label">
+            Open-source Stata tools
+          </div>
+<h2>
+            Software &amp; computational demography
+          </h2>
+<p class="section-intro">
+            Developing reproducible, open-source software tools for demographic estimation, population health metrics, and survey data analysis in Stata.
+          </p>
+</div>
+
+<!-- Featured Package: dhscmort -->
+<article class="software-featured">
+<div class="software-header-meta">
+<span class="badge-stata">Stata Package</span>
+<span class="badge-version">v0.0.5</span>
+</div>
+<h3>dhscmort: DHS childhood mortality estimation &amp; visualisation</h3>
+<p>
+  A Stata command for synthetic cohort estimation of neonatal, infant, child, and under-five mortality rates using Demographic and Health Surveys (DHS) Birth Recode (BR) datasets. Provides automated binary indicator generation and publication-ready graphics.
+</p>
+
+<div class="code-box-container">
+<div class="code-box-label">Direct Stata Installation</div>
+<div class="code-box" style="margin-bottom: 14px;">net install dhscmort, from("https://raw.githubusercontent.com/MlulekiT/dhscmort/main") replace</div>
+
+<div class="code-box-label">Alternative (browse &amp; install)</div>
+<div class="code-box">net from "https://raw.githubusercontent.com/MlulekiT/dhscmort/main"</div>
+</div>
+
+<div class="software-actions">
+<a class="btn btn-primary" href="https://github.com/MlulekiT/dhscmort" rel="noopener" target="_blank">
+  View on GitHub <i class="fa-brands fa-github" style="margin-left: 6px;"></i>
+</a>
+<a class="btn btn-secondary" href="https://github.com/MlulekiT/dhscmort/releases/download/v0.0.5/dhscmort.ris" rel="noopener" target="_blank">
+  Download Citation (.ris) <i class="fa-solid fa-download" style="margin-left: 6px;"></i>
+</a>
+</div>
+</article>
+
+<h3 style="font-family: 'Merriweather', serif; font-size: 24px; color: var(--purple-dark); margin-bottom: 20px; text-align: left;">
+  In development &amp; upcoming Stata ado files
+</h3>
+
+<div class="upcoming-grid">
+<!-- mtmaps -->
+<div class="upcoming-card">
+<div>
+  <div class="upcoming-title">mtmaps</div>
+  <span class="upcoming-badge">Coming Soon</span>
+  <p class="upcoming-desc">
+    Native spatial choropleth mapping engine with boundary-safe labels, vector north arrows, scalebars, and extended typography.
+  </p>
+</div>
+</div>
+
+<!-- mzantsifert -->
+<div class="upcoming-card">
+<div>
+  <div class="upcoming-title">mzantsifert</div>
+  <span class="upcoming-badge">Coming Soon</span>
+  <p class="upcoming-desc">
+    South African Census and Community Survey fertility engine featuring classical Brass P/F, Coale-Trussell models, and an advanced diagnostics suite.
+  </p>
+</div>
+</div>
+
+<!-- dhsfert -->
+<div class="upcoming-card">
+<div>
+  <div class="upcoming-title">dhsfert</div>
+  <span class="upcoming-badge">Coming Soon</span>
+  <p class="upcoming-desc">
+    Calculate and visualise DHS total fertility rates (TFR), age-specific fertility rates (ASFR), and wanted fertility indicators (i.e., WTFR).
+  </p>
+</div>
+</div>
+
+<!-- demcharts -->
+<div class="upcoming-card">
+<div>
+  <div class="upcoming-title">demcharts</div>
+  <span class="upcoming-badge">Coming Soon</span>
+  <p class="upcoming-desc">
+    Professional suite for demographic data visualisations (i.e., population pyramids, line charts, bar charts, and doughnut charts).
+  </p>
+</div>
+</div>
+
+<!-- micsfert -->
+<div class="upcoming-card">
+<div>
+  <div class="upcoming-title">micsfert</div>
+  <span class="upcoming-badge">Coming Soon</span>
+  <p class="upcoming-desc">
+    Demographic fertility analysis and data visualisation engine tailored specifically for the Multiple Indicator Cluster Survey (MICS) data.
+  </p>
+</div>
+</div>
+</div>
+
+</div>
+</section>
+
+<!-- METHODS & DATA -->
+<section aria-hidden="true" class="page-view" data-page="methods" id="methods" role="region" aria-label="Methods & Data">
 <div class="container">
 <div class="section-heading">
 <div class="section-label">
@@ -2578,13 +2913,13 @@
 </div>
 
 <div class="methods-grid">
-<!-- Column 1: Data & Evidence Sources -->
+<!-- Column 1: Data & evidence sources -->
 <article class="method-card">
 <div class="method-icon">
               01
             </div>
 <h3>
-              Data &amp; Evidence Sources
+              Data &amp; evidence sources
             </h3>
 <p>
               Core empirical foundations, nationally representative datasets, and rigorous measurement validation principles.
@@ -2598,13 +2933,13 @@
 </ul>
 </article>
 
-<!-- Column 2: Analytical Methods -->
+<!-- Column 2: Analytical methods -->
 <article class="method-card">
 <div class="method-icon">
               02
             </div>
 <h3>
-              Analytical Methods
+              Analytical methods
             </h3>
 <p>
               Advanced statistical and demographic techniques applied to evaluate population dynamics and health patterns.
@@ -2619,7 +2954,7 @@
 </div>
 
 <div style="margin-top: 50px;">
-<h3 style="font-size: 18px; margin-bottom: 12px; font-family: 'Playfair Display', serif;">Analytical tools</h3>
+<h3 style="font-size: 18px; margin-bottom: 12px; font-family: 'Merriweather', serif; text-align: left;">Analytical tools</h3>
 <div class="data-strip">
 <span class="data-tag">Stata</span>
 <span class="data-tag">R</span>
@@ -2630,106 +2965,70 @@
 </div>
 </section>
 
-<!-- =====================================================
-         TEACHING
-    ====================================================== -->
-<section aria-hidden="true" class="page-view" data-page="teaching" id="teaching" role="region" aria-label="Teaching">
+<!-- TEACHING & MENTORING -->
+<section aria-hidden="true" class="section-alt page-view" data-page="teaching-mentoring" id="teaching-mentoring" role="region" aria-label="Teaching & Mentoring">
 <div class="container">
 <div class="section-heading">
 <div class="section-label">
-            Teaching
+            Teaching, Supervision &amp; Service
           </div>
 <h2>
-            Teaching demography through evidence, methods and population change
+            Teaching demography, research mentoring &amp; academic service
           </h2>
 <p class="section-intro">
-            My teaching connects demographic concepts and population processes with the practical skills required to conduct social research, analyse population data and interpret demographic evidence.
-          </p>
-<p class="section-intro" style="margin-top: 12px;">
-            Teaching spans social research methods, demographic analysis, population projections, population policy and applied population research, with an emphasis on rigorous research design, appropriate methods and evidence-based interpretation.
+            My academic role connects demographic concepts and population processes with the practical skills required to conduct social research, analyse population data, interpret evidence, and mentor the next generation of demographers.
           </p>
 </div>
+
+<!-- Modules Table -->
+<h3 style="font-family: 'Merriweather', serif; font-size: 22px; color: var(--purple-dark); margin-bottom: 10px; text-align: left;">Postgraduate Modules</h3>
 <table class="module-table">
 <thead>
 <tr>
-<th>
-                Module
-              </th>
-<th>
-                Course
-              </th>
+<th>Module</th>
+<th>Course</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td class="module-code">
-                HPPA515
-              </td>
-<td>
-                Social Research Methods
-              </td>
+<td class="module-code">HPPA515</td>
+<td>Social Research Methods</td>
 </tr>
 <tr>
-<td class="module-code">
-                HPOP617
-              </td>
-<td>
-                Research Methods
-              </td>
+<td class="module-code">HPOP617</td>
+<td>Research Methods</td>
 </tr>
 <tr>
-<td class="module-code">
-                HPOP822
-              </td>
-<td>
-                Population Projections with Particular Relevance to Development Planning
-              </td>
+<td class="module-code">HPOP822</td>
+<td>Population Projections with Particular Relevance to Development Planning</td>
 </tr>
 </tbody>
 </table>
+
 <div class="teaching-philosophy">
 <h3>Teaching philosophy</h3>
 <p>
-            My teaching is student-centred, constructivist and pragmatic, connecting demographic concepts and methods to authentic population, health and development problems.
-          </p>
-<p>
-            I encourage students to move beyond learning concepts in isolation and to develop the ability to ask meaningful questions, work critically with population data, select appropriate methods and interpret evidence within its social and demographic context.
-          </p>
-<p style="margin-bottom: 0;">
-            The aim is not simply to teach students how to analyse data, but to develop independent, critical and evidence-oriented population researchers.
-          </p>
+  My teaching is student-centred, constructivist and pragmatic, connecting demographic concepts and methods to authentic population, health and development problems. I encourage students to move beyond learning concepts in isolation and to develop the ability to ask meaningful questions, work critically with population data, select appropriate methods and interpret evidence within its social and demographic context.
+</p>
 </div>
-</div>
-</section>
 
-<!-- =====================================================
-         MENTORING & SERVICE
-    ====================================================== -->
-<section aria-hidden="true" class="section-alt page-view" data-page="mentoring" id="mentoring" role="region" aria-label="Mentoring & Service">
-<div class="container">
-<div class="section-heading">
-<div class="section-label">Supporting researchers and contributing to the academic community</div>
-<h2>Postgraduate supervision, editorial contributions &amp; academic service</h2>
-<p class="section-intro">
-            My academic work extends beyond research and teaching to include postgraduate supervision, research mentoring, academic examination, editorial work and peer review. I contribute to the development of emerging population researchers and to the quality of scholarly research in population health, demography and related fields.
-          </p>
-</div>
+<!-- Supervision & Service Grid -->
 <div class="supervision-grid">
 <article class="supervision-card">
 <h3>Postgraduate supervision &amp; mentoring</h3>
 <p>
-              I supervise and co-supervise Master's and doctoral research in Population Studies and Demography, with particular interests in population health, health inequalities, demographic processes, households and ageing. My approach to supervision emphasises clear research questions, appropriate research design, rigorous use of population data, methodological reasoning and careful interpretation of evidence.
-            </p>
+  I supervise and co-supervise Master's and doctoral research in Population Studies and Demography, with particular interests in population health, health inequalities, demographic processes, households and ageing.
+</p>
 <ul class="service-list">
 <li><span>Current PhD promotion / co-promotion</span> <span class="service-tag">9 candidates</span></li>
 <li><span>Completed Master's &amp; PhD supervision</span> <span class="service-tag">21 graduates</span></li>
 </ul>
 </article>
 <article class="supervision-card">
-<h3>Academic examination &amp; Editorial service</h3>
+<h3>Academic examination &amp; editorial service</h3>
 <p>
-              Contributing to external examining of research at different stages of development and supporting scholarly publishing through editorial responsibilities and peer review.
-            </p>
+  Contributing to external examining of research at different stages of development and supporting scholarly publishing through editorial responsibilities and peer review.
+</p>
 <ul class="service-list">
 <li><span>External examination (UWC, Wits, UKZN)</span> <span class="service-tag">Active</span></li>
 <li><span>Journal editorial activities (Associate Editor)</span> <a class="service-tag" href="https://link.springer.com/journal/12978/editorial-board" rel="noopener" target="_blank">Reproductive Health ↗</a></li>
@@ -2737,24 +3036,23 @@
 </ul>
 </article>
 </div>
+
 <div class="mentoring-principle">
 <h3>Mentoring principle</h3>
 <p>
-            I see postgraduate research as both a process of producing new knowledge and developing independent researchers. My aim is to help emerging researchers move from using population data to asking meaningful population questions, making defensible methodological choices and communicating evidence clearly.
-          </p>
+  I see postgraduate research as both a process of producing new knowledge and developing independent researchers. My aim is to help emerging researchers move from using population data to asking meaningful population questions, making defensible methodological choices and communicating evidence clearly.
+</p>
 </div>
 </div>
 </section>
 
-<!-- =====================================================
-         RESEARCH LAB
-    ====================================================== -->
+<!-- RESEARCH LAB -->
 <section aria-hidden="true" class="page-view" data-page="lab" id="lab" role="region" aria-label="Research Lab">
 <div class="container">
 <div class="section-heading">
-<h2>Research Lab</h2>
+<h2>Research lab</h2>
 <p class="section-intro">
-            The Research Lab brings together postgraduate students working on population dynamics, population health, ageing, fertility, sexual and reproductive health, migration, and health inequalities in South Africa and across Africa. Through quantitative and qualitative research, lab members contribute to evidence-based scholarship that informs policy, development, and population wellbeing.
+            The Research lab brings together postgraduate students working on population dynamics, population health, ageing, fertility, sexual and reproductive health, migration, and health inequalities in South Africa and across Africa.
           </p>
 </div>
 
@@ -2765,7 +3063,7 @@
 <div>
 <div class="lab-card-header">
 <div class="student-photo-container">
-  <img alt="Thandiwe Lisa Wiessie" src="https://media.licdn.com/dms/image/v2/D4D03AQGNgL4kbFwZYQ/profile-displayphoto-scale_400_400/B4DZzZMY2BKEAg-/0/1773170431993?e=1792627200&v=beta&t=-As2rjLMIEk8CHUdwcOTjFMb-hYVovF69KFwgL17kpQ"/>
+  <img alt="Thandiwe Lisa Wiessie" src="https://media.licdn.com/dms/image/v2/D4D03AQGNgL4kbFwZYQ/profile-displayphoto-scale_400_400/B4DZzZMY2BKEAg-/0/1773170431993?e=1792627200&amp;v=beta&amp;t=-As2rjLMIEk8CHUdwcOTjFMb-hYVovF69KFwgL17kpQ"/>
 </div>
 <div>
 <div class="lab-name">Thandiwe Lisa Wiessie</div>
@@ -2805,7 +3103,7 @@
 <div>
 <div class="lab-card-header">
 <div class="student-photo-container">
-  <img alt="Mphoentle Nothukela Mnguni" src="https://p16-common-sign.tiktokcdn.com/tos-maliva-avt-0068/3560e230c253097b3c221946f28bbb36~tplv-tiktokx-cropcenter:1080:1080.jpeg?dr=14579&amp;refresh_token=f3dcc3af&amp;x-expires=1790992800&amp;x-signature=HYCZdHNGph46AduEdXKDKZKh1ag%3D&amp;t=4d5b0474&amp;ps=13740610&amp;shp=a5d48078&amp;shcp=81f88b70&amp;idc=sg1"/>
+  <img alt="Mphoentle Nothukela Mnguni" src="https://p16-common-sign.tiktokcdn.com/tos-maliva-avt-0068/3560e230c253097b3c221946f28bbb36~tplv-tiktokx-cropcenter:1080:1080.jpeg?dr=14579&amp;refresh_token=9961a30a&amp;x-expires=1792353600&amp;x-signature=FgA4%2FgIADH5DnzihyURse%2FDng0Q%3D&amp;t=4d5b0474&amp;ps=13740610&amp;shp=a5d48078&amp;shcp=81f88b70&amp;idc=my2"/>
 </div>
 <div>
 <div class="lab-name">Mphoentle Nothukela Mnguni</div>
@@ -2845,7 +3143,7 @@
 <div>
 <div class="lab-card-header">
 <div class="student-photo-container">
-  <img alt="Itumeleng Dinku" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSz2PthVvp0m7FscMEZF1qt4CJ0lncGuBpaMKy-3gtNPg&s=10"/>
+  <img alt="Itumeleng Dinku" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSz2PthVvp0m7FscMEZF1qt4CJ0lncGuBpaMKy-3gtNPg&amp;s=10"/>
 </div>
 <div>
 <div class="lab-name">Itumeleng Dinku</div>
@@ -2997,6 +3295,9 @@
 <article class="lab-card">
 <div>
 <div class="lab-card-header">
+<div class="student-photo-container">
+  <img alt="Kgomotso Mbele" src="https://raw.githubusercontent.com/MlulekiT/MlulekiT.github.io/main/Image%20placeholder2.jpg"/>
+</div>
 <div class="lab-name">Kgomotso Mbele</div>
 </div>
 <div class="lab-body">
@@ -3013,6 +3314,9 @@
 <article class="lab-card">
 <div>
 <div class="lab-card-header">
+<div class="student-photo-container">
+  <img alt="Boitshwarelo K.M. Ngake" src="https://raw.githubusercontent.com/MlulekiT/MlulekiT.github.io/main/Image%20placeholder2.jpg"/>
+</div>
 <div class="lab-name">Boitshwarelo K.M. Ngake</div>
 </div>
 <div class="lab-body">
@@ -3029,9 +3333,7 @@
 </div>
 </section>
 
-<!-- =====================================================
-         PROFILE
-    ====================================================== -->
+<!-- PROFILE -->
 <section aria-hidden="true" class="section-alt page-view" data-page="profile" id="profile" role="region" aria-label="Profile">
 <div class="container">
 <div class="section-heading">
@@ -3113,9 +3415,7 @@
 </div>
 </section>
 
-<!-- =====================================================
-         CONTACT
-    ====================================================== -->
+<!-- CONTACT -->
 <section aria-hidden="true" class="contact page-view" data-page="contact" id="contact" role="region" aria-label="Contact">
 <div class="container">
 <div class="contact-grid">
@@ -3133,7 +3433,7 @@
             I am particularly interested in research collaborations, postgraduate research enquiries, scholarly discussions and opportunities to contribute to population and health research in South Africa and beyond. I am also open to visiting researcher opportunities, invited academic engagements and opportunities to present or collaborate at universities and research institutions elsewhere.
           </p>
 
-<!-- Incorporating Academic & Professional Links -->
+<!-- Academic & Professional Links -->
 <div class="social-links" role="navigation" aria-label="Academic and social profiles">
     <!-- 1. NWU Profile -->
     <a href="https://humanities.nwu.ac.za/population-studies-and-demography/mluleki-tsawe" 
@@ -3141,12 +3441,12 @@
        target="_blank" 
        rel="noopener noreferrer" 
        data-tooltip="NWU Profile">
-        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSkOoKIWXSq_ECVcYRI0qoD3_GgXbN6ft2WYWe9SUTZ9Q&s=10" alt="NWU Logo" class="img-icon">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSkOoKIWXSq_ECVcYRI0qoD3_GgXbN6ft2WYWe9SUTZ9Q&amp;s=10" alt="NWU Logo" class="img-icon">
         <span class="sr-only">Dr. Mluleki Tsawe on NWU Profile</span>
     </a>
 
     <!-- 2. Google Scholar -->
-    <a href="https://scholar.google.com/citations?hl=en&user=1L3IWv4AAAAJ" 
+    <a href="https://scholar.google.com/citations?hl=en&amp;user=1L3IWv4AAAAJ" 
        class="scholar" 
        target="_blank" 
        rel="noopener noreferrer" 
@@ -3191,7 +3491,7 @@
        target="_blank" 
        rel="noopener noreferrer" 
        data-tooltip="Web of Science">
-        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRYaEpCReMh_4e93fNKCU1FIfySObEVhV35qhwe8HE6yg&s=10" alt="Web of Science Logo" class="img-icon">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRYaEpCReMh_4e93fNKCU1FIfySObEVhV35qhwe8HE6yg&amp;s=10" alt="Web of Science Logo" class="img-icon">
         <span class="sr-only">Dr. Mluleki Tsawe on Web of Science</span>
     </a>
 
@@ -3254,17 +3554,22 @@
 <footer>
 <div class="container footer-inner">
 <div>
-        © 2026 Dr Mluleki Tsawe · Population Studies &amp; Demography · North-West University
-      </div>
+  © <span id="current-year"></span> Dr Mluleki Tsawe · Population Studies &amp; Demography · North-West University
+</div>
 <div>
-        
-      </div>
+</div>
 </div>
 </footer>
 
 <!-- Single-file Routing & Interactive Navigation Script -->
 <script>
   (function() {
+    // Dynamic Footer Year Automation
+    const yearSpan = document.getElementById('current-year');
+    if (yearSpan) {
+      yearSpan.textContent = new Date().getFullYear();
+    }
+
     const pages = Array.from(document.querySelectorAll('.page-view'));
     const navLinksContainer = document.getElementById('nav-links');
     const navLinks = Array.from(document.querySelectorAll('.nav-links a'));
@@ -3312,7 +3617,6 @@
         }
       });
 
-      // Auto-close hamburger menu on mobile upon clicking a link
       if (navLinksContainer && navLinksContainer.classList.contains('active')) {
         navLinksContainer.classList.remove('active');
         if (menuToggle) {
